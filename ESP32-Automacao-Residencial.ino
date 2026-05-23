@@ -68,7 +68,6 @@
 #include <WiFi.h>
 #include "WiFiManagerConfig.h"
 
-
 // LED indicador de WiFi
 #define wifiLed 2 // D2
 
@@ -99,9 +98,6 @@ Preferences preferences; // Memória não-volátil para persistência de estado
 WiFiServer telnetServer(2323); // Servidor Telnet
 WiFiClient telnetClient;     // Cliente Telnet
 DualSerialClass DualSerial;  // Espelho do Serial para WiFi
-
-// =============== VARIÁVEIS GLOBAIS ===============
-// Variáveis para armazenar os dados dos sensores
 
 // Variáveis para controle de tempo de leitura dos sensores
 // =============== VARIÁVEIS DE CONTROLE DE TEMPO ===============
