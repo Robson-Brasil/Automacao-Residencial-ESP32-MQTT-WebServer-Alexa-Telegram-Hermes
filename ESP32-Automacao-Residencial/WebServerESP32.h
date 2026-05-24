@@ -12,6 +12,7 @@
 void notifyTelegramStateChange(const String& source, int relayNum, bool relayState);
 void saveRelayState(int relayNum, bool state);
 void publishRelayStates();
+void logRelayAction(const char* source, int relayNum, bool state);
 extern bool mqttConnected;
 
 // DASHBOARD MINIFICADO (Espaços e comentários removidos)
@@ -75,6 +76,7 @@ void handleApiRelay() {
         if (idx >= 0 && idx < 8) {
             const int relayPins[8] = {RelayPin1, RelayPin2, RelayPin3, RelayPin4, RelayPin5, RelayPin6, RelayPin7, RelayPin8};
             digitalWrite(relayPins[idx], bState ? LOW : HIGH);
+            logRelayAction("Dashboard", idx, bState);
 
             bool* relayStates[] = {&RelayState1, &RelayState2, &RelayState3, &RelayState4,
                                  &RelayState5, &RelayState6, &RelayState7, &RelayState8};
@@ -102,6 +104,7 @@ void handleApiAll() {
         for (int i = 0; i < 8; i++) {
             digitalWrite(relayPins[i], bState ? LOW : HIGH);
         }
+        logRelayAction("Dashboard", -1, bState);
 
         bool* relayStates[] = {&RelayState1, &RelayState2, &RelayState3, &RelayState4,
                              &RelayState5, &RelayState6, &RelayState7, &RelayState8};

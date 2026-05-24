@@ -98,6 +98,54 @@ void saveMQTTConfigCallback() {
 }
 
 // ============================================================
+// DHCP Capture — salva IP automático no NVS
+// ============================================================
+IPAddress staticIP(0, 0, 0, 0);
+IPAddress staticGateway(0, 0, 0, 0);
+IPAddress staticSubnet(255, 255, 255, 0);
+IPAddress staticDNS(8, 8, 8, 8);
+bool staticIPConfigured = false;
+
+void saveStaticIPConfig() {
+    if (WiFi.status() != WL_CONNECTED) return;
+    IPAddress ip = WiFi.localIP();
+    IPAddress gw = WiFi.gatewayIP();
+    IPAddress sn = WiFi.subnetMask();
+    IPAddress dns = WiFi.dnsIP(0);
+    Preferences prefs;
+    prefs.begin("wifi-ip", false);
+    prefs.putBytes("ip", &ip, 4);
+    prefs.putBytes("gw", &gw, 4);
+    prefs.putBytes("sn", &sn, 4);
+    prefs.putBytes("dns", &dns, 4);
+    prefs.end();
+    Serial.printf("[DHCP] IP fixo salvo: %s\n", ip.toString().c_str());
+}
+
+void loadStaticIPConfig() {
+    Preferences prefs;
+    prefs.begin("wifi-ip", true);
+    size_t len = prefs.getBytes("ip", &staticIP, 4);
+    if (len == 4 && staticIP[0] != 0) {
+        prefs.getBytes("gw", &staticGateway, 4);
+        prefs.getBytes("sn", &staticSubnet, 4);
+        prefs.getBytes("dns", &staticDNS, 4);
+        staticIPConfigured = true;
+        Serial.printf("[DHCP] IP fixo carregado: %s\n", staticIP.toString().c_str());
+    }
+    prefs.end();
+}
+
+void clearStaticIPConfig() {
+    Preferences prefs;
+    prefs.begin("wifi-ip", false);
+    prefs.clear();
+    prefs.end();
+    staticIPConfigured = false;
+    Serial.println("[DHCP] IP fixo removido do NVS");
+}
+
+// ============================================================
 // Setup do WiFiManager (parâmetros adicionados apenas 1 vez)
 // ============================================================
 bool WiFiManagerSetup() {
@@ -115,6 +163,12 @@ bool WiFiManagerSetup() {
     wm.setConnectTimeout(30);
     wm.setDebugOutput(false);
 
+    loadStaticIPConfig();
+    if (staticIPConfigured) {
+        WiFi.config(staticIP, staticGateway, staticSubnet, staticDNS);
+        Serial.printf("[WM] IP fixo aplicado: %s\n", staticIP.toString().c_str());
+    }
+
     Serial.println("[WM] Iniciando portal WiFiManager...");
 
     bool res = wm.autoConnect(globalHostname);
@@ -128,24 +182,24 @@ bool WiFiManagerSetup() {
     Serial.print("[WM] IP: ");
     Serial.println(WiFi.localIP());
 
+    saveStaticIPConfig();
+
     return true;
 }
 
 void setupMDNS() {
+    static bool mdnsStarted = false;
+    if (mdnsStarted) return;
     if (WiFi.status() != WL_CONNECTED) {
         Serial.println("[mDNS] WiFi nao conectado, abortando...");
         return;
     }
 
-    MDNS.end();
     WiFi.setHostname(globalHostname);
 
-    delay(500);
-    Serial.println("[mDNS] Iniciando...");
-
     if (MDNS.begin(globalHostname)) {
+        mdnsStarted = true;
         Serial.printf("[mDNS] Respondendo em: http://%s.local:8181\n", globalHostname);
-
         MDNS.addService("http", "tcp", 8181);
     } else {
         Serial.println("[mDNS] FALHA!");

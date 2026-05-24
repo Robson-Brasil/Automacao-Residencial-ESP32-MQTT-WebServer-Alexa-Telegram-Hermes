@@ -21,6 +21,7 @@
 extern void saveRelayState(int relayNum, bool state);
 extern void publishRelayStates();
 extern void notifyTelegramStateChange(const String& source, int relayNum, bool relayState);
+extern void logRelayAction(const char* source, int relayNum, bool state);
 
 // ── Credenciais SinricPro (definidas no .ino principal) ────────────────────
 extern const char* SINRICPRO_APP_KEY;
@@ -57,6 +58,7 @@ bool onPowerState(const String &deviceId, bool &state) {
     if (RelayState2 != state) {
       RelayState2 = state;
       digitalWrite(RelayPin2, !RelayState2); // active-low
+      logRelayAction("Alexa/Google", 1, state);
       saveRelayState(2, RelayState2);
       pendingMqttUpdate = true;
       notifyTelegramStateChange("Alexa/Google", 1, state); // index 1 = Bancada
@@ -70,6 +72,7 @@ bool onPowerState(const String &deviceId, bool &state) {
     if (RelayState8 != state) {
       RelayState8 = state;
       digitalWrite(RelayPin8, !RelayState8); // active-low
+      logRelayAction("Alexa/Google", 7, state);
       saveRelayState(8, RelayState8);
       pendingMqttUpdate = true;
       notifyTelegramStateChange("Alexa/Google", 7, state); // index 7 = Refletor/Kinha

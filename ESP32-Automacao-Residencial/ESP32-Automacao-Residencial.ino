@@ -49,6 +49,9 @@
 // =============== BIBLIOTECAS ===============
 #include <Preferences.h>
 
+// Protótipo global para logging de acionamento de relés
+void logRelayAction(const char* source, int relayNum, bool state);
+
 #include "Bibliotecas.h"
 #include "ConfigMQTT.h"
 #include "ConstantesTempo.h"
@@ -284,6 +287,7 @@ void mqttCallback(char *topic, byte *payload, unsigned int length) {
       for (int i = 0; i < 8; i++) {
         digitalWrite(pins[i], !Todos);
       }
+      logRelayAction("MQTT", -1, Todos);
 
       RelayState1 = RelayState2 = RelayState3 = RelayState4 = RelayState5 =
           RelayState6 = RelayState7 = RelayState8 = Todos;
@@ -296,7 +300,8 @@ void mqttCallback(char *topic, byte *payload, unsigned int length) {
   } else if (strcmp(topic, sub1) == 0) {
     if (RelayState1 != newState) {
       RelayState1 = newState;
-      digitalWrite(RelayPin1, !RelayState1);
+digitalWrite(RelayPin1, !RelayState1);
+      logRelayAction("MQTT", 0, RelayState1);
       saveRelayState(1, RelayState1);
       notifyTelegramStateChange("MQTT", 0, newState);
       pendingSinricProUpdate = true;
@@ -304,7 +309,8 @@ void mqttCallback(char *topic, byte *payload, unsigned int length) {
   } else if (strcmp(topic, sub2) == 0) {
     if (RelayState2 != newState) {
       RelayState2 = newState;
-      digitalWrite(RelayPin2, !RelayState2);
+digitalWrite(RelayPin2, !RelayState2);
+      logRelayAction("MQTT", 1, RelayState2);
       saveRelayState(2, RelayState2);
       notifyTelegramStateChange("MQTT", 1, newState);
       pendingSinricProUpdate = true;
@@ -312,7 +318,8 @@ void mqttCallback(char *topic, byte *payload, unsigned int length) {
   } else if (strcmp(topic, sub3) == 0) {
     if (RelayState3 != newState) {
       RelayState3 = newState;
-      digitalWrite(RelayPin3, !RelayState3);
+digitalWrite(RelayPin3, !RelayState3);
+      logRelayAction("MQTT", 2, RelayState3);
       saveRelayState(3, RelayState3);
       notifyTelegramStateChange("MQTT", 2, newState);
       pendingSinricProUpdate = true;
@@ -320,7 +327,8 @@ void mqttCallback(char *topic, byte *payload, unsigned int length) {
   } else if (strcmp(topic, sub4) == 0) {
     if (RelayState4 != newState) {
       RelayState4 = newState;
-      digitalWrite(RelayPin4, !RelayState4);
+digitalWrite(RelayPin4, !RelayState4);
+      logRelayAction("MQTT", 3, RelayState4);
       saveRelayState(4, RelayState4);
       notifyTelegramStateChange("MQTT", 3, newState);
       pendingSinricProUpdate = true;
@@ -328,7 +336,8 @@ void mqttCallback(char *topic, byte *payload, unsigned int length) {
   } else if (strcmp(topic, sub5) == 0) {
     if (RelayState5 != newState) {
       RelayState5 = newState;
-      digitalWrite(RelayPin5, !RelayState5);
+digitalWrite(RelayPin5, !RelayState5);
+      logRelayAction("MQTT", 4, RelayState5);
       saveRelayState(5, RelayState5);
       notifyTelegramStateChange("MQTT", 4, newState);
       pendingSinricProUpdate = true;
@@ -336,7 +345,8 @@ void mqttCallback(char *topic, byte *payload, unsigned int length) {
   } else if (strcmp(topic, sub6) == 0) {
     if (RelayState6 != newState) {
       RelayState6 = newState;
-      digitalWrite(RelayPin6, !RelayState6);
+digitalWrite(RelayPin6, !RelayState6);
+      logRelayAction("MQTT", 5, RelayState6);
       saveRelayState(6, RelayState6);
       notifyTelegramStateChange("MQTT", 5, newState);
       pendingSinricProUpdate = true;
@@ -344,7 +354,8 @@ void mqttCallback(char *topic, byte *payload, unsigned int length) {
   } else if (strcmp(topic, sub7) == 0) {
     if (RelayState7 != newState) {
       RelayState7 = newState;
-      digitalWrite(RelayPin7, !RelayState7);
+digitalWrite(RelayPin7, !RelayState7);
+      logRelayAction("MQTT", 6, RelayState7);
       saveRelayState(7, RelayState7);
       notifyTelegramStateChange("MQTT", 6, newState);
       pendingSinricProUpdate = true;
@@ -352,7 +363,8 @@ void mqttCallback(char *topic, byte *payload, unsigned int length) {
   } else if (strcmp(topic, sub8) == 0) {
     if (RelayState8 != newState) {
       RelayState8 = newState;
-      digitalWrite(RelayPin8, !RelayState8);
+digitalWrite(RelayPin8, !RelayState8);
+      logRelayAction("MQTT", 7, RelayState8);
       saveRelayState(8, RelayState8);
       notifyTelegramStateChange("MQTT", 7, newState);
       pendingSinricProUpdate = true;
@@ -392,6 +404,7 @@ void mqttCallback(char *topic, byte *payload, unsigned int length) {
       RelayState5 = RelayState6 = RelayState7 = RelayState8 = true;
       const int pins[] = {RelayPin1, RelayPin2, RelayPin3, RelayPin4, RelayPin5, RelayPin6, RelayPin7, RelayPin8};
       for (int i = 0; i < 8; i++) digitalWrite(pins[i], LOW);
+      logRelayAction("Hermes", -1, true);
       for (int r = 1; r <= 8; r++) saveRelayState(r, true);
       notifyTelegramStateChange("HERMES", -1, true);
       pendingSinricProUpdate = true;
@@ -403,6 +416,7 @@ void mqttCallback(char *topic, byte *payload, unsigned int length) {
       RelayState5 = RelayState6 = RelayState7 = RelayState8 = false;
       const int pins[] = {RelayPin1, RelayPin2, RelayPin3, RelayPin4, RelayPin5, RelayPin6, RelayPin7, RelayPin8};
       for (int i = 0; i < 8; i++) digitalWrite(pins[i], HIGH);
+      logRelayAction("Hermes", -1, false);
       for (int r = 1; r <= 8; r++) saveRelayState(r, false);
       notifyTelegramStateChange("HERMES", -1, false);
       pendingSinricProUpdate = true;
@@ -410,28 +424,28 @@ void mqttCallback(char *topic, byte *payload, unsigned int length) {
     // LIGAR individual
     else if (cmd.startsWith("LIGAR:")) {
       String item = cmd.substring(6); item.trim();
-      if (item == "VARANDA") { RelayState1 = true; digitalWrite(RelayPin1, LOW); saveRelayState(1, true); notifyTelegramStateChange("HERMES", 0, true); }
-      else if (item == "BANCADA") { RelayState2 = true; digitalWrite(RelayPin2, LOW); saveRelayState(2, true); notifyTelegramStateChange("HERMES", 1, true); }
-      else if (item == "SALA") { RelayState3 = true; digitalWrite(RelayPin3, LOW); saveRelayState(3, true); notifyTelegramStateChange("HERMES", 2, true); }
-      else if (item == "COZINHA") { RelayState4 = true; digitalWrite(RelayPin4, LOW); saveRelayState(4, true); notifyTelegramStateChange("HERMES", 3, true); }
-      else if (item == "QUINTAL") { RelayState5 = true; digitalWrite(RelayPin5, LOW); saveRelayState(5, true); notifyTelegramStateChange("HERMES", 4, true); }
-      else if (item == "VAL" || item == "VARÃO") { RelayState6 = true; digitalWrite(RelayPin6, LOW); saveRelayState(6, true); notifyTelegramStateChange("HERMES", 5, true); }
-      else if (item == "ROBSON") { RelayState7 = true; digitalWrite(RelayPin7, LOW); saveRelayState(7, true); notifyTelegramStateChange("HERMES", 6, true); }
-      else if (item == "KINHA") { RelayState8 = true; digitalWrite(RelayPin8, LOW); saveRelayState(8, true); notifyTelegramStateChange("HERMES", 7, true); }
+if (item == "VARANDA") { RelayState1 = true; digitalWrite(RelayPin1, LOW); logRelayAction("Hermes",0,true); saveRelayState(1, true); notifyTelegramStateChange("HERMES", 0, true); }
+      else if (item == "BANCADA") { RelayState2 = true; digitalWrite(RelayPin2, LOW); logRelayAction("Hermes",1,true); saveRelayState(2, true); notifyTelegramStateChange("HERMES", 1, true); }
+      else if (item == "SALA") { RelayState3 = true; digitalWrite(RelayPin3, LOW); logRelayAction("Hermes",2,true); saveRelayState(3, true); notifyTelegramStateChange("HERMES", 2, true); }
+      else if (item == "COZINHA") { RelayState4 = true; digitalWrite(RelayPin4, LOW); logRelayAction("Hermes",3,true); saveRelayState(4, true); notifyTelegramStateChange("HERMES", 3, true); }
+      else if (item == "QUINTAL") { RelayState5 = true; digitalWrite(RelayPin5, LOW); logRelayAction("Hermes",4,true); saveRelayState(5, true); notifyTelegramStateChange("HERMES", 4, true); }
+      else if (item == "VAL" || item == "VARÃO") { RelayState6 = true; digitalWrite(RelayPin6, LOW); logRelayAction("Hermes",5,true); saveRelayState(6, true); notifyTelegramStateChange("HERMES", 5, true); }
+      else if (item == "ROBSON") { RelayState7 = true; digitalWrite(RelayPin7, LOW); logRelayAction("Hermes",6,true); saveRelayState(7, true); notifyTelegramStateChange("HERMES", 6, true); }
+      else if (item == "KINHA") { RelayState8 = true; digitalWrite(RelayPin8, LOW); logRelayAction("Hermes",7,true); saveRelayState(8, true); notifyTelegramStateChange("HERMES", 7, true); }
       pendingSinricProUpdate = true;
       Todos = RelayState1 && RelayState2 && RelayState3 && RelayState4 && RelayState5 && RelayState6 && RelayState7 && RelayState8;
     }
     // DESLIGAR individual
     else if (cmd.startsWith("DESLIGAR:")) {
       String item = cmd.substring(9); item.trim();
-      if (item == "VARANDA") { RelayState1 = false; digitalWrite(RelayPin1, HIGH); saveRelayState(1, false); notifyTelegramStateChange("HERMES", 0, false); }
-      else if (item == "BANCADA") { RelayState2 = false; digitalWrite(RelayPin2, HIGH); saveRelayState(2, false); notifyTelegramStateChange("HERMES", 1, false); }
-      else if (item == "SALA") { RelayState3 = false; digitalWrite(RelayPin3, HIGH); saveRelayState(3, false); notifyTelegramStateChange("HERMES", 2, false); }
-      else if (item == "COZINHA") { RelayState4 = false; digitalWrite(RelayPin4, HIGH); saveRelayState(4, false); notifyTelegramStateChange("HERMES", 3, false); }
-      else if (item == "QUINTAL") { RelayState5 = false; digitalWrite(RelayPin5, HIGH); saveRelayState(5, false); notifyTelegramStateChange("HERMES", 4, false); }
-      else if (item == "VAL" || item == "VARÃO") { RelayState6 = false; digitalWrite(RelayPin6, HIGH); saveRelayState(6, false); notifyTelegramStateChange("HERMES", 5, false); }
-      else if (item == "ROBSON") { RelayState7 = false; digitalWrite(RelayPin7, HIGH); saveRelayState(7, false); notifyTelegramStateChange("HERMES", 6, false); }
-      else if (item == "KINHA") { RelayState8 = false; digitalWrite(RelayPin8, HIGH); saveRelayState(8, false); notifyTelegramStateChange("HERMES", 7, false); }
+if (item == "VARANDA") { RelayState1 = false; digitalWrite(RelayPin1, HIGH); logRelayAction("Hermes",0,false); saveRelayState(1, false); notifyTelegramStateChange("HERMES", 0, false); }
+      else if (item == "BANCADA") { RelayState2 = false; digitalWrite(RelayPin2, HIGH); logRelayAction("Hermes",1,false); saveRelayState(2, false); notifyTelegramStateChange("HERMES", 1, false); }
+      else if (item == "SALA") { RelayState3 = false; digitalWrite(RelayPin3, HIGH); logRelayAction("Hermes",2,false); saveRelayState(3, false); notifyTelegramStateChange("HERMES", 2, false); }
+      else if (item == "COZINHA") { RelayState4 = false; digitalWrite(RelayPin4, HIGH); logRelayAction("Hermes",3,false); saveRelayState(4, false); notifyTelegramStateChange("HERMES", 3, false); }
+      else if (item == "QUINTAL") { RelayState5 = false; digitalWrite(RelayPin5, HIGH); logRelayAction("Hermes",4,false); saveRelayState(5, false); notifyTelegramStateChange("HERMES", 4, false); }
+      else if (item == "VAL" || item == "VARÃO") { RelayState6 = false; digitalWrite(RelayPin6, HIGH); logRelayAction("Hermes",5,false); saveRelayState(6, false); notifyTelegramStateChange("HERMES", 5, false); }
+      else if (item == "ROBSON") { RelayState7 = false; digitalWrite(RelayPin7, HIGH); logRelayAction("Hermes",6,false); saveRelayState(7, false); notifyTelegramStateChange("HERMES", 6, false); }
+      else if (item == "KINHA") { RelayState8 = false; digitalWrite(RelayPin8, HIGH); logRelayAction("Hermes",7,false); saveRelayState(8, false); notifyTelegramStateChange("HERMES", 7, false); }
       pendingSinricProUpdate = true;
       Todos = RelayState1 && RelayState2 && RelayState3 && RelayState4 && RelayState5 && RelayState6 && RelayState7 && RelayState8;
     }
@@ -523,6 +537,10 @@ void readSensors() {
         // Publica altitude real (acima da referência pressaoNivelMar)
         dtostrf(altitudeReal, 2, 2, buffer);
 
+        // Lê a temperatura do BMP180
+        float tempBMP = bmp.readTemperature();
+        temperature = tempBMP; // atualiza global
+
         // Calcula e publica altitude total (acima do nível do mar)
         altitude = altitudeReal + altitudeNivelMar;
         altitudeTotal = altitude; // Sincroniza variável global adicional
@@ -531,12 +549,11 @@ void readSensors() {
         // Sinaliza para o Core 0 publicar os dados
         pendingSensorMqttUpdate = true;
 
-        // Lê a temperatura do BMP180
-        float tempBMP = bmp.readTemperature();
-        temperature = tempBMP; // atualiza global
-
         // Debug no serial
         Serial.println("\n=== Leitura BMP180 ===");
+        Serial.print("Temperatura: ");
+        Serial.print(temperature);
+        Serial.println(" °C");
         Serial.print("Pressão: ");
         Serial.print(pressure / 100.0);
         Serial.println(" hPa");
@@ -624,6 +641,14 @@ void loadAllRelayStates() {
 }
 
 void applyRelayStatesToPins() {
+  logRelayAction("Sistema", 0, RelayState1);
+  logRelayAction("Sistema", 1, RelayState2);
+  logRelayAction("Sistema", 2, RelayState3);
+  logRelayAction("Sistema", 3, RelayState4);
+  logRelayAction("Sistema", 4, RelayState5);
+  logRelayAction("Sistema", 5, RelayState6);
+  logRelayAction("Sistema", 6, RelayState7);
+  logRelayAction("Sistema", 7, RelayState8);
   digitalWrite(RelayPin1, !RelayState1);
   digitalWrite(RelayPin2, !RelayState2);
   digitalWrite(RelayPin3, !RelayState3);
@@ -632,6 +657,20 @@ void applyRelayStatesToPins() {
   digitalWrite(RelayPin6, !RelayState6);
   digitalWrite(RelayPin7, !RelayState7);
   digitalWrite(RelayPin8, !RelayState8);
+}
+
+// =============== FUNÇÃO DE LOG ===============
+void logRelayAction(const char* source, int relayNum, bool state) {
+  Serial.print('[');
+  Serial.print(source);
+  Serial.print("] ");
+  if (relayNum >= 0 && relayNum < 8) {
+    Serial.print(relayNames[relayNum]);
+  } else {
+    Serial.print("TODOS");
+  }
+  Serial.print(": ");
+  Serial.println(state ? "LIGADO" : "DESLIGADO");
 }
 
 // =============== PROTÓTIPOS DE FUNÇÕES ===============
@@ -651,7 +690,9 @@ void setup() {
   // 1. Inicialização básica e hardware
   Serial.begin(115200);
   delay(100);
-  Serial.println("\n[SISTEMA] Iniciando hardware...");
+  Serial.println("\n[SISTEMA] " PROJETO_NOME " v" PROJETO_VERSAO);
+  Serial.println("[SISTEMA] Autor: " PROJETO_AUTOR);
+  Serial.println("[SISTEMA] Data: " PROJETO_DATA);
 
   // Carrega configurações MQTT salvas no NVS (antes do WiFiManager)
   loadMQTTConfig();
@@ -743,6 +784,7 @@ void TaskConexoes(void *pvParameters) {
       delay(3000);
       if (digitalRead(configButton) == LOW) {
         Serial.println("[BOTAO] Abrindo portal WiFiManager...");
+        clearStaticIPConfig();
         WiFi.disconnect();
         wm.startConfigPortal(globalHostname);
         setupMDNS();
