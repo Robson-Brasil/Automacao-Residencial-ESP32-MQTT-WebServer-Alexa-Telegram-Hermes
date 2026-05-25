@@ -32,20 +32,6 @@
  * Sensor Library.
  ******************************************************************************************************************************************/
 
-// ========================================================================================
-// MAPEAMENTO DE HARDWARE (GPIOs)
-// ========================================================================================
-// Nota: Os relés padrão de 5V costumam ativar em nível lógico BAIXO
-// (active-low).
-#define RelayPin1 26 // D26 Ligados ao Nora/MQTT
-#define RelayPin2 13 // D13 Ligados ao SirincPro/Nora/MQTT
-#define RelayPin3 14 // D14 Ligados ao Nora/MQTT
-#define RelayPin4 32 // D32 Ligados ao Nora/MQTT
-#define RelayPin5 16 // D16 Ligados ao Nora/MQTT
-#define RelayPin6 17 // D17 Ligados ao MQTT
-#define RelayPin7 18 // D18 Ligados ao MQTT
-#define RelayPin8 19 // D19 Ligados ao SirincPro/MQTT
-
 // =============== BIBLIOTECAS ===============
 #include <Preferences.h>
 
@@ -70,21 +56,6 @@ void logRelayAction(const char* source, int relayNum, bool state);
 #include "HomeAssistantDiscovery.h"
 #include <WiFi.h>
 #include "WiFiManagerConfig.h"
-
-// LED indicador de WiFi
-#define wifiLed 2 // D2
-
-// Botão para forçar portal WiFiManager (GPIO0 = botão BOOT na maioria das placas)
-#define configButton 0
-
-// Sensor DHT
-#define DHTPIN 25 // D25
-#define DHTTYPE                                                                \
-  DHT22 // DHT22 (AM2302) - Altere para DHT11 se estiver usando esse modelo
-
-// Pinos I2C para BMP180
-#define I2C_SDA 21 // Pino SDA
-#define I2C_SCL 22 // Pino SCL
 
 // Estados dos relés
 
@@ -121,21 +92,7 @@ const float pressaoNivelMar =
 const float altitudeNivelMar = 92.0; // Altitude de referência do seu local
 
 // Configurações do MQTT - definidas em LoginsSenhas.h (via WiFiManager)
-
-// Configurações do Telegram
-const char *BOT_TOKEN = "8444037202:AAGB4P8wjPtjiGzlBHInCYkLUqTa1OUzgHI";
-const char *CHAT_ID = "5270818980";
-
-// Configurações do SinricPro (Alexa / Google Home)
-const char *SINRICPRO_APP_KEY = "4914a0d0-327e-4815-8128-822b7a80713d";
-const char *SINRICPRO_APP_SECRET =
-    "b73f409a-fcc5-4c60-8cf4-d86d9b4e2bae-e7fc2fe6-1b4a-4b71-aa38-de61ad019107";
-const char *SINRICPRO_DEVICE_BANCADA =
-    "69fd1b19baa50bf9bf2e4b8e"; // Bancada - RelayPin2 GPIO 13
-const char *SINRICPRO_DEVICE_REFLETOR =
-    "69fd1bc0977a0619a739f409"; // Refletor - RelayPin8 GPIO 19
-const char *SINRICPRO_DEVICE_TEMP_SENSOR =
-    "69fd1c4dbaa50bf9bf2e4c2a"; // Sensor de Temperatura DHT22
+// Telegram e SinricPro - buffers carregados do NVS com fallback em LoginsSenhas.h
 
 /**
  * @brief Tenta conectar ao WiFi se a conexão for perdida.
@@ -525,24 +482,24 @@ void readSensors() {
       // Pressão atual
       dtostrf(pressure / 100.0, 2, 2, buffer);
 
-      // Pressão ao nível do mar
-      float seaLevelPressure = bmp.readSealevelPressure(pressaoNivelMar);
-      if (seaLevelPressure != 0) {
-        dtostrf(seaLevelPressure / 100.0, 2, 2, buffer);
+      // Pressão ao nível do mar (cache para publishSensorData)
+      seaLevelPressureCache = bmp.readSealevelPressure(pressaoNivelMar);
+      if (seaLevelPressureCache != 0) {
+        dtostrf(seaLevelPressureCache / 100.0, 2, 2, buffer);
       }
 
-      // Altitude
-      float altitudeReal = bmp.readAltitude(pressaoNivelMar * 100);
-      if (!isnan(altitudeReal)) {
+      // Altitude (cache para publishSensorData)
+      altitudeRealCache = bmp.readAltitude(pressaoNivelMar * 100);
+      if (!isnan(altitudeRealCache)) {
         // Publica altitude real (acima da referência pressaoNivelMar)
-        dtostrf(altitudeReal, 2, 2, buffer);
+        dtostrf(altitudeRealCache, 2, 2, buffer);
 
         // Lê a temperatura do BMP180
         float tempBMP = bmp.readTemperature();
         temperature = tempBMP; // atualiza global
 
         // Calcula e publica altitude total (acima do nível do mar)
-        altitude = altitudeReal + altitudeNivelMar;
+        altitude = altitudeRealCache + altitudeNivelMar;
         altitudeTotal = altitude; // Sincroniza variável global adicional
         dtostrf(altitude, 2, 2, buffer);
 
@@ -558,10 +515,10 @@ void readSensors() {
         Serial.print(pressure / 100.0);
         Serial.println(" hPa");
         Serial.print("Pressão nível do mar: ");
-        Serial.print(seaLevelPressure / 100.0);
+        Serial.print(seaLevelPressureCache / 100.0);
         Serial.println(" hPa");
         Serial.print("Altitude real: ");
-        Serial.print(altitudeReal);
+        Serial.print(altitudeRealCache);
         Serial.println(" m");
         Serial.print("Altitude total: ");
         Serial.print(altitude);
@@ -588,14 +545,12 @@ void publishSensorData() {
   dtostrf(pressure / 100.0, 6, 2, tempStr);
   mqttClient.publish(pub13, tempStr, true); // Pressão real BMP180
 
-  // Pressão ao nível do mar (correta)
-  float seaLevelPressure = bmp.readSealevelPressure(pressaoNivelMar);
-  dtostrf(seaLevelPressure / 100.0, 6, 2, tempStr);
+  // Pressão ao nível do mar (cache, evita I2C duplicado)
+  dtostrf(seaLevelPressureCache / 100.0, 6, 2, tempStr);
   mqttClient.publish(pub14, tempStr, true); // Pressão ao nível do mar BMP180
 
-  // Altitude real
-  float altitudeReal = bmp.readAltitude(pressaoNivelMar * 100);
-  dtostrf(altitudeReal, 6, 2, tempStr);
+  // Altitude real (cache, evita I2C duplicado)
+  dtostrf(altitudeRealCache, 6, 2, tempStr);
   mqttClient.publish(pub15, tempStr, true); // Altitude real BMP180
 
   // Altitude em relação ao nível do mar
@@ -673,18 +628,6 @@ void logRelayAction(const char* source, int relayNum, bool state) {
   Serial.println(state ? "LIGADO" : "DESLIGADO");
 }
 
-// =============== PROTÓTIPOS DE FUNÇÕES ===============
-void setupWiFi();
-void setupMQTT();
-void handleMQTT();
-void reconnectMQTT();
-void checkWiFiConnection();
-void readDHTSensor();
-void readBMP180Sensor();
-void readSensors();
-void publishSensorData();
-void publishRelayStates();
-
 // =============== INÍCIO ===============
 void setup() {
   // 1. Inicialização básica e hardware
@@ -694,8 +637,12 @@ void setup() {
   Serial.println("[SISTEMA] Autor: " PROJETO_AUTOR);
   Serial.println("[SISTEMA] Data: " PROJETO_DATA);
 
-  // Carrega configurações MQTT salvas no NVS (antes do WiFiManager)
+  // Migração NVS: unifica namespaces legados → "app" (antes de qualquer leitura)
+  migrateNVS();
+
+  // Carrega configurações do NVS (namespace unificado "app")
   loadMQTTConfig();
+  loadCredentials();
 
   pinMode(RelayPin1, OUTPUT);
   pinMode(RelayPin2, OUTPUT);
@@ -713,7 +660,7 @@ void setup() {
   telegramQueue = xQueueCreate(10, sizeof(TelegramNotification));
 
   // 3. Persistência e Estados Iniciais
-  preferences.begin("relay states", false);
+  preferences.begin("app", false);
   bool needsReset = preferences.getBool("needsReset", true);
   if (needsReset) {
     for (int i = 1; i <= 8; i++) {

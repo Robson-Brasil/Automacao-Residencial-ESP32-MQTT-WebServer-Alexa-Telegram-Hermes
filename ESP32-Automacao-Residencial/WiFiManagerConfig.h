@@ -24,17 +24,91 @@ WiFiManagerParameter custom_mqtt_pass("mqtt_pass", "Senha MQTT", mqtt_pass, 32, 
 WiFiManagerParameter custom_mqtt_client("mqtt_client", "Client ID", mqtt_client, 24);
 
 // ============================================================
+// Migração: unifica namespaces legados em "app"
+// ============================================================
+void migrateNVS() {
+    Preferences app;
+    app.begin("app", false);
+    if (app.getBool("_migrated", false)) { app.end(); return; }
+
+    Serial.println("[NVS] Migrando dados legados para namespace 'app'...");
+
+    Preferences old;
+
+    // --- "relay states" → "app" (mesmas chaves) ---
+    old.begin("relay states", true);
+    for (int i = 1; i <= 8; i++) {
+        String k = "RelayState" + String(i);
+        bool v1 = old.getBool(k.c_str(), true);
+        bool v2 = old.getBool(k.c_str(), false);
+        if (v1 == v2) app.putBool(k.c_str(), v1);
+    }
+    {   bool v1 = old.getBool("needsReset", true);
+        bool v2 = old.getBool("needsReset", false);
+        if (v1 == v2) app.putBool("needsReset", v1);
+    }
+    for (int i = 1; i <= 8; i++) {
+        String nk = "RelayName" + String(i);
+        String nv = old.getString(nk.c_str(), "");
+        if (nv.length() > 0) app.putString(nk.c_str(), nv);
+    }
+    old.end();
+
+    // --- "mqtt_config" → "app" (chaves prefixadas com mqtt_) ---
+    old.begin("mqtt_config", true);
+    auto cp = [&](const char* k) {
+        String v = old.getString(k, "");
+        if (v.length()) {
+            String nk = String("mqtt_") + k;
+            app.putString(nk.c_str(), v);
+        }
+    };
+    cp("broker"); cp("port"); cp("user"); cp("pass"); cp("client");
+    old.end();
+
+    // --- "wifi-ip" → "app" (chaves prefixadas com static_) ---
+    old.begin("wifi-ip", true);
+    IPAddress ip4, gw4, sn4, dns4;
+    if (old.getBytes("ip", &ip4, 4) == 4 && ip4[0] != 0) {
+        app.putBytes("static_ip", &ip4, 4);
+        old.getBytes("gw", &gw4, 4); app.putBytes("static_gw", &gw4, 4);
+        old.getBytes("sn", &sn4, 4); app.putBytes("static_sn", &sn4, 4);
+        old.getBytes("dns", &dns4, 4); app.putBytes("static_dns", &dns4, 4);
+    }
+    old.end();
+
+    // --- "credenciais" → "app" (mesmas chaves) ---
+    old.begin("credenciais", true);
+    auto cr = [&](const char* k) {
+        String v = old.getString(k, "");
+        if (v.length()) app.putString(k, v);
+    };
+    cr("telegram_token"); cr("chat_id"); cr("sinric_key");
+    cr("sinric_secret"); cr("sinric_bancada"); cr("sinric_refletor"); cr("sinric_temp");
+    old.end();
+
+    app.putBool("_migrated", true);
+    app.end();
+
+    // Apaga namespaces legados
+    auto eraseNS = [](const char* ns) { Preferences p; p.begin(ns, false); p.clear(); p.end(); };
+    eraseNS("relay states"); eraseNS("mqtt_config"); eraseNS("wifi-ip"); eraseNS("credenciais");
+
+    Serial.println("[NVS] Migracao concluida. Namespaces legados apagados.");
+}
+
+// ============================================================
 // Persistência NVS (Preferences)
 // ============================================================
 void loadMQTTConfig() {
     Preferences prefs;
-    prefs.begin("mqtt_config", true); // readOnly
+    prefs.begin("app", true);
 
-    prefs.getString("broker", mqtt_broker, sizeof(mqtt_broker));
-    prefs.getString("port", mqtt_port, sizeof(mqtt_port));
-    prefs.getString("user", mqtt_user, sizeof(mqtt_user));
-    prefs.getString("pass", mqtt_pass, sizeof(mqtt_pass));
-    prefs.getString("client", mqtt_client, sizeof(mqtt_client));
+    prefs.getString("mqtt_broker", mqtt_broker, sizeof(mqtt_broker));
+    prefs.getString("mqtt_port", mqtt_port, sizeof(mqtt_port));
+    prefs.getString("mqtt_user", mqtt_user, sizeof(mqtt_user));
+    prefs.getString("mqtt_pass", mqtt_pass, sizeof(mqtt_pass));
+    prefs.getString("mqtt_client", mqtt_client, sizeof(mqtt_client));
 
     prefs.end();
 
@@ -47,15 +121,62 @@ void loadMQTTConfig() {
     Serial.print("[NVS] Client: "); Serial.println(mqtt_client);
 }
 
+void saveCredentials() {
+    Preferences prefs;
+    prefs.begin("app", false);
+
+    prefs.putString("telegram_token", telegram_token);
+    prefs.putString("chat_id", telegram_chatid);
+    prefs.putString("sinric_key", sinric_app_key);
+    prefs.putString("sinric_secret", sinric_app_secret);
+    prefs.putString("sinric_bancada", sinric_device_bancada);
+    prefs.putString("sinric_refletor", sinric_device_refletor);
+    prefs.putString("sinric_temp", sinric_device_temp);
+
+    prefs.end();
+    Serial.println("[NVS] Credenciais salvas com sucesso!");
+}
+
+void loadCredentials() {
+    Preferences prefs;
+    prefs.begin("app", true);
+
+    String val;
+
+    val = prefs.getString("telegram_token", "");
+    if (val.length() > 0) val.toCharArray(telegram_token, sizeof(telegram_token));
+
+    val = prefs.getString("chat_id", "");
+    if (val.length() > 0) val.toCharArray(telegram_chatid, sizeof(telegram_chatid));
+
+    val = prefs.getString("sinric_key", "");
+    if (val.length() > 0) val.toCharArray(sinric_app_key, sizeof(sinric_app_key));
+
+    val = prefs.getString("sinric_secret", "");
+    if (val.length() > 0) val.toCharArray(sinric_app_secret, sizeof(sinric_app_secret));
+
+    val = prefs.getString("sinric_bancada", "");
+    if (val.length() > 0) val.toCharArray(sinric_device_bancada, sizeof(sinric_device_bancada));
+
+    val = prefs.getString("sinric_refletor", "");
+    if (val.length() > 0) val.toCharArray(sinric_device_refletor, sizeof(sinric_device_refletor));
+
+    val = prefs.getString("sinric_temp", "");
+    if (val.length() > 0) val.toCharArray(sinric_device_temp, sizeof(sinric_device_temp));
+
+    prefs.end();
+    Serial.println("[NVS] Credenciais carregadas.");
+}
+
 void saveMQTTConfigToNVS() {
     Preferences prefs;
-    prefs.begin("mqtt_config", false); // write mode
+    prefs.begin("app", false);
 
-    prefs.putString("broker", mqtt_broker);
-    prefs.putString("port", mqtt_port);
-    prefs.putString("user", mqtt_user);
-    prefs.putString("pass", mqtt_pass);
-    prefs.putString("client", mqtt_client);
+    prefs.putString("mqtt_broker", mqtt_broker);
+    prefs.putString("mqtt_port", mqtt_port);
+    prefs.putString("mqtt_user", mqtt_user);
+    prefs.putString("mqtt_pass", mqtt_pass);
+    prefs.putString("mqtt_client", mqtt_client);
 
     prefs.end();
 
@@ -113,23 +234,23 @@ void saveStaticIPConfig() {
     IPAddress sn = WiFi.subnetMask();
     IPAddress dns = WiFi.dnsIP(0);
     Preferences prefs;
-    prefs.begin("wifi-ip", false);
-    prefs.putBytes("ip", &ip, 4);
-    prefs.putBytes("gw", &gw, 4);
-    prefs.putBytes("sn", &sn, 4);
-    prefs.putBytes("dns", &dns, 4);
+    prefs.begin("app", false);
+    prefs.putBytes("static_ip", &ip, 4);
+    prefs.putBytes("static_gw", &gw, 4);
+    prefs.putBytes("static_sn", &sn, 4);
+    prefs.putBytes("static_dns", &dns, 4);
     prefs.end();
     Serial.printf("[DHCP] IP fixo salvo: %s\n", ip.toString().c_str());
 }
 
 void loadStaticIPConfig() {
     Preferences prefs;
-    prefs.begin("wifi-ip", true);
-    size_t len = prefs.getBytes("ip", &staticIP, 4);
+    prefs.begin("app", true);
+    size_t len = prefs.getBytes("static_ip", &staticIP, 4);
     if (len == 4 && staticIP[0] != 0) {
-        prefs.getBytes("gw", &staticGateway, 4);
-        prefs.getBytes("sn", &staticSubnet, 4);
-        prefs.getBytes("dns", &staticDNS, 4);
+        prefs.getBytes("static_gw", &staticGateway, 4);
+        prefs.getBytes("static_sn", &staticSubnet, 4);
+        prefs.getBytes("static_dns", &staticDNS, 4);
         staticIPConfigured = true;
         Serial.printf("[DHCP] IP fixo carregado: %s\n", staticIP.toString().c_str());
     }
@@ -138,8 +259,9 @@ void loadStaticIPConfig() {
 
 void clearStaticIPConfig() {
     Preferences prefs;
-    prefs.begin("wifi-ip", false);
-    prefs.clear();
+    prefs.begin("app", false);
+    prefs.remove("static_ip"); prefs.remove("static_gw");
+    prefs.remove("static_sn"); prefs.remove("static_dns");
     prefs.end();
     staticIPConfigured = false;
     Serial.println("[DHCP] IP fixo removido do NVS");

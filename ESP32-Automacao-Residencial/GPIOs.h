@@ -10,10 +10,11 @@
 #define RelayPin6 17
 #define RelayPin7 18
 #define RelayPin8 19
-#define wifiLed    2
-#define DHTPIN    25
-#define DHTTYPE   DHT22
-#define I2C_SDA   21
-#define I2C_SCL   22
+#define wifiLed       2
+#define configButton  0
+#define DHTPIN       25
+#define DHTTYPE      DHT22
+#define I2C_SDA      21
+#define I2C_SCL      22
 
 #endif // GPIOS_H

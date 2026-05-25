@@ -36,16 +36,16 @@ extern float temperature;
 extern float pressure;
 extern float altitude;
 extern float altitudeTotal;
+extern float seaLevelPressureCache;
+extern float altitudeRealCache;
 extern unsigned long lastMsgDHT;
 extern unsigned long lastMsgBMP180;
 extern unsigned long lastWifiRetryTime;
-extern unsigned long lastWifiBlinkTime;
 extern unsigned long lastWifiCheckTime;
 extern unsigned long lastMqttReconnectAttempt;
 extern unsigned long lastRelayUpdate;
 extern bool wifiConnected;
 extern bool mqttConnected;
-extern bool wifiConfigDone;
 
 // Estrutura para fila de notificações do Telegram (Thread-safe)
 struct TelegramNotification {
@@ -65,7 +65,6 @@ extern bool pendingHADiscovery;
 // Handles das Tasks FreeRTOS
 extern TaskHandle_t hTaskConexoes;
 extern TaskHandle_t hTaskSensores;
-extern TaskHandle_t hTaskTelegram;
 extern bool otaInProgress;
 
 extern const char* globalHostname;

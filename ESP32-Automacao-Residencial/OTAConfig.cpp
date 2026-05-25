@@ -1,6 +1,4 @@
-#ifndef OTACONFIG_H
-#define OTACONFIG_H
-
+#include "OTAConfig.h"
 #include <ArduinoOTA.h>
 #include <WiFi.h>
 #include "VariaveisGlobais.h"
@@ -66,5 +64,3 @@ void setupOTA() {
   ArduinoOTA.begin();
   Serial.println("[OTA] Servico pronto e aguardando...");
 }
-
-#endif

@@ -21,16 +21,16 @@ float temperature = 0.0f;
 float pressure = 0.0f;
 float altitude = 0.0f;
 float altitudeTotal = 0.0f;
+float seaLevelPressureCache = 0.0f;
+float altitudeRealCache = 0.0f;
 unsigned long lastMsgDHT = 0;
 unsigned long lastMsgBMP180 = 0;
 unsigned long lastWifiRetryTime = 0;
-unsigned long lastWifiBlinkTime = 0;
 unsigned long lastWifiCheckTime = 0;
 unsigned long lastMqttReconnectAttempt = 0;
 unsigned long lastRelayUpdate = 0;
 bool wifiConnected = false;
 bool mqttConnected = false;
-bool wifiConfigDone = false;
 
 // Sinalizadores de sincronização
 QueueHandle_t telegramQueue = NULL;
@@ -43,7 +43,6 @@ bool pendingHADiscovery = false;
 // Handles das Tasks FreeRTOS
 TaskHandle_t hTaskConexoes = NULL;
 TaskHandle_t hTaskSensores = NULL;
-TaskHandle_t hTaskTelegram = NULL;
 bool otaInProgress = false;
 
 const char* globalHostname = DEVICE_HOSTNAME;

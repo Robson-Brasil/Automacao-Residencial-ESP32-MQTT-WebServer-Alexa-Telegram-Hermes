@@ -8,7 +8,5 @@
 void readSensors();
 void publishSensorData();
 void publishRelayStates();
-void readDHTSensor();
-void readBMP180Sensor();
 
 #endif // SENSORES_H

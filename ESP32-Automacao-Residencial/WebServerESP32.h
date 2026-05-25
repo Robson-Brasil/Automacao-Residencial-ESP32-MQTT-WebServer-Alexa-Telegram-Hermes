@@ -32,7 +32,7 @@ String getRelayName(int idx) {
     Preferences p;
     char key[16];
     snprintf(key, sizeof(key), "RelayName%d", idx + 1);
-    p.begin("relay states", false);
+    p.begin("app", false);
     String name = p.getString(key, "");
     p.end();
     if (name == "") {
@@ -162,7 +162,7 @@ void handleApiSetName() {
         Preferences p;
         char key[16];
         snprintf(key, sizeof(key), "RelayName%d", idx + 1);
-        p.begin("relay states", false);
+        p.begin("app", false);
         p.putString(key, newName);
         p.end();
         
