@@ -15,3 +15,50 @@ Thumbs.db
 
 # OpenCode
 .opencode/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+venv/
+.venv/
+
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Compiled binaries
+*.elf
+*.hex
+*.bin
+*.eep
+*.map
+*.o
+*.a
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Temp files
+*~
+*.bak
+*.old
+tmp/
+tmp.json
+
+# Planning artifacts
+findings.md
+progress.md
+task_plan.md
