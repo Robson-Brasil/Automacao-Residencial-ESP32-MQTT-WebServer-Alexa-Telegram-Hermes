@@ -62,3 +62,6 @@ tmp.json
 findings.md
 progress.md
 task_plan.md
+
+# Credentials (real file, never commit)
+LoginsSenhas.h

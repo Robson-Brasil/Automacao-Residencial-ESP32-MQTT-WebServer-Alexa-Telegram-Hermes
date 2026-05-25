@@ -39,6 +39,7 @@ bool pendingSinricProUpdate = false;
 bool pendingSensorMqttUpdate = false;
 bool pendingSensorSinricUpdate = false;
 bool pendingHADiscovery = false;
+bool mqttFirstSub9 = true;
 
 // Handles das Tasks FreeRTOS
 TaskHandle_t hTaskConexoes = NULL;

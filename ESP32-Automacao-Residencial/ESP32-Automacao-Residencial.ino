@@ -76,12 +76,6 @@ DualSerialClass DualSerial;  // Espelho do Serial para WiFi
 // Variáveis para controle de tempo de leitura dos sensores
 // =============== VARIÁVEIS DE CONTROLE DE TEMPO ===============
 
-// =============== CONSTANTES DE TEMPO ===============
-const unsigned long WIFI_RETRY_INTERVAL = 1000;
-const unsigned long WIFI_BLINK_INTERVAL = 500;
-const unsigned long RECONNECT_INTERVAL = 5000;
-const unsigned long DHT_READ_INTERVAL = 60000;
-const unsigned long BMP_READ_INTERVAL = 120000;
 // =============== VARIÁVEIS DE ESTADO ===============
 
 // Tópicos MQTT definidos em TopicosMQTT.h
@@ -93,12 +87,6 @@ const float altitudeNivelMar = 92.0; // Altitude de referência do seu local
 
 // Configurações do MQTT - definidas em LoginsSenhas.h (via WiFiManager)
 // Telegram e SinricPro - buffers carregados do NVS com fallback em LoginsSenhas.h
-
-/**
- * @brief Tenta conectar ao WiFi se a conexão for perdida.
- * Utiliza IP fixo se configurado para evitar esperas de DHCP.
- */
-void setupWiFi();
 
 /**
  * @brief Configura o servidor e os callbacks do cliente MQTT.
@@ -197,6 +185,7 @@ void reconnectMQTT() {
       Serial.println("==============================");
       mqttConnected = true;
       pendingHADiscovery = true;
+      mqttFirstSub9 = true; // Ignorar primeira mensagem retida no sub9
       // Inscrição nos tópicos dos relés
       mqttClient.subscribe(sub0);
       mqttClient.subscribe(sub1);
@@ -327,6 +316,11 @@ digitalWrite(RelayPin8, !RelayState8);
       pendingSinricProUpdate = true;
     }
   } else if (strcmp(topic, sub9) == 0) {
+    // Ignora mensagem retida entregue logo após o subscribe
+    if (mqttFirstSub9) {
+      mqttFirstSub9 = false;
+      return;
+    }
     // ========== HANDLE HERMES COMMANDS ==========
     // Formato: COMANDO:ITEM (ex: LIGAR:Varanda, DESLIGAR:Sala, SENSORES, STATUS)
     messageTemp.toUpperCase(); // normaliza pra maiúsculas

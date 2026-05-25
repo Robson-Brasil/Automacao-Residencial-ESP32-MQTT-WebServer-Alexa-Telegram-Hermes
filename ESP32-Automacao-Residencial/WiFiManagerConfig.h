@@ -317,8 +317,6 @@ void setupMDNS() {
         return;
     }
 
-    WiFi.setHostname(globalHostname);
-
     if (MDNS.begin(globalHostname)) {
         mdnsStarted = true;
         Serial.printf("[mDNS] Respondendo em: http://%s.local:8181\n", globalHostname);

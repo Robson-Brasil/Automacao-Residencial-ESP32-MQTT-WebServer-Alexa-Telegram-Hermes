@@ -61,6 +61,7 @@ extern bool pendingSinricProUpdate;
 extern bool pendingSensorMqttUpdate;
 extern bool pendingSensorSinricUpdate;
 extern bool pendingHADiscovery;
+extern bool mqttFirstSub9;
 
 // Handles das Tasks FreeRTOS
 extern TaskHandle_t hTaskConexoes;

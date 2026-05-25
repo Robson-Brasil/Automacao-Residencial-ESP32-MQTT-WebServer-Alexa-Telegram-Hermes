@@ -16,7 +16,6 @@
 #include <SinricPro.h>
 #include <SinricProSwitch.h>
 #include <SinricProTemperaturesensor.h>
-#define MQTT_MAX_PACKET_SIZE 1024
 #include <PubSubClient.h>
 #include <DHT.h>
 #include <Wire.h>
