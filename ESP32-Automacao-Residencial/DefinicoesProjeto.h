@@ -8,8 +8,8 @@
 
 #define PROJETO_NOME "ESP32 - Sistema IoT"
 #define PROJETO_AUTOR "Robson Brasil"
-#define PROJETO_VERSAO "1.0.0"
-#define PROJETO_DATA "23 de Maio de 2026"
+#define PROJETO_VERSAO "1.0.5"
+#define PROJETO_DATA "26 de Maio de 2026"
 
 #define DEVICE_HOSTNAME "automacaoresidencial"
 

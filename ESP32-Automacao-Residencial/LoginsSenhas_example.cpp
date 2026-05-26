@@ -1,9 +1,9 @@
 #include "LoginsSenhas.h"
 
-char mqtt_broker[40]  = "192.168.15.21";
+char mqtt_broker[40]  = "SEU_BROKER_IP";
 char mqtt_port[6]     = "1883";
-char mqtt_user[32]    = "RobsonBrasil";
-char mqtt_pass[32]    = "S3nh@S3gur@";
+char mqtt_user[32]    = "SEU_USUARIO_MQTT";
+char mqtt_pass[32]    = "SUA_SENHA_MQTT";
 char mqtt_client[24]  = "ESP32_Automacao";
 
 const char* BrokerMQTT  = mqtt_broker;
