@@ -178,6 +178,35 @@ const char* relayTopics[8] = {sub1, sub2, sub3, sub4, sub5, sub6, sub7, sub8};
 const int relayPinNums[8] = {RelayPin1, RelayPin2, RelayPin3, RelayPin4, RelayPin5, RelayPin6, RelayPin7, RelayPin8};
 bool* relayStatePtrs[8] = {&RelayState1, &RelayState2, &RelayState3, &RelayState4, &RelayState5, &RelayState6, &RelayState7, &RelayState8};
 
+void setRelayByIndex(int idx, bool state, const char* source) {
+  *relayStatePtrs[idx] = state;
+  digitalWrite(relayPinNums[idx], !state);
+  logRelayAction(source, idx, state);
+  saveRelayState(idx + 1, state);
+  notifyTelegramStateChange(source, idx, state);
+}
+
+void setAllRelays(bool state, const char* source) {
+  Todos = state;
+  for (int i = 0; i < 8; i++) {
+    *relayStatePtrs[i] = state;
+    digitalWrite(relayPinNums[i], !state);
+    saveRelayState(i + 1, state);
+  }
+  logRelayAction(source, -1, state);
+  notifyTelegramStateChange(source, -1, state);
+}
+
+int findRelayByName(const String& name) {
+  for (int i = 0; i < 8; i++) {
+    String stored = relayNames[i];
+    stored.toUpperCase();
+    if (name == stored) return i;
+  }
+  if (name == "VAL") return 5;
+  return -1;
+}
+
 // Função de callback para mensagens MQTT recebidas
 void mqttCallback(char *topic, byte *payload, unsigned int length) {
   if (length > 255) return;
@@ -254,55 +283,35 @@ void mqttCallback(char *topic, byte *payload, unsigned int length) {
     
     // LIGAR TUDO
     if (cmd.startsWith("LIGAR") && cmd.indexOf("TUDO") != -1) {
-      Todos = true;
-      RelayState1 = RelayState2 = RelayState3 = RelayState4 = true;
-      RelayState5 = RelayState6 = RelayState7 = RelayState8 = true;
-      const int pins[] = {RelayPin1, RelayPin2, RelayPin3, RelayPin4, RelayPin5, RelayPin6, RelayPin7, RelayPin8};
-      for (int i = 0; i < 8; i++) digitalWrite(pins[i], LOW);
-      logRelayAction("Hermes", -1, true);
-      for (int r = 1; r <= 8; r++) saveRelayState(r, true);
-      notifyTelegramStateChange("HERMES", -1, true);
+      setAllRelays(true, "HERMES");
       pendingSinricProUpdate = true;
     }
     // DESLIGAR TUDO
     else if (cmd.startsWith("DESLIGAR") && cmd.indexOf("TUDO") != -1) {
-      Todos = false;
-      RelayState1 = RelayState2 = RelayState3 = RelayState4 = false;
-      RelayState5 = RelayState6 = RelayState7 = RelayState8 = false;
-      const int pins[] = {RelayPin1, RelayPin2, RelayPin3, RelayPin4, RelayPin5, RelayPin6, RelayPin7, RelayPin8};
-      for (int i = 0; i < 8; i++) digitalWrite(pins[i], HIGH);
-      logRelayAction("Hermes", -1, false);
-      for (int r = 1; r <= 8; r++) saveRelayState(r, false);
-      notifyTelegramStateChange("HERMES", -1, false);
+      setAllRelays(false, "HERMES");
       pendingSinricProUpdate = true;
     }
     // LIGAR individual
     else if (cmd.startsWith("LIGAR:")) {
       String item = cmd.substring(6); item.trim();
-if (item == "VARANDA") { RelayState1 = true; digitalWrite(RelayPin1, LOW); logRelayAction("Hermes",0,true); saveRelayState(1, true); notifyTelegramStateChange("HERMES", 0, true); }
-      else if (item == "BANCADA") { RelayState2 = true; digitalWrite(RelayPin2, LOW); logRelayAction("Hermes",1,true); saveRelayState(2, true); notifyTelegramStateChange("HERMES", 1, true); }
-      else if (item == "SALA") { RelayState3 = true; digitalWrite(RelayPin3, LOW); logRelayAction("Hermes",2,true); saveRelayState(3, true); notifyTelegramStateChange("HERMES", 2, true); }
-      else if (item == "COZINHA") { RelayState4 = true; digitalWrite(RelayPin4, LOW); logRelayAction("Hermes",3,true); saveRelayState(4, true); notifyTelegramStateChange("HERMES", 3, true); }
-      else if (item == "QUINTAL") { RelayState5 = true; digitalWrite(RelayPin5, LOW); logRelayAction("Hermes",4,true); saveRelayState(5, true); notifyTelegramStateChange("HERMES", 4, true); }
-      else if (item == "VAL" || item == "VARÃO") { RelayState6 = true; digitalWrite(RelayPin6, LOW); logRelayAction("Hermes",5,true); saveRelayState(6, true); notifyTelegramStateChange("HERMES", 5, true); }
-      else if (item == "ROBSON") { RelayState7 = true; digitalWrite(RelayPin7, LOW); logRelayAction("Hermes",6,true); saveRelayState(7, true); notifyTelegramStateChange("HERMES", 6, true); }
-      else if (item == "KINHA") { RelayState8 = true; digitalWrite(RelayPin8, LOW); logRelayAction("Hermes",7,true); saveRelayState(8, true); notifyTelegramStateChange("HERMES", 7, true); }
-      pendingSinricProUpdate = true;
-      Todos = RelayState1 && RelayState2 && RelayState3 && RelayState4 && RelayState5 && RelayState6 && RelayState7 && RelayState8;
+      int idx = findRelayByName(item);
+      if (idx >= 0) {
+        setRelayByIndex(idx, true, "HERMES");
+        pendingSinricProUpdate = true;
+        Todos = true;
+        for (int i = 0; i < 8; i++) if (!*relayStatePtrs[i]) { Todos = false; break; }
+      }
     }
     // DESLIGAR individual
     else if (cmd.startsWith("DESLIGAR:")) {
       String item = cmd.substring(9); item.trim();
-if (item == "VARANDA") { RelayState1 = false; digitalWrite(RelayPin1, HIGH); logRelayAction("Hermes",0,false); saveRelayState(1, false); notifyTelegramStateChange("HERMES", 0, false); }
-      else if (item == "BANCADA") { RelayState2 = false; digitalWrite(RelayPin2, HIGH); logRelayAction("Hermes",1,false); saveRelayState(2, false); notifyTelegramStateChange("HERMES", 1, false); }
-      else if (item == "SALA") { RelayState3 = false; digitalWrite(RelayPin3, HIGH); logRelayAction("Hermes",2,false); saveRelayState(3, false); notifyTelegramStateChange("HERMES", 2, false); }
-      else if (item == "COZINHA") { RelayState4 = false; digitalWrite(RelayPin4, HIGH); logRelayAction("Hermes",3,false); saveRelayState(4, false); notifyTelegramStateChange("HERMES", 3, false); }
-      else if (item == "QUINTAL") { RelayState5 = false; digitalWrite(RelayPin5, HIGH); logRelayAction("Hermes",4,false); saveRelayState(5, false); notifyTelegramStateChange("HERMES", 4, false); }
-      else if (item == "VAL" || item == "VARÃO") { RelayState6 = false; digitalWrite(RelayPin6, HIGH); logRelayAction("Hermes",5,false); saveRelayState(6, false); notifyTelegramStateChange("HERMES", 5, false); }
-      else if (item == "ROBSON") { RelayState7 = false; digitalWrite(RelayPin7, HIGH); logRelayAction("Hermes",6,false); saveRelayState(7, false); notifyTelegramStateChange("HERMES", 6, false); }
-      else if (item == "KINHA") { RelayState8 = false; digitalWrite(RelayPin8, HIGH); logRelayAction("Hermes",7,false); saveRelayState(8, false); notifyTelegramStateChange("HERMES", 7, false); }
-      pendingSinricProUpdate = true;
-      Todos = RelayState1 && RelayState2 && RelayState3 && RelayState4 && RelayState5 && RelayState6 && RelayState7 && RelayState8;
+      int idx = findRelayByName(item);
+      if (idx >= 0) {
+        setRelayByIndex(idx, false, "Hermes");
+        pendingSinricProUpdate = true;
+        Todos = false;
+        for (int i = 0; i < 8; i++) if (*relayStatePtrs[i]) { Todos = true; break; }
+      }
     }
     pendingMqttUpdate = true;
   }
