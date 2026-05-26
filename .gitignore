@@ -1,0 +1,22 @@
+# Python
+*.py
+__pycache__/
+*.pyc
+
+# Credentials
+LoginSenhas.h
+LoginsSenhas.cpp
+
+# IDE / Tool directories
+.kilo/
+.planning/
+
+# Build outputs
+*.o
+*.elf
+*.bin
+*.map
+
+# OS files
+Thumbs.db
+.DS_Store
