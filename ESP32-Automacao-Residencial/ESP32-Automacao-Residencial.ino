@@ -67,6 +67,7 @@ Preferences preferences; // Memória não-volátil para persistência de estado
 
 WiFiServer telnetServer(2323); // Servidor Telnet
 WiFiClient telnetClient;     // Cliente Telnet
+bool telnetAuthenticated = false;
 DualSerialClass DualSerial;  // Espelho do Serial para WiFi
 
 // Variáveis para controle de tempo de leitura dos sensores
@@ -290,10 +291,8 @@ digitalWrite(RelayPin8, !RelayState8);
 
     // SENSORES
     if (cmd == "SENSORES") {
-      Serial.println("✅ Hermes SENSORES: solicitado, forçando leitura...");
-      lastMsgDHT = 0;
-      lastMsgBMP180 = 0;
-      readSensors();
+      // Apenas publica o que já está em cache, sem forçar leitura
+      Serial.println("✅ Hermes SENSORES");
       pendingSensorMqttUpdate = true;
     }
     // STATUS
@@ -591,14 +590,15 @@ void setup() {
   migrateNVS();
   loadCredentials();
 
-  pinMode(RelayPin1, OUTPUT); digitalWrite(RelayPin1, HIGH);
-  pinMode(RelayPin2, OUTPUT); digitalWrite(RelayPin2, HIGH);
-  pinMode(RelayPin3, OUTPUT); digitalWrite(RelayPin3, HIGH);
-  pinMode(RelayPin4, OUTPUT); digitalWrite(RelayPin4, HIGH);
-  pinMode(RelayPin5, OUTPUT); digitalWrite(RelayPin5, HIGH);
-  pinMode(RelayPin6, OUTPUT); digitalWrite(RelayPin6, HIGH);
-  pinMode(RelayPin7, OUTPUT); digitalWrite(RelayPin7, HIGH);
-  pinMode(RelayPin8, OUTPUT); digitalWrite(RelayPin8, HIGH);
+  // Relés começam como INPUT_PULLUP (sem driving ativo) durante boot
+  pinMode(RelayPin1, INPUT_PULLUP);
+  pinMode(RelayPin2, INPUT_PULLUP);
+  pinMode(RelayPin3, INPUT_PULLUP);
+  pinMode(RelayPin4, INPUT_PULLUP);
+  pinMode(RelayPin5, INPUT_PULLUP);
+  pinMode(RelayPin6, INPUT_PULLUP);
+  pinMode(RelayPin7, INPUT_PULLUP);
+  pinMode(RelayPin8, INPUT_PULLUP);
   pinMode(wifiLed, OUTPUT);
   pinMode(configButton, INPUT_PULLUP);
 
@@ -616,6 +616,13 @@ void setup() {
       preferences.remove(key.c_str());
     }
     preferences.putBool("needsReset", false);
+  }
+  // Só agora vira os relés pra OUTPUT — todo boot já passou
+  const int relayPins[] = {RelayPin1, RelayPin2, RelayPin3, RelayPin4,
+                           RelayPin5, RelayPin6, RelayPin7, RelayPin8};
+  for (int i = 0; i < 8; i++) {
+    digitalWrite(relayPins[i], HIGH);
+    pinMode(relayPins[i], OUTPUT);
   }
   loadAllRelayStates();
   applyRelayStatesToPins();
@@ -754,16 +761,42 @@ void TaskConexoes(void *pvParameters) {
       if (!telnetClient || !telnetClient.connected()) {
         if (telnetClient) telnetClient.stop();
         telnetClient = telnetServer.available();
+        if (telnetClient && telnetClient.connected()) {
+          telnetClient.println("ESP32 Automação Residencial");
+          telnetClient.print("Password: ");
+          telnetAuthenticated = false;
+        }
       } else {
         WiFiClient rejectedClient = telnetServer.available();
-        rejectedClient.stop();
+        if (rejectedClient) rejectedClient.stop();
       }
     }
 
     if (telnetClient && telnetClient.connected()) {
-      while (telnetClient.available()) {
-        char c = telnetClient.read();
-        Serial.write(c);
+      if (!telnetAuthenticated) {
+        static String telnetInput;
+        while (telnetClient.available()) {
+          char c = telnetClient.read();
+          if (c == '\r' || c == '\n') {
+            if (telnetInput.length() > 0) {
+              if (telnetInput == TELNET_PASSWORD) {
+                telnetClient.println("\nOK");
+                telnetAuthenticated = true;
+              } else {
+                telnetClient.println("\nERROR");
+                if (telnetClient) telnetClient.stop();
+              }
+              telnetInput = "";
+            }
+          } else {
+            telnetInput += c;
+          }
+        }
+      } else {
+        while (telnetClient.available()) {
+          char c = telnetClient.read();
+          Serial.write(c);
+        }
       }
     }
 

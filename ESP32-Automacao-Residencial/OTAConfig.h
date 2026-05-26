@@ -4,6 +4,7 @@
 #include <ArduinoOTA.h>
 
 #define OTA_PASSWORD "S3nh@S3gur@"
+#define TELNET_PASSWORD OTA_PASSWORD
 
 void setupOTA();
 
