@@ -514,13 +514,23 @@ void publishRelayStates() {
 
 // =============== FUNÇÕES DE PERSISTÊNCIA ===============
 void saveRelayState(int relayNum, bool state) {
+  if (relayMutex == NULL) return;
   String key = "RelayState" + String(relayNum);
-  preferences.putBool(key.c_str(), state);
+  if (xSemaphoreTake(relayMutex, portMAX_DELAY) == pdTRUE) {
+    preferences.putBool(key.c_str(), state);
+    xSemaphoreGive(relayMutex);
+  }
 }
 
 bool loadRelayState(int relayNum, bool defaultValue) {
+  if (relayMutex == NULL) return defaultValue;
   String key = "RelayState" + String(relayNum);
-  return preferences.getBool(key.c_str(), defaultValue);
+  bool val = defaultValue;
+  if (xSemaphoreTake(relayMutex, portMAX_DELAY) == pdTRUE) {
+    val = preferences.getBool(key.c_str(), defaultValue);
+    xSemaphoreGive(relayMutex);
+  }
+  return val;
 }
 
 void loadAllRelayStates() {
