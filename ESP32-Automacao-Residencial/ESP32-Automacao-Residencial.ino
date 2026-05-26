@@ -174,6 +174,10 @@ void reconnectMQTT() {
   }
 }
 
+const char* relayTopics[8] = {sub1, sub2, sub3, sub4, sub5, sub6, sub7, sub8};
+const int relayPinNums[8] = {RelayPin1, RelayPin2, RelayPin3, RelayPin4, RelayPin5, RelayPin6, RelayPin7, RelayPin8};
+bool* relayStatePtrs[8] = {&RelayState1, &RelayState2, &RelayState3, &RelayState4, &RelayState5, &RelayState6, &RelayState7, &RelayState8};
+
 // Função de callback para mensagens MQTT recebidas
 void mqttCallback(char *topic, byte *payload, unsigned int length) {
   if (length > 255) return;
@@ -189,101 +193,40 @@ void mqttCallback(char *topic, byte *payload, unsigned int length) {
   Serial.print(topic);
   Serial.print("] ");
   Serial.println(messageTemp);
-  // Controle dos relés
+
   bool newState = messageTemp.startsWith("1");
 
   if (strcmp(topic, sub0) == 0) {
     if (Todos != newState) {
       Todos = newState;
-
       const int pins[] = {RelayPin1, RelayPin2, RelayPin3, RelayPin4,
                           RelayPin5, RelayPin6, RelayPin7, RelayPin8};
-      for (int i = 0; i < 8; i++) {
-        digitalWrite(pins[i], !Todos);
-      }
+      for (int i = 0; i < 8; i++) digitalWrite(pins[i], !Todos);
       logRelayAction("MQTT", -1, Todos);
-
       RelayState1 = RelayState2 = RelayState3 = RelayState4 = RelayState5 =
           RelayState6 = RelayState7 = RelayState8 = Todos;
-
-      for (int r = 1; r <= 8; r++)
-        saveRelayState(r, Todos);
+      for (int r = 1; r <= 8; r++) saveRelayState(r, Todos);
       notifyTelegramStateChange("MQTT", -1, Todos);
       pendingSinricProUpdate = true;
     }
-  } else if (strcmp(topic, sub1) == 0) {
-    if (RelayState1 != newState) {
-      RelayState1 = newState;
-digitalWrite(RelayPin1, !RelayState1);
-      logRelayAction("MQTT", 0, RelayState1);
-      saveRelayState(1, RelayState1);
-      notifyTelegramStateChange("MQTT", 0, newState);
-      pendingSinricProUpdate = true;
+    return;
+  }
+
+  for (int i = 0; i < 8; i++) {
+    if (strcmp(topic, relayTopics[i]) == 0) {
+      if (*relayStatePtrs[i] != newState) {
+        *relayStatePtrs[i] = newState;
+        digitalWrite(relayPinNums[i], !newState);
+        logRelayAction("MQTT", i, newState);
+        saveRelayState(i + 1, newState);
+        notifyTelegramStateChange("MQTT", i, newState);
+        pendingSinricProUpdate = true;
+      }
+      return;
     }
-  } else if (strcmp(topic, sub2) == 0) {
-    if (RelayState2 != newState) {
-      RelayState2 = newState;
-digitalWrite(RelayPin2, !RelayState2);
-      logRelayAction("MQTT", 1, RelayState2);
-      saveRelayState(2, RelayState2);
-      notifyTelegramStateChange("MQTT", 1, newState);
-      pendingSinricProUpdate = true;
-    }
-  } else if (strcmp(topic, sub3) == 0) {
-    if (RelayState3 != newState) {
-      RelayState3 = newState;
-digitalWrite(RelayPin3, !RelayState3);
-      logRelayAction("MQTT", 2, RelayState3);
-      saveRelayState(3, RelayState3);
-      notifyTelegramStateChange("MQTT", 2, newState);
-      pendingSinricProUpdate = true;
-    }
-  } else if (strcmp(topic, sub4) == 0) {
-    if (RelayState4 != newState) {
-      RelayState4 = newState;
-digitalWrite(RelayPin4, !RelayState4);
-      logRelayAction("MQTT", 3, RelayState4);
-      saveRelayState(4, RelayState4);
-      notifyTelegramStateChange("MQTT", 3, newState);
-      pendingSinricProUpdate = true;
-    }
-  } else if (strcmp(topic, sub5) == 0) {
-    if (RelayState5 != newState) {
-      RelayState5 = newState;
-digitalWrite(RelayPin5, !RelayState5);
-      logRelayAction("MQTT", 4, RelayState5);
-      saveRelayState(5, RelayState5);
-      notifyTelegramStateChange("MQTT", 4, newState);
-      pendingSinricProUpdate = true;
-    }
-  } else if (strcmp(topic, sub6) == 0) {
-    if (RelayState6 != newState) {
-      RelayState6 = newState;
-digitalWrite(RelayPin6, !RelayState6);
-      logRelayAction("MQTT", 5, RelayState6);
-      saveRelayState(6, RelayState6);
-      notifyTelegramStateChange("MQTT", 5, newState);
-      pendingSinricProUpdate = true;
-    }
-  } else if (strcmp(topic, sub7) == 0) {
-    if (RelayState7 != newState) {
-      RelayState7 = newState;
-digitalWrite(RelayPin7, !RelayState7);
-      logRelayAction("MQTT", 6, RelayState7);
-      saveRelayState(7, RelayState7);
-      notifyTelegramStateChange("MQTT", 6, newState);
-      pendingSinricProUpdate = true;
-    }
-  } else if (strcmp(topic, sub8) == 0) {
-    if (RelayState8 != newState) {
-      RelayState8 = newState;
-digitalWrite(RelayPin8, !RelayState8);
-      logRelayAction("MQTT", 7, RelayState8);
-      saveRelayState(8, RelayState8);
-      notifyTelegramStateChange("MQTT", 7, newState);
-      pendingSinricProUpdate = true;
-    }
-  } else if (strcmp(topic, sub9) == 0) {
+  }
+
+  if (strcmp(topic, sub9) == 0) {
     // ========== HANDLE HERMES COMMANDS ==========
     // Formato: COMANDO:ITEM (ex: LIGAR:Varanda, DESLIGAR:Sala, SENSORES, STATUS)
     messageTemp.toUpperCase(); // normaliza pra maiúsculas
