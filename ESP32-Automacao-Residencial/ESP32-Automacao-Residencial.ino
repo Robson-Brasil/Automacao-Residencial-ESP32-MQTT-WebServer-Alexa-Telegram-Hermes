@@ -33,15 +33,11 @@
  ******************************************************************************************************************************************/
 
 // =============== BIBLIOTECAS ===============
-#include <Preferences.h>
-
 #include "Bibliotecas.h"
-#include "ConfigMQTT.h"
 #include "ConstantesTempo.h"
 #include "DefinicoesProjeto.h"
 #include "GPIOs.h"
 #include "LoginsSenhas.h"
-#include "MQTTParametros.h"
 #include "Sensores.h"
 #include "SinricProESP32.h"
 #include "TaskCores.h"
@@ -52,39 +48,17 @@
 #include "WiFiUtils.h"
 #include "HomeAssistantDiscovery.h"
 #include "WiFiManagerConfig.h"
-
-// Estados dos relés
+#include "RelayManager.h"
+#include "SensorManager.h"
+#include "MQTTHandler.h"
 
 // =============== INSTÂNCIAS DE OBJETOS ===============
-// Instância do sensor DHT
-DHT dht(DHTPIN, DHTTYPE);
-
-// Instância do sensor BMP180
-Adafruit_BMP085 bmp;
-WiFiClient espClient;               // Cliente WiFi
-PubSubClient mqttClient(espClient); // Cliente MQTT
-Preferences preferences; // Memória não-volátil para persistência de estado
-
-WiFiServer telnetServer(2323); // Servidor Telnet
-WiFiClient telnetClient;     // Cliente Telnet
+WiFiServer telnetServer(2323);
+WiFiClient telnetClient;
 bool telnetAuthenticated = false;
-DualSerialClass DualSerial;  // Espelho do Serial para WiFi
-
-// Variáveis para controle de tempo de leitura dos sensores
-// =============== VARIÁVEIS DE CONTROLE DE TEMPO ===============
-
-// =============== VARIÁVEIS DE ESTADO ===============
-
-// Tópicos MQTT definidos em TopicosMQTT.h
-
-// Constantes para o sensor BMP180
-const float pressaoNivelMar =
-    1012.0; // Pressão ao nível do mar em sua localidad
-const float altitudeNivelMar = 92.0; // Altitude de referência do seu local
-
-void readSensors();
-void publishRelayStates();
-void logRelayAction(const char* source, int relayNum, bool state);
+DualSerialClass DualSerial;
+extern WiFiClientSecure telegramClient;
+extern UniversalTelegramBot *telegramBot;
 
 /**
  * @brief Atualiza o LED de status (GPIO 2) com base no WiFi e MQTT.
@@ -102,430 +76,23 @@ void updateStatusLED() {
     }
 }
 
+/**
+ * @brief Inicia conexão WiFi com IP estático e credenciais.
+ * Não bloqueia — apenas inicia o processo de conexão.
+ */
 void setupWiFi() {
-  unsigned long currentMillis = millis();
+  if (WiFi.status() == WL_CONNECTED) return;
 
-  if (currentMillis - lastWifiRetryTime < WIFI_RETRY_INTERVAL) {
-    return;
-  }
-  lastWifiRetryTime = currentMillis;
+  #ifdef STATIC_IP
+  IPAddress staticIP(STATIC_IP);
+  IPAddress gateway(STATIC_GATEWAY);
+  IPAddress subnet(STATIC_SUBNET);
+  IPAddress dns(STATIC_DNS);
+  WiFi.config(staticIP, gateway, subnet, dns);
+  #endif
 
-  if (WiFi.status() != WL_CONNECTED) {
-    Serial.println("[Rede] Conectando ao WiFi...");
-
-    IPAddress ip(STATIC_IP);
-    IPAddress gateway(STATIC_GATEWAY);
-    IPAddress subnet(STATIC_SUBNET);
-    IPAddress dns(STATIC_DNS);
-    WiFi.config(ip, gateway, subnet, dns);
-
-    WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-    Serial.println("[Rede] WiFi.begin() assíncrono iniciado.");
-  }
-
-  if (WiFi.status() == WL_CONNECTED && !wifiConnected) {
-    wifiConnected = true;
-  } else if (WiFi.status() != WL_CONNECTED) {
-    wifiConnected = false;
-  }
-}
-
-// Função para configurar o MQTT
-void setupMQTT() {
-  mqttClient.setServer(BrokerMQTT, MQTT_PORT);
-  mqttClient.setCallback(mqttCallback);
-  mqttClient.setKeepAlive(MQTT_KEEPALIVE);
-  mqttClient.setBufferSize(2048);
-}
-
-// Função para reconectar ao MQTT
-void reconnectMQTT() {
-  if (!mqttClient.connected() && WiFi.status() == WL_CONNECTED) {
-    Serial.println("Tentando conectar ao MQTT...");
-    if (mqttClient.connect(clientID, LoginDoMQTT, SenhaMQTT)) {
-      Serial.println("==============================");
-      Serial.println("MQTT CONECTADO!");
-      Serial.print("IP do ESP32: ");
-      Serial.println(WiFi.localIP());
-      Serial.println("==============================");
-      mqttConnected = true;
-      pendingHADiscovery = true;
-
-      // Inscrição nos tópicos dos relés
-      mqttClient.subscribe(sub0);
-      mqttClient.subscribe(sub1);
-      mqttClient.subscribe(sub2);
-      mqttClient.subscribe(sub3);
-      mqttClient.subscribe(sub4);
-      mqttClient.subscribe(sub5);
-      mqttClient.subscribe(sub6);
-      mqttClient.subscribe(sub7);
-      mqttClient.subscribe(sub8);
-      mqttClient.subscribe(sub9); // Hermes commands
-      // Publica estado inicial dos relés
-      publishRelayStates();
-    } else {
-      Serial.print("Falha na conexão MQTT, rc=");
-      Serial.println(mqttClient.state());
-      mqttConnected = false;
-    }
-  }
-}
-
-const char* relayTopics[8] = {sub1, sub2, sub3, sub4, sub5, sub6, sub7, sub8};
-const int relayPinNums[8] = {RelayPin1, RelayPin2, RelayPin3, RelayPin4, RelayPin5, RelayPin6, RelayPin7, RelayPin8};
-bool* relayStatePtrs[8] = {&RelayState1, &RelayState2, &RelayState3, &RelayState4, &RelayState5, &RelayState6, &RelayState7, &RelayState8};
-
-void setRelayByIndex(int idx, bool state, const char* source) {
-  *relayStatePtrs[idx] = state;
-  digitalWrite(relayPinNums[idx], !state);
-  logRelayAction(source, idx, state);
-  saveRelayState(idx + 1, state);
-  notifyTelegramStateChange(source, idx, state);
-}
-
-void setAllRelays(bool state, const char* source) {
-  Todos = state;
-  for (int i = 0; i < 8; i++) {
-    *relayStatePtrs[i] = state;
-    digitalWrite(relayPinNums[i], !state);
-    saveRelayState(i + 1, state);
-  }
-  logRelayAction(source, -1, state);
-  notifyTelegramStateChange(source, -1, state);
-}
-
-int findRelayByName(const String& name) {
-  for (int i = 0; i < 8; i++) {
-    String stored = relayNames[i];
-    stored.toUpperCase();
-    if (name == stored) return i;
-  }
-  if (name == "VAL") return 5;
-  return -1;
-}
-
-// Função de callback para mensagens MQTT recebidas
-void mqttCallback(char *topic, byte *payload, unsigned int length) {
-  if (length > 255) return;
-
-  char messageBuf[256];
-  memcpy(messageBuf, payload, length);
-  messageBuf[length] = '\0';
-
-  String messageTemp(messageBuf);
-  messageTemp.trim();
-
-  Serial.print("Mensagem recebida [");
-  Serial.print(topic);
-  Serial.print("] ");
-  Serial.println(messageTemp);
-
-  bool newState = messageTemp.startsWith("1");
-
-  if (strcmp(topic, sub0) == 0) {
-    if (Todos != newState) {
-      Todos = newState;
-      const int pins[] = {RelayPin1, RelayPin2, RelayPin3, RelayPin4,
-                          RelayPin5, RelayPin6, RelayPin7, RelayPin8};
-      for (int i = 0; i < 8; i++) digitalWrite(pins[i], !Todos);
-      logRelayAction("MQTT", -1, Todos);
-      RelayState1 = RelayState2 = RelayState3 = RelayState4 = RelayState5 =
-          RelayState6 = RelayState7 = RelayState8 = Todos;
-      for (int r = 1; r <= 8; r++) saveRelayState(r, Todos);
-      notifyTelegramStateChange("MQTT", -1, Todos);
-      pendingSinricProUpdate = true;
-    }
-    return;
-  }
-
-  for (int i = 0; i < 8; i++) {
-    if (strcmp(topic, relayTopics[i]) == 0) {
-      if (*relayStatePtrs[i] != newState) {
-        *relayStatePtrs[i] = newState;
-        digitalWrite(relayPinNums[i], !newState);
-        logRelayAction("MQTT", i, newState);
-        saveRelayState(i + 1, newState);
-        notifyTelegramStateChange("MQTT", i, newState);
-        pendingSinricProUpdate = true;
-      }
-      return;
-    }
-  }
-
-  if (strcmp(topic, sub9) == 0) {
-    // ========== HANDLE HERMES COMMANDS ==========
-    // Formato: COMANDO:ITEM (ex: LIGAR:Varanda, DESLIGAR:Sala, SENSORES, STATUS)
-    messageTemp.toUpperCase(); // normaliza pra maiúsculas
-    String cmd = messageTemp;
-
-    // SENSORES
-    if (cmd == "SENSORES") {
-      // Apenas publica o que já está em cache, sem forçar leitura
-      Serial.println("✅ Hermes SENSORES");
-      pendingSensorMqttUpdate = true;
-    }
-    // STATUS
-    else if (cmd == "STATUS") {
-      // Monta JSON com estado dos 8 relés + Toggle Geral
-      char statusJson[512];
-      snprintf(statusJson, sizeof(statusJson),
-        "{\"estados\": {\"Varanda\": \"%s\", \"Bancada\": \"%s\", \"Sala\": \"%s\", \"Cozinha\": \"%s\", \"Quintal\": \"%s\", \"Val\": \"%s\", \"Robson\": \"%s\", \"Kinha\": \"%s\", \"TUDO\": \"%s\"}}",
-        RelayState1 ? "ON" : "OFF", RelayState2 ? "ON" : "OFF", RelayState3 ? "ON" : "OFF", RelayState4 ? "ON" : "OFF",
-        RelayState5 ? "ON" : "OFF", RelayState6 ? "ON" : "OFF", RelayState7 ? "ON" : "OFF", RelayState8 ? "ON" : "OFF",
-        Todos ? "ON" : "OFF");
-      mqttClient.publish(pub18, statusJson);
-      Serial.println("✅ Hermes STATUS: " + String(statusJson));
-    }
-    // LIGAR individual ou TUDO
-    
-    // LIGAR TUDO
-    if (cmd.startsWith("LIGAR") && cmd.indexOf("TUDO") != -1) {
-      setAllRelays(true, "HERMES");
-      pendingSinricProUpdate = true;
-    }
-    // DESLIGAR TUDO
-    else if (cmd.startsWith("DESLIGAR") && cmd.indexOf("TUDO") != -1) {
-      setAllRelays(false, "HERMES");
-      pendingSinricProUpdate = true;
-    }
-    // LIGAR individual
-    else if (cmd.startsWith("LIGAR:")) {
-      String item = cmd.substring(6); item.trim();
-      int idx = findRelayByName(item);
-      if (idx >= 0) {
-        setRelayByIndex(idx, true, "HERMES");
-        pendingSinricProUpdate = true;
-        Todos = true;
-        for (int i = 0; i < 8; i++) if (!*relayStatePtrs[i]) { Todos = false; break; }
-      }
-    }
-    // DESLIGAR individual
-    else if (cmd.startsWith("DESLIGAR:")) {
-      String item = cmd.substring(9); item.trim();
-      int idx = findRelayByName(item);
-      if (idx >= 0) {
-        setRelayByIndex(idx, false, "Hermes");
-        pendingSinricProUpdate = true;
-        Todos = false;
-        for (int i = 0; i < 8; i++) if (*relayStatePtrs[i]) { Todos = true; break; }
-      }
-    }
-    pendingMqttUpdate = true;
-  }
-}
-
-// Função para ler e publicar dados dos sensores
-void readSensors() {
-  unsigned long currentTimeDHT = millis();
-  unsigned long currentTimeBMP180 = millis();
-
-  // Leitura do DHT22 a cada 60 segundos
-  if (currentTimeDHT - lastMsgDHT > DHT_READ_INTERVAL) {
-    lastMsgDHT = currentTimeDHT;
-
-    float temp_data = dht.readTemperature();
-    float hum_data = dht.readHumidity();
-
-    // Verifica se as leituras são válidas
-    if (isnan(temp_data) || isnan(hum_data)) {
-      Serial.println("Falha na leitura do sensor DHT22!");
-      return;
-    }
-
-    // Processa dados de temperatura e umidade
-    dtostrf(temp_data, 6, 2, str_temp_data);
-    dtostrf(hum_data, 6, 2, str_hum_data);
-
-    // Calcula Ponto de Orvalho (Dew Point)
-    float a = 17.27;
-    float b = 237.7;
-    float gamma = (a * temp_data) / (b + temp_data) + log(hum_data / 100.0);
-    float dewpoint = (b * gamma) / (a - gamma);
-    dtostrf(dewpoint, 6, 2, str_dewpoint_data);
-
-    // Processa temperatura em Fahrenheit e sensação térmica
-    float tempF_data = dht.readTemperature(true);
-    if (!isnan(tempF_data)) {
-      dtostrf(tempF_data, 6, 2, str_tempF_data);
-
-      float tempterm_data = dht.computeHeatIndex(tempF_data, hum_data);
-      if (!isnan(tempterm_data)) {
-        tempterm_data = dht.convertFtoC(tempterm_data);
-        dtostrf(tempterm_data, 6, 2, str_tempterm_data);
-      }
-    }
-
-    // Sinaliza para o Core 0 publicar os dados
-    pendingSensorMqttUpdate = true;
-    pendingSensorSinricUpdate = true;
-
-    // Debug no serial
-    Serial.println("\n=== Leitura DHT22 ===");
-    Serial.print("Temperatura: ");
-    Serial.print(str_temp_data);
-    Serial.println(" °C");
-    Serial.print("Umidade: ");
-    Serial.print(str_hum_data);
-    Serial.println(" %");
-    Serial.print("Sensação Térmica: ");
-    Serial.print(str_tempterm_data);
-    Serial.println(" °C");
-    Serial.print("Ponto de Orvalho: ");
-    Serial.print(str_dewpoint_data);
-    Serial.println(" °C");
-  }
-
-  // Leitura do BMP180 a cada 120 segundos
-  if (currentTimeBMP180 - lastMsgBMP180 > BMP_READ_INTERVAL) {
-    lastMsgBMP180 = currentTimeBMP180;
-
-    pressure = bmp.readPressure();
-    if (pressure != 0) {
-      seaLevelPressureCache = bmp.readSealevelPressure(pressaoNivelMar);
-
-      altitudeRealCache = bmp.readAltitude(pressaoNivelMar * 100);
-      if (!isnan(altitudeRealCache)) {
-        float tempBMP = bmp.readTemperature();
-        temperature = tempBMP;
-
-        altitude = altitudeRealCache + altitudeNivelMar;
-        altitudeTotal = altitude;
-
-        // Sinaliza para o Core 0 publicar os dados
-        pendingSensorMqttUpdate = true;
-
-        // Debug no serial
-        Serial.println("\n=== Leitura BMP180 ===");
-        Serial.print("Temperatura: ");
-        Serial.print(temperature);
-        Serial.println(" °C");
-        Serial.print("Pressão: ");
-        Serial.print(pressure / 100.0);
-        Serial.println(" hPa");
-        Serial.print("Pressão nível do mar: ");
-        Serial.print(seaLevelPressureCache / 100.0);
-        Serial.println(" hPa");
-        Serial.print("Altitude real: ");
-        Serial.print(altitudeRealCache);
-        Serial.println(" m");
-        Serial.print("Altitude total: ");
-        Serial.print(altitude);
-        Serial.println(" m");
-      }
-    } else {
-      Serial.println("Erro na leitura do sensor BMP180");
-    }
-  }
-}
-
-// Função para publicar dados dos sensores
-void publishSensorData() {
-  // Publicar dados do DHT22
-  mqttClient.publish(pub9, str_temp_data, true);
-  mqttClient.publish(pub10, str_hum_data, true);
-  mqttClient.publish(pub11, str_tempterm_data, true);
-
-  // Publicar dados do BMP180
-  char tempStr[10];
-  dtostrf(temperature, 6, 2, tempStr);
-  mqttClient.publish(pub12, tempStr, true); // Temperatura BMP180
-
-  dtostrf(pressure / 100.0, 6, 2, tempStr);
-  mqttClient.publish(pub13, tempStr, true); // Pressão real BMP180
-
-  // Pressão ao nível do mar (cache, evita I2C duplicado)
-  dtostrf(seaLevelPressureCache / 100.0, 6, 2, tempStr);
-  mqttClient.publish(pub14, tempStr, true); // Pressão ao nível do mar BMP180
-
-  // Altitude real (cache, evita I2C duplicado)
-  dtostrf(altitudeRealCache, 6, 2, tempStr);
-  mqttClient.publish(pub15, tempStr, true); // Altitude real BMP180
-
-  // Altitude em relação ao nível do mar
-  dtostrf(altitude, 6, 2, tempStr);
-  mqttClient.publish(pub16, tempStr, true);
-  mqttClient.publish(pub17, str_dewpoint_data, true);
-}
-
-// Função para publicar estado dos relés
-void publishRelayStates() {
-  mqttClient.publish(pub0, Todos ? "1" : "0", true);
-  mqttClient.publish(pub1, RelayState1 ? "1" : "0", true);
-  mqttClient.publish(pub2, RelayState2 ? "1" : "0", true);
-  mqttClient.publish(pub3, RelayState3 ? "1" : "0", true);
-  mqttClient.publish(pub4, RelayState4 ? "1" : "0", true);
-  mqttClient.publish(pub5, RelayState5 ? "1" : "0", true);
-  mqttClient.publish(pub6, RelayState6 ? "1" : "0", true);
-  mqttClient.publish(pub7, RelayState7 ? "1" : "0", true);
-  mqttClient.publish(pub8, RelayState8 ? "1" : "0", true);
-}
-
-// =============== FUNÇÕES DE PERSISTÊNCIA ===============
-void saveRelayState(int relayNum, bool state) {
-  if (relayMutex == NULL) return;
-  String key = "RelayState" + String(relayNum);
-  if (xSemaphoreTake(relayMutex, portMAX_DELAY) == pdTRUE) {
-    preferences.putBool(key.c_str(), state);
-    xSemaphoreGive(relayMutex);
-  }
-}
-
-bool loadRelayState(int relayNum, bool defaultValue) {
-  if (relayMutex == NULL) return defaultValue;
-  String key = "RelayState" + String(relayNum);
-  bool val = defaultValue;
-  if (xSemaphoreTake(relayMutex, portMAX_DELAY) == pdTRUE) {
-    val = preferences.getBool(key.c_str(), defaultValue);
-    xSemaphoreGive(relayMutex);
-  }
-  return val;
-}
-
-void loadAllRelayStates() {
-  RelayState1 = loadRelayState(1, false);
-  RelayState2 = loadRelayState(2, false);
-  RelayState3 = loadRelayState(3, false);
-  RelayState4 = loadRelayState(4, false);
-  RelayState5 = loadRelayState(5, false);
-  RelayState6 = loadRelayState(6, false);
-  RelayState7 = loadRelayState(7, false);
-  RelayState8 = loadRelayState(8, false);
-  Todos = RelayState1 && RelayState2 && RelayState3 && RelayState4 &&
-          RelayState5 && RelayState6 && RelayState7 && RelayState8;
-}
-
-void applyRelayStatesToPins() {
-  logRelayAction("Sistema", 0, RelayState1);
-  logRelayAction("Sistema", 1, RelayState2);
-  logRelayAction("Sistema", 2, RelayState3);
-  logRelayAction("Sistema", 3, RelayState4);
-  logRelayAction("Sistema", 4, RelayState5);
-  logRelayAction("Sistema", 5, RelayState6);
-  logRelayAction("Sistema", 6, RelayState7);
-  logRelayAction("Sistema", 7, RelayState8);
-  digitalWrite(RelayPin1, !RelayState1);
-  digitalWrite(RelayPin2, !RelayState2);
-  digitalWrite(RelayPin3, !RelayState3);
-  digitalWrite(RelayPin4, !RelayState4);
-  digitalWrite(RelayPin5, !RelayState5);
-  digitalWrite(RelayPin6, !RelayState6);
-  digitalWrite(RelayPin7, !RelayState7);
-  digitalWrite(RelayPin8, !RelayState8);
-}
-
-// =============== FUNÇÃO DE LOG ===============
-void logRelayAction(const char* source, int relayNum, bool state) {
-  Serial.print('[');
-  Serial.print(source);
-  Serial.print("] ");
-  if (relayNum >= 0 && relayNum < 8) {
-    Serial.print(relayNames[relayNum]);
-  } else {
-    Serial.print("TODOS");
-  }
-  Serial.print(": ");
-  Serial.println(state ? "LIGADO" : "DESLIGADO");
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+  Serial.println("[WiFi] Conectando (" WIFI_SSID ")...");
 }
 
 // =============== INÍCIO ===============

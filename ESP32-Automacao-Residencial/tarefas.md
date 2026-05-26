@@ -90,10 +90,10 @@
 **Solução:** Mesma abordagem de array de lookup.  
 **Status:** ✅ Concluído — 8 blocos substituídos por loop + `setRelayByIndex()` + `setAllRelays()`.
 
-### ❌ 14. `.ino` monolítico com 818 linhas
-**Problema:** Toda a lógica principal (WiFi, MQTT, sensores, persistência, Hermes, tasks) está em um único arquivo.  
-**Solução:** Mover implementações para arquivos `.cpp` separados (ex: `MQTTHandler.cpp`, `SensorManager.cpp`, `HermesHandler.cpp`).  
-**Status:** ❌ Pendente — Refatoração estrutural extensa.
+### ✅ 14. `.ino` monolítico com 809 linhas
+**Problema:** Toda a lógica principal (WiFi, MQTT, sensores, persistência, Hermes, tasks) estava em um único arquivo.  
+**Solução:** Mover implementações para arquivos `.cpp` separados.  
+**Status:** ✅ Concluído — Criados `RelayManager.cpp/h`, `SensorManager.cpp/h`, `MQTTHandler.cpp/h`. `.ino` reduzido de 809 para 387 linhas.
 
 ### ✅ 15. Stack size potencialmente insuficiente
 **Arquivo:** `.ino:670-676`  
@@ -132,7 +132,21 @@
 **Solução:** Adicionar autenticação básica ou restringir acesso por IP/MAC.  
 **Status:** ✅ Concluído — Telnet exige senha (`TELNET_PASSWORD = OTA_PASSWORD`) antes de liberar bridge Serial.
 
+### ✅ 21. Múltiplas definições de símbolos (linker) após modularização
+**Arquivos:** `TelegramBotESP32.h/cpp`, `HomeAssistantDiscovery.h/cpp`, `RelayManager.cpp`, `MQTTHandler.cpp`, `.ino`  
+**Problema:** Ao modularizar o `.ino` monolítico em múltiplos `.cpp`, headers que definiam funções/variáveis diretamente (`TelegramBotESP32.h`, `HomeAssistantDiscovery.h`) causaram erro de `multiple definition` no linker. Além disso, `TelegramBotESP32.h` incluía `Bibliotecas.h`, que puxava SinricPro headers com definições inline — agravando o problema.  
+**Solução:**  
+- `TelegramBotESP32.h`: função bodies movidas para `TelegramBotESP32.cpp`; variáveis declaradas `extern`; `#include "Bibliotecas.h"` substituído por includes específicos (`WiFi.h`, `WiFiClientSecure.h`, `UniversalTelegramBot.h`)  
+- `TelegramBotESP32.cpp`: criado com as implementações e variáveis globais  
+- `HomeAssistantDiscovery.h`: função bodies movidas para `HomeAssistantDiscovery.cpp`  
+- `HomeAssistantDiscovery.cpp`: criado com as implementações  
+- `.ino`: `telegramClient`/`telegramBot` alterados para `extern` (definidos em TelegramBotESP32.cpp)  
+- `setupWiFi()`: adicionada definição no `.ino` (estava declarada em `WiFiUtils.h` mas sem implementação)  
+**Status:** ✅ Concluído — Build compila sem erros de linker.
+
 ---
+
+
 
 ## Resumo
 
@@ -140,10 +154,9 @@
 |------------|-------|-------------|------------|
 | Críticas   | 5     | 5           | 0          |
 | Altas      | 5     | 5           | 0          |
-| Médias     | 5     | 4           | 1          |
+| Médias     | 6     | 6           | 0          |
 | Baixas     | 5     | 4           | 1          |
-| **Total**  | **20**| **18**      | **2**      |
+| **Total**  | **21**| **20**      | **1**      |
 
 **Próximas etapas recomendadas:**
-1. Tarefa 18 — Implementar watchdog task com heartbeat
-2. Tarefa 14 — Refatoração estrutural do `.ino` em múltiplos `.cpp`
+- Task 18 (watchdog) — única pendente
