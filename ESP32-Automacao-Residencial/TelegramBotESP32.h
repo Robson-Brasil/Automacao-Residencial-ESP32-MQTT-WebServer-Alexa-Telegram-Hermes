@@ -174,26 +174,28 @@ void handleTelegramMessages(int numNewMessages) {
         break;
       }
     }
-    else if (text == "💡 LIGAR TUDO" || text == "/on") {
-      setAllRelays(true, "Telegram");
-      feedback = "✅ Todos os relés ligados!";
-      updated = true;
-    }
-    else if (text == "🔌 DESLIGAR TUDO" || text == "/off") {
-      setAllRelays(false, "Telegram");
-      feedback = "⭕ Todos os relés desligados!";
-      updated = true;
-    }
-    else if (text == "📊 VER SENSORES" || text == "/sensores") {
-      String msg = "📊 *Leituras*\n";
-      msg += "🌡️ Temp: " + String(str_temp_data) + " °C\n";
-      msg += "🌡️ Sensação: " + String(str_tempterm_data) + " °C\n";
-      msg += "💧 Umidade: " + String(str_hum_data) + "%\n";
-      msg += "🌫️ Ponto Orvalho: " + String(str_dewpoint_data) + " °C\n";
-      msg += "⏲️ Pressão: " + String(pressure/100.0, 1) + " hPa\n";
-      msg += "🏔️ Altitude: " + String(altitude, 1) + " m";
-      sendMainMenu(chat_id, msg);
-      continue;
+    if (!updated) {
+      if (text == "💡 LIGAR TUDO" || text == "/on") {
+        setAllRelays(true, "Telegram");
+        feedback = "✅ Todos os relés ligados!";
+        updated = true;
+      }
+      else if (text == "🔌 DESLIGAR TUDO" || text == "/off") {
+        setAllRelays(false, "Telegram");
+        feedback = "⭕ Todos os relés desligados!";
+        updated = true;
+      }
+      else if (text == "📊 VER SENSORES" || text == "/sensores") {
+        String msg = "📊 *Leituras*\n";
+        msg += "🌡️ Temp: " + String(str_temp_data) + " °C\n";
+        msg += "🌡️ Sensação: " + String(str_tempterm_data) + " °C\n";
+        msg += "💧 Umidade: " + String(str_hum_data) + "%\n";
+        msg += "🌫️ Ponto Orvalho: " + String(str_dewpoint_data) + " °C\n";
+        msg += "⏲️ Pressão: " + String(pressure/100.0, 1) + " hPa\n";
+        msg += "🏔️ Altitude: " + String(altitude, 1) + " m";
+        sendMainMenu(chat_id, msg);
+        continue;
+      }
     }
 
     if (updated) {
