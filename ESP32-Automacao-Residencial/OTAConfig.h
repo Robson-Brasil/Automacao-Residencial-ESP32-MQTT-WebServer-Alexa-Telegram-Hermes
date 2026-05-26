@@ -3,6 +3,8 @@
 
 #include <ArduinoOTA.h>
 
+#define OTA_PASSWORD "S3nh@S3gur@"
+
 void setupOTA();
 
 #endif // OTACONFIG_H

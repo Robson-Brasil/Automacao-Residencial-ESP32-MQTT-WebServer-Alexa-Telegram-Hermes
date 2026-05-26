@@ -124,11 +124,6 @@
     "ast_hash": "c1dcd79d7e4f5a5a4fe04fe939fbf5f1",
     "semantic_hash": "c1dcd79d7e4f5a5a4fe04fe939fbf5f1"
   },
-  "C:\\Users\\RobsonBrasil\\Desktop\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\WiFiManagerConfig.h": {
-    "mtime": 1779574928.869275,
-    "ast_hash": "2f7d59fbcf7260f794dea5ea17ac0359",
-    "semantic_hash": "2f7d59fbcf7260f794dea5ea17ac0359"
-  },
   "C:\\Users\\RobsonBrasil\\Desktop\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\WiFiUtils.h": {
     "mtime": 1774809652.816545,
     "ast_hash": "6ff941df279ede22e1acbf84989413f4",
@@ -205,6 +200,206 @@
     "semantic_hash": "a89d0328a05be1410900f45434cdb49b"
   },
   "C:\\Users\\RobsonBrasil\\Desktop\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\docs\\superpowers\\specs\\2026-05-14-remove-hardcoded-wifi-ip-design.md": {
+    "mtime": 1778768879.7625663,
+    "ast_hash": "9131b16dbcdc4f131428a489c6f25845",
+    "semantic_hash": "9131b16dbcdc4f131428a489c6f25845"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\Bibliotecas.h": {
+    "mtime": 1779736461.2517354,
+    "ast_hash": "312c30a63d67a11b31388316bf6cdd9a",
+    "semantic_hash": "312c30a63d67a11b31388316bf6cdd9a"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\ConfigMQTT.h": {
+    "mtime": 1774809434.6207557,
+    "ast_hash": "75c64c885a86df2b9f8045018e58bc53",
+    "semantic_hash": "75c64c885a86df2b9f8045018e58bc53"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\ConstantesTempo.h": {
+    "mtime": 1779736603.6128597,
+    "ast_hash": "a910abb070c9970dde219e156cffe006",
+    "semantic_hash": "a910abb070c9970dde219e156cffe006"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\DefinicoesProjeto.h": {
+    "mtime": 1779570511.0679293,
+    "ast_hash": "4dc6ad02a52c12f4ee657e0f8d8ebd22",
+    "semantic_hash": "4dc6ad02a52c12f4ee657e0f8d8ebd22"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\finalize_fixed.py": {
+    "mtime": 1779540036.933804,
+    "ast_hash": "000ac57e56aa67f0a96d7e63a1c6c758",
+    "semantic_hash": "000ac57e56aa67f0a96d7e63a1c6c758"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\finalize_graphify.py": {
+    "mtime": 1779540016.4256153,
+    "ast_hash": "666358d4f67a89e8b42337b88c041d7d",
+    "semantic_hash": "666358d4f67a89e8b42337b88c041d7d"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\generate_visualization.py": {
+    "mtime": 1779540053.1009285,
+    "ast_hash": "130f814c812caa0d07e8634022d2083d",
+    "semantic_hash": "130f814c812caa0d07e8634022d2083d"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\GPIOs.h": {
+    "mtime": 1779731629.776747,
+    "ast_hash": "e2ebc0700f0de2d7cf199e9d5d9a1817",
+    "semantic_hash": "e2ebc0700f0de2d7cf199e9d5d9a1817"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\HomeAssistantDiscovery.h": {
+    "mtime": 1779762561.4055974,
+    "ast_hash": "05ba7cc701171e69e71b3260d44dcee7",
+    "semantic_hash": "05ba7cc701171e69e71b3260d44dcee7"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\LoginsSenhas.h": {
+    "mtime": 1779761515.6642473,
+    "ast_hash": "73bf46af7f3ca19823e93ea8e203f88d",
+    "semantic_hash": "73bf46af7f3ca19823e93ea8e203f88d"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\LoginsSenhas_example.h": {
+    "mtime": 1779761516.002255,
+    "ast_hash": "43b28a48af02efb39de69a61e3e7f105",
+    "semantic_hash": "43b28a48af02efb39de69a61e3e7f105"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\MQTTParametros.h": {
+    "mtime": 1779733373.4292178,
+    "ast_hash": "9f453c8f2edeb10d1d1014d510207f74",
+    "semantic_hash": "9f453c8f2edeb10d1d1014d510207f74"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\OTAConfig.cpp": {
+    "mtime": 1779761518.1485298,
+    "ast_hash": "beadbe5d7b46eec1e0a9ff8ed2950f6f",
+    "semantic_hash": "beadbe5d7b46eec1e0a9ff8ed2950f6f"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\OTAConfig.h": {
+    "mtime": 1777516685.5377297,
+    "ast_hash": "bb8de16f18ecbdd0a2fc65f9f782f9dd",
+    "semantic_hash": "bb8de16f18ecbdd0a2fc65f9f782f9dd"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\RemoteDebug.h": {
+    "mtime": 1779762032.8269453,
+    "ast_hash": "4914147f5e739f7c87e7a2c7e2135d04",
+    "semantic_hash": "4914147f5e739f7c87e7a2c7e2135d04"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\Sensores.h": {
+    "mtime": 1779734051.380198,
+    "ast_hash": "7f4f895ad7747679c15a430953019a96",
+    "semantic_hash": "7f4f895ad7747679c15a430953019a96"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\SinricProESP32.h": {
+    "mtime": 1779585129.3367915,
+    "ast_hash": "84e70f47b23266648f0966445f27663b",
+    "semantic_hash": "84e70f47b23266648f0966445f27663b"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\TaskCores.h": {
+    "mtime": 1774809478.0238132,
+    "ast_hash": "a8325c7f2ab73a29519865e8ac6edb72",
+    "semantic_hash": "a8325c7f2ab73a29519865e8ac6edb72"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\TelegramBotESP32.h": {
+    "mtime": 1779762063.8108485,
+    "ast_hash": "9b7d8bbe5c1d3425be827ea3dcab623e",
+    "semantic_hash": "9b7d8bbe5c1d3425be827ea3dcab623e"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\TopicosMQTT.h": {
+    "mtime": 1779569973.374106,
+    "ast_hash": "dae01a20abb637560f3f642dffac279e",
+    "semantic_hash": "dae01a20abb637560f3f642dffac279e"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\VariaveisGlobais.cpp": {
+    "mtime": 1779762519.0237918,
+    "ast_hash": "3b84d3175d9a81795fdd0fcafe9f6ba4",
+    "semantic_hash": "3b84d3175d9a81795fdd0fcafe9f6ba4"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\VariaveisGlobais.h": {
+    "mtime": 1779762518.6167848,
+    "ast_hash": "97b030402971a532d4d31feaa9a50288",
+    "semantic_hash": "97b030402971a532d4d31feaa9a50288"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\WebServerESP32.h": {
+    "mtime": 1779736226.419617,
+    "ast_hash": "74f5c218e33a85ce343e7acf4253834c",
+    "semantic_hash": "74f5c218e33a85ce343e7acf4253834c"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\WiFiManagerConfig.h": {
+    "mtime": 1779758283.0709455,
+    "ast_hash": "6cfbf2150b571ec9babeb852daefefe4",
+    "semantic_hash": "6cfbf2150b571ec9babeb852daefefe4"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\WiFiUtils.h": {
+    "mtime": 1779734051.9400084,
+    "ast_hash": "0c652cfebb5a72b64de88f72adf86b41",
+    "semantic_hash": "0c652cfebb5a72b64de88f72adf86b41"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\CLAUDE.md": {
+    "mtime": 1778587228.6310406,
+    "ast_hash": "f4ff62b33525cd65bf076d7570ea3381",
+    "semantic_hash": "f4ff62b33525cd65bf076d7570ea3381"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\dashboard.html": {
+    "mtime": 1778723294.834652,
+    "ast_hash": "d3d4ecd01b7c864ff7d81c265f03df2e",
+    "semantic_hash": "d3d4ecd01b7c864ff7d81c265f03df2e"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\findings.md": {
+    "mtime": 1779728024.3440602,
+    "ast_hash": "5f050062ea52d0c2bdfac69f3d566f93",
+    "semantic_hash": "5f050062ea52d0c2bdfac69f3d566f93"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\progress.md": {
+    "mtime": 1779728031.1150608,
+    "ast_hash": "d25db658577140409d54dc02a63e73c9",
+    "semantic_hash": "d25db658577140409d54dc02a63e73c9"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\README.md": {
+    "mtime": 1779460460.0258582,
+    "ast_hash": "4ecbad8e32c0e1179802f90ef0a17a93",
+    "semantic_hash": "4ecbad8e32c0e1179802f90ef0a17a93"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\tarefas.md": {
+    "mtime": 1779763266.8445604,
+    "ast_hash": "690c6ffcd95899621e674ecc3c6993c4",
+    "semantic_hash": "690c6ffcd95899621e674ecc3c6993c4"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\task_plan.md": {
+    "mtime": 1779728028.4030626,
+    "ast_hash": "5367281ff6d4224ae0b7d8c93c4dbf51",
+    "semantic_hash": "5367281ff6d4224ae0b7d8c93c4dbf51"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\docs\\CHEATSHEET.md": {
+    "mtime": 1779460457.4703362,
+    "ast_hash": "13d4896b866511d8b7506dbf18f0b285",
+    "semantic_hash": "13d4896b866511d8b7506dbf18f0b285"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\docs\\INDICE.md": {
+    "mtime": 1779247005.892951,
+    "ast_hash": "1304edd0498ba267c8d263c7494af887",
+    "semantic_hash": "1304edd0498ba267c8d263c7494af887"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\docs\\PROJETO_DETALHADO.md": {
+    "mtime": 1779246911.3284917,
+    "ast_hash": "4d25017e0a5dca0f5bbbcea18f1e2ac2",
+    "semantic_hash": "4d25017e0a5dca0f5bbbcea18f1e2ac2"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\docs\\superpowers\\plans\\2026-05-13-fix-mdns-ota-hostname.md": {
+    "mtime": 1778725199.0373433,
+    "ast_hash": "a5e0ac8b02d2f3a0d35e00a13099b4c4",
+    "semantic_hash": "a5e0ac8b02d2f3a0d35e00a13099b4c4"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\docs\\superpowers\\plans\\2026-05-14-mqtt-wifi-manager-implementation.md": {
+    "mtime": 1778774245.6259296,
+    "ast_hash": "c66672b7ba4a6b11bd15392ee811f09f",
+    "semantic_hash": "c66672b7ba4a6b11bd15392ee811f09f"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\docs\\superpowers\\plans\\2026-05-14-remove-hardcoded-wifi-ip.md": {
+    "mtime": 1778769049.8761132,
+    "ast_hash": "5783cfbe868cadc55d4a8a0696d278f2",
+    "semantic_hash": "5783cfbe868cadc55d4a8a0696d278f2"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\docs\\superpowers\\specs\\2026-05-14-mqtt-wifi-manager-design.md": {
+    "mtime": 1778773408.1757133,
+    "ast_hash": "a89d0328a05be1410900f45434cdb49b",
+    "semantic_hash": "a89d0328a05be1410900f45434cdb49b"
+  },
+  "D:\\GitHub-Repositorios\\Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes\\ESP32-Automacao-Residencial\\docs\\superpowers\\specs\\2026-05-14-remove-hardcoded-wifi-ip-design.md": {
     "mtime": 1778768879.7625663,
     "ast_hash": "9131b16dbcdc4f131428a489c6f25845",
     "semantic_hash": "9131b16dbcdc4f131428a489c6f25845"

@@ -19,6 +19,9 @@ const char* SenhaMQTT = mqtt_pass;
 int MQTT_PORT = 1883;
 const char* clientID = mqtt_client;
 
+// OTA - senha para atualização over-the-air
+#define OTA_PASSWORD "SUA_SENHA_OTA_AQUI"
+
 // Telegram - substitua pelos seus valores reais
 #define DEFAULT_TELEGRAM_TOKEN "SEU_TELEGRAM_BOT_TOKEN_AQUI"
 #define DEFAULT_CHAT_ID "SEU_CHAT_ID_AQUI"

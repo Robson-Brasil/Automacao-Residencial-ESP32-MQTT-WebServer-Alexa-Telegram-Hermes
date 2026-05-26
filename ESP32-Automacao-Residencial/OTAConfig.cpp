@@ -9,7 +9,7 @@ void setupOTA() {
   // Configurações de Identificação
   ArduinoOTA.setPort(3232);
   ArduinoOTA.setHostname(globalHostname);
-  ArduinoOTA.setPassword("S3nh@S3gur@");
+  ArduinoOTA.setPassword(OTA_PASSWORD);
 
   ArduinoOTA
     .onStart([]() {

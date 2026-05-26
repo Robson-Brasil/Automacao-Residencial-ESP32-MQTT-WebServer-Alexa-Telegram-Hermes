@@ -120,24 +120,8 @@ void setupWiFi() {
 
     WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
 
-    int attempts = 0;
-    while (WiFi.status() != WL_CONNECTED && attempts < 60) {
-      delay(500);
-      Serial.print(".");
-      attempts++;
-    }
-
-    if (WiFi.status() == WL_CONNECTED) {
-      wifiConnected = true;
-      Serial.println("\n==============================");
-      Serial.println("WiFi CONECTADO!");
-      Serial.print("IP: "); Serial.println(WiFi.localIP());
-      Serial.println("==============================");
-      setupMDNS();
-    } else {
-      wifiConnected = false;
-      Serial.println("\n[Rede] Falha na conexao WiFi.");
-    }
+    WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+    Serial.println("[Rede] WiFi.begin() assíncrono iniciado.");
   }
 
   if (WiFi.status() == WL_CONNECTED && !wifiConnected) {
@@ -167,7 +151,7 @@ void reconnectMQTT() {
       Serial.println("==============================");
       mqttConnected = true;
       pendingHADiscovery = true;
-      mqttFirstSub9 = true; // Ignorar primeira mensagem retida no sub9
+
       // Inscrição nos tópicos dos relés
       mqttClient.subscribe(sub0);
       mqttClient.subscribe(sub1);
@@ -191,12 +175,13 @@ void reconnectMQTT() {
 
 // Função de callback para mensagens MQTT recebidas
 void mqttCallback(char *topic, byte *payload, unsigned int length) {
-  String messageTemp;
+  if (length > 255) return;
 
-  for (unsigned int i = 0; i < length; i++) {
-    messageTemp += (char)payload[i];
-  }
+  char messageBuf[256];
+  memcpy(messageBuf, payload, length);
+  messageBuf[length] = '\0';
 
+  String messageTemp(messageBuf);
   messageTemp.trim();
 
   Serial.print("Mensagem recebida [");
@@ -298,11 +283,6 @@ digitalWrite(RelayPin8, !RelayState8);
       pendingSinricProUpdate = true;
     }
   } else if (strcmp(topic, sub9) == 0) {
-    // Ignora mensagem retida entregue logo após o subscribe
-    if (mqttFirstSub9) {
-      mqttFirstSub9 = false;
-      return;
-    }
     // ========== HANDLE HERMES COMMANDS ==========
     // Formato: COMANDO:ITEM (ex: LIGAR:Varanda, DESLIGAR:Sala, SENSORES, STATUS)
     messageTemp.toUpperCase(); // normaliza pra maiúsculas
@@ -450,34 +430,18 @@ void readSensors() {
   // Leitura do BMP180 a cada 120 segundos
   if (currentTimeBMP180 - lastMsgBMP180 > BMP_READ_INTERVAL) {
     lastMsgBMP180 = currentTimeBMP180;
-    char buffer[10];
 
-    // NÃO chame bmp.begin() aqui!
     pressure = bmp.readPressure();
     if (pressure != 0) {
-      // Pressão atual
-      dtostrf(pressure / 100.0, 2, 2, buffer);
-
-      // Pressão ao nível do mar (cache para publishSensorData)
       seaLevelPressureCache = bmp.readSealevelPressure(pressaoNivelMar);
-      if (seaLevelPressureCache != 0) {
-        dtostrf(seaLevelPressureCache / 100.0, 2, 2, buffer);
-      }
 
-      // Altitude (cache para publishSensorData)
       altitudeRealCache = bmp.readAltitude(pressaoNivelMar * 100);
       if (!isnan(altitudeRealCache)) {
-        // Publica altitude real (acima da referência pressaoNivelMar)
-        dtostrf(altitudeRealCache, 2, 2, buffer);
-
-        // Lê a temperatura do BMP180
         float tempBMP = bmp.readTemperature();
-        temperature = tempBMP; // atualiza global
+        temperature = tempBMP;
 
-        // Calcula e publica altitude total (acima do nível do mar)
         altitude = altitudeRealCache + altitudeNivelMar;
-        altitudeTotal = altitude; // Sincroniza variável global adicional
-        dtostrf(altitude, 2, 2, buffer);
+        altitudeTotal = altitude;
 
         // Sinaliza para o Core 0 publicar os dados
         pendingSensorMqttUpdate = true;
@@ -531,7 +495,8 @@ void publishSensorData() {
 
   // Altitude em relação ao nível do mar
   dtostrf(altitude, 6, 2, tempStr);
-  mqttClient.publish(pub16, tempStr, true); // Altitude total BMP180
+  mqttClient.publish(pub16, tempStr, true);
+  mqttClient.publish(pub17, str_dewpoint_data, true);
 }
 
 // Função para publicar estado dos relés
@@ -616,20 +581,21 @@ void setup() {
   migrateNVS();
   loadCredentials();
 
-  pinMode(RelayPin1, OUTPUT);
-  pinMode(RelayPin2, OUTPUT);
-  pinMode(RelayPin3, OUTPUT);
-  pinMode(RelayPin4, OUTPUT);
-  pinMode(RelayPin5, OUTPUT);
-  pinMode(RelayPin6, OUTPUT);
-  pinMode(RelayPin7, OUTPUT);
-  pinMode(RelayPin8, OUTPUT);
+  pinMode(RelayPin1, OUTPUT); digitalWrite(RelayPin1, HIGH);
+  pinMode(RelayPin2, OUTPUT); digitalWrite(RelayPin2, HIGH);
+  pinMode(RelayPin3, OUTPUT); digitalWrite(RelayPin3, HIGH);
+  pinMode(RelayPin4, OUTPUT); digitalWrite(RelayPin4, HIGH);
+  pinMode(RelayPin5, OUTPUT); digitalWrite(RelayPin5, HIGH);
+  pinMode(RelayPin6, OUTPUT); digitalWrite(RelayPin6, HIGH);
+  pinMode(RelayPin7, OUTPUT); digitalWrite(RelayPin7, HIGH);
+  pinMode(RelayPin8, OUTPUT); digitalWrite(RelayPin8, HIGH);
   pinMode(wifiLed, OUTPUT);
   pinMode(configButton, INPUT_PULLUP);
 
   // 2. Inicialização de Comunicação Inter-Core (IPC)
   // Criar a fila ANTES de qualquer serviço que possa usá-la
   telegramQueue = xQueueCreate(10, sizeof(TelegramNotification));
+  relayMutex = xSemaphoreCreateMutex();
 
   // 3. Persistência e Estados Iniciais
   preferences.begin("app", false);
@@ -670,7 +636,7 @@ void setup() {
   xTaskCreatePinnedToCore(
       TaskSensores,
       "TaskSensores",
-      4096,
+      8192,
       NULL, 1, &hTaskSensores,
       1 // Core 1 (Lógica de sensores)
   );

@@ -61,7 +61,7 @@ extern bool pendingSinricProUpdate;
 extern bool pendingSensorMqttUpdate;
 extern bool pendingSensorSinricUpdate;
 extern bool pendingHADiscovery;
-extern bool mqttFirstSub9;
+
 
 // Handles das Tasks FreeRTOS
 extern TaskHandle_t hTaskConexoes;
@@ -69,5 +69,7 @@ extern TaskHandle_t hTaskSensores;
 extern bool otaInProgress;
 
 extern const char* globalHostname;
+
+extern SemaphoreHandle_t relayMutex;
 
 #endif // VARIAVEISGLOBAIS_H

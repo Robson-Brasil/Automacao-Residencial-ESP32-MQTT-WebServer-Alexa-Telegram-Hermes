@@ -1,34 +1,34 @@
-# Graph Report - .  (2026-05-23)
+# Graph Report - .  (2026-05-26)
 
 ## Corpus Check
-- Corpus is ~15,847 words - fits in a single context window. You may not need a graph.
+- 40 files · ~17,619 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 174 nodes · 176 edges · 59 communities (26 shown, 33 thin omitted)
-- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 19 edges (avg confidence: 0.78)
+- 237 nodes · 245 edges · 75 communities (39 shown, 36 thin omitted)
+- Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 23 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_Cloud Integration Controllers|Cloud Integration Controllers]]
-- [[_COMMUNITY_System Config & Networking|System Config & Networking]]
-- [[_COMMUNITY_Library & Debug Infrastructure|Library & Debug Infrastructure]]
-- [[_COMMUNITY_Web API Handlers|Web API Handlers]]
-- [[_COMMUNITY_Credentials & WiFi Config|Credentials & WiFi Config]]
-- [[_COMMUNITY_WiFiManager & MQTT Setup|WiFiManager & MQTT Setup]]
-- [[_COMMUNITY_Community 6|Community 6]]
-- [[_COMMUNITY_GPIOs & SinricPro Events|GPIOs & SinricPro Events]]
-- [[_COMMUNITY_FreeRTOS Tasks & OTA|FreeRTOS Tasks & OTA]]
-- [[_COMMUNITY_Community 9|Community 9]]
-- [[_COMMUNITY_Community 12|Community 12]]
-- [[_COMMUNITY_Community 13|Community 13]]
-- [[_COMMUNITY_Community 15|Community 15]]
+- [[_COMMUNITY_Architecture & Config Docs|Architecture & Config Docs]]
+- [[_COMMUNITY_Alexa & Telegram Control|Alexa & Telegram Control]]
+- [[_COMMUNITY_Web Server API|Web Server API]]
+- [[_COMMUNITY_Core Infrastructure|Core Infrastructure]]
+- [[_COMMUNITY_Code Improvements & Tasks|Code Improvements & Tasks]]
+- [[_COMMUNITY_Telegram Bot Functions|Telegram Bot Functions]]
+- [[_COMMUNITY_WiFi & Network Config|WiFi & Network Config]]
+- [[_COMMUNITY_Graphify Incremental Tracking|Graphify Incremental Tracking]]
+- [[_COMMUNITY_Graphify Incremental Fix|Graphify Incremental Fix]]
+- [[_COMMUNITY_Visualization Scripts|Visualization Scripts]]
+- [[_COMMUNITY_Configuration Constants|Configuration Constants]]
+- [[_COMMUNITY_Home Assistant MQTT Discovery|Home Assistant MQTT Discovery]]
+- [[_COMMUNITY_Graph Finalization|Graph Finalization]]
 - [[_COMMUNITY_Community 16|Community 16]]
 - [[_COMMUNITY_Community 17|Community 17]]
 - [[_COMMUNITY_Community 18|Community 18]]
-- [[_COMMUNITY_Project Documentation|Project Documentation]]
-- [[_COMMUNITY_Community 30|Community 30]]
-- [[_COMMUNITY_Community 31|Community 31]]
-- [[_COMMUNITY_Community 32|Community 32]]
+- [[_COMMUNITY_Community 20|Community 20]]
+- [[_COMMUNITY_Community 21|Community 21]]
+- [[_COMMUNITY_Community 22|Community 22]]
 - [[_COMMUNITY_Community 33|Community 33]]
 - [[_COMMUNITY_Community 34|Community 34]]
 - [[_COMMUNITY_Community 35|Community 35]]
@@ -47,14 +47,17 @@
 - [[_COMMUNITY_Community 48|Community 48]]
 - [[_COMMUNITY_Community 49|Community 49]]
 - [[_COMMUNITY_Community 50|Community 50]]
-- [[_COMMUNITY_GitNexus Code Intelligence|GitNexus Code Intelligence]]
-- [[_COMMUNITY_IoT Dashboard Interface|IoT Dashboard Interface]]
-- [[_COMMUNITY_Project Analysis|Project Analysis]]
-- [[_COMMUNITY_Quick Reference|Quick Reference]]
+- [[_COMMUNITY_Community 51|Community 51]]
+- [[_COMMUNITY_Community 52|Community 52]]
+- [[_COMMUNITY_Community 53|Community 53]]
+- [[_COMMUNITY_Community 54|Community 54]]
 - [[_COMMUNITY_Community 55|Community 55]]
 - [[_COMMUNITY_Community 56|Community 56]]
 - [[_COMMUNITY_Community 57|Community 57]]
 - [[_COMMUNITY_Community 58|Community 58]]
+- [[_COMMUNITY_Community 59|Community 59]]
+- [[_COMMUNITY_Community 60|Community 60]]
+- [[_COMMUNITY_Community 61|Community 61]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Documentation Index` - 10 edges
@@ -69,90 +72,85 @@
 10. `Remove Hardcoded WiFi/IP Design Spec` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `OTAConfig.cpp (OTA Implementation)` --references--> `VariaveisGlobais.h (Global State Header)`  [EXTRACTED]
-  OTAConfig.cpp → VariaveisGlobais.h
 - `RemoteDebug.h (Dual Serial/Telnet)` --references--> `VariaveisGlobais.h (Global State Header)`  [INFERRED]
   RemoteDebug.h → VariaveisGlobais.h
-- `ESP32 Project Analysis Task Plan` --references--> `Progress Log`  [EXTRACTED]
-  task_plan.md → progress.md
-- `ESP32 Project Analysis Task Plan` --references--> `MQTT Broker Configuration`  [EXTRACTED]
-  task_plan.md → docs/superpowers/specs/2026-05-14-mqtt-wifi-manager-design.md
+- `Progress Log` --references--> `ESP32 Project Analysis Task Plan`  [EXTRACTED]
+  progress.md → task_plan.md
 - `ESP32 Project Analysis Task Plan` --references--> `Telegram Bot Integration`  [EXTRACTED]
   task_plan.md → docs/INDICE.md
+- `ESP32 Project Analysis Task Plan` --references--> `SinricPro Alexa/Google Home`  [EXTRACTED]
+  task_plan.md → docs/INDICE.md
+- `SinricPro Alexa Integration` --shares_data_with--> `MQTT Sync Pending Flag`  [INFERRED]
+  SinricProESP32.h → VariaveisGlobais.h
 
 ## Hyperedges (group relationships)
-- **Cross-Core Synchronization Mechanism** — CrossCoreSyncFlags, TelegramNotificationQueue, FreeRTOS_TaskHandles, VariaveisGlobais_h [INFERRED 0.90]
 - **Documentation Portal (INDICE)** — docsINDICEmd_DocIndex, PROJETO_DETALHADO_Guide, CHEATSHEET_Reference [EXTRACTED 1.00]
 - **WiFi Initialization Stack Fix** — docsPlanFixMdnsOta, MDNSService, OTAUpdateService, WiFiManagerLibrary, TaskConexoesCore0, DeviceHostnameConstant [INFERRED 0.80]
 - **Configuration Hardcoding Elimination Initiative** — docsPlanFixMdnsOta, docsPlanRemoveHardcodedWifi, docsSpecMqttWifiManager, docsSpecRemoveHardcodedWifi, HardcodedConfigRemoval [INFERRED 0.85]
 
-## Communities (59 total, 33 thin omitted)
+## Communities (75 total, 36 thin omitted)
 
-### Community 0 - "Cloud Integration Controllers"
+### Community 0 - "Architecture & Config Docs"
+Cohesion: 0.15
+Nodes (25): CHEATSHEET.md Quick Reference, DHCP-Only Networking, DEVICE_HOSTNAME Constant, FreeRTOS Multi-Core Architecture, Global Hostname Centralization Design, Hardcoded Configuration Removal Initiative, Hermes Natural Language Commands, Home Assistant MQTT Discovery (+17 more)
+
+### Community 1 - "Alexa & Telegram Control"
 Cohesion: 0.18
 Nodes (21): SinricPro Alexa Integration, Telegram Bot Controller, Web Dashboard Server, Generate Telegram Keyboard JSON, API All Relays Control, API Single Relay Control, Process Telegram Commands, Initialize Telegram Bot (+13 more)
 
-### Community 1 - "System Config & Networking"
-Cohesion: 0.20
-Nodes (16): CHEATSHEET.md Quick Reference, DEVICE_HOSTNAME Constant, FreeRTOS Multi-Core Architecture, Global Hostname Centralization Design, Hermes Natural Language Commands, Home Assistant MQTT Discovery, mDNS (ESPmDNS), OTA Update (ArduinoOTA) (+8 more)
+### Community 2 - "Web Server API"
+Cohesion: 0.15
+Nodes (13): getRelayName(), handleApiAll(), handleApiRelay(), handleApiRelays(), handleApiSetName(), setupWebServer(), _ensureRelayNames(), getRelayName() (+5 more)
 
-### Community 2 - "Library & Debug Infrastructure"
-Cohesion: 0.29
-Nodes (11): Bibliotecas.h (Library Aggregator), DualSerialClass (Telnet debug stream), OTAConfig.h (OTA Header), RemoteDebug.h (Dual Serial/Telnet), VariaveisGlobais.h (Global State Header), getControlKeyboard(), handleTelegramMessages(), initTelegram() (+3 more)
+### Community 3 - "Core Infrastructure"
+Cohesion: 0.15
+Nodes (15): Bibliotecas.h (Library Aggregator), DualSerialClass (Telnet debug stream), FreeRTOS Task Handles (hTaskConexoes/Sensores/Telegram), GPIOs.h (Pin Definitions), OTAConfig.cpp (OTA Implementation), OTAConfig.h (OTA Header), RemoteDebug.h (Dual Serial/Telnet), VariaveisGlobais.cpp (Global Definitions) (+7 more)
 
-### Community 3 - "Web API Handlers"
-Cohesion: 0.29
-Nodes (6): getRelayName(), handleApiAll(), handleApiRelay(), handleApiRelays(), handleApiSetName(), setupWebServer()
+### Community 4 - "Code Improvements & Tasks"
+Cohesion: 0.17
+Nodes (9): Code Duplication, ESP32 Automação Residencial, Mutex/Semaphore, NVS (Non-Volatile Storage), Race Condition, Telnet Remote Serial, TLS Certificate Validation, VariaveisGlobais (+1 more)
 
-### Community 4 - "Credentials & WiFi Config"
-Cohesion: 0.27
+### Community 5 - "Telegram Bot Functions"
+Cohesion: 0.33
+Nodes (12): getControlKeyboard(), handleTelegramMessages(), initTelegram(), processPendingTelegramNotification(), sendMainMenu(), telegramLoop(), getControlKeyboard(), handleTelegramMessages() (+4 more)
+
+### Community 6 - "WiFi & Network Config"
+Cohesion: 0.19
 Nodes (6): LoginsSenhas.h (Credentials Hub), loadStaticIPConfig(), saveMQTTConfigCallback(), saveMQTTConfigToNVS(), saveStaticIPConfig(), WiFiManagerSetup()
 
-### Community 5 - "WiFiManager & MQTT Setup"
-Cohesion: 0.42
-Nodes (9): DHCP-Only Networking, Hardcoded Configuration Removal Initiative, MQTT Broker Configuration, NVS Flash Persistence, WiFiManager Library, WiFiManager Custom MQTT Parameters, Remove Hardcoded WiFi/IP Plan, MQTT WiFiManager Integration Design (+1 more)
-
-### Community 6 - "Community 6"
+### Community 7 - "Graphify Incremental Tracking"
 Cohesion: 0.22
 Nodes (8): deleted_files, new_files, code, document, image, paper, video, new_total
 
-### Community 7 - "GPIOs & SinricPro Events"
-Cohesion: 0.33
-Nodes (3): GPIOs.h (Pin Definitions), onPowerState(), setupSinricPro()
-
-### Community 8 - "FreeRTOS Tasks & OTA"
-Cohesion: 0.40
-Nodes (4): FreeRTOS Task Handles (hTaskConexoes/Sensores/Telegram), OTAConfig.cpp (OTA Implementation), VariaveisGlobais.cpp (Global Definitions), setupOTA (function)
-
-### Community 9 - "Community 9"
+### Community 9 - "Graphify Incremental Fix"
 Cohesion: 0.40
 Nodes (4): deleted_files, new_files, code, document
 
-### Community 12 - "Community 12"
+### Community 12 - "Configuration Constants"
 Cohesion: 0.67
 Nodes (3): Project Definition Constants, MQTT Topic Definitions, WiFi Manager Configuration
 
-### Community 15 - "Community 15"
+### Community 14 - "Graph Finalization"
 Cohesion: 0.67
 Nodes (3): Finalize Visualization (networkx), Finalize Visualization (graphify), Generate Visualization Standalone
 
-### Community 17 - "Community 17"
+### Community 18 - "Community 18"
 Cohesion: 0.67
 Nodes (3): WiFiManager Portal Setup, Save MQTT Config Callback, MQTT Topic String Constants
 
 ## Knowledge Gaps
-- **66 isolated node(s):** `new_total`, `deleted_files`, `code`, `document`, `paper` (+61 more)
+- **70 isolated node(s):** `new_total`, `deleted_files`, `code`, `document`, `paper` (+65 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **36 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `VariaveisGlobais.h (Global State Header)` connect `Library & Debug Infrastructure` to `FreeRTOS Tasks & OTA`, `Web API Handlers`, `Credentials & WiFi Config`, `GPIOs & SinricPro Events`?**
-  _High betweenness centrality (0.043) - this node is a cross-community bridge._
-- **Why does `OTAConfig.cpp (OTA Implementation)` connect `FreeRTOS Tasks & OTA` to `Library & Debug Infrastructure`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
-- **Why does `Documentation Index` connect `System Config & Networking` to `WiFiManager & MQTT Setup`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `VariaveisGlobais.h (Global State Header)` connect `Core Infrastructure` to `Web Server API`, `Telegram Bot Functions`, `WiFi & Network Config`?**
+  _High betweenness centrality (0.049) - this node is a cross-community bridge._
+- **Why does `Bibliotecas.h (Library Aggregator)` connect `Core Infrastructure` to `Telegram Bot Functions`?**
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **What connects `new_total`, `deleted_files`, `code` to the rest of the system?**
-  _66 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _70 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Architecture & Config Docs` be split into smaller, more focused modules?**
+  _Cohesion score 0.14666666666666667 - nodes in this community are weakly interconnected._
