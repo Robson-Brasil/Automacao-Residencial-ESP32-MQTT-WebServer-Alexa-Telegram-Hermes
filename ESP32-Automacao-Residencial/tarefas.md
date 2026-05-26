@@ -1,7 +1,7 @@
 # Tarefas de Melhoria - ESP32 Automação Residencial
 
 **Data de criação:** 25/05/2026  
-**Última atualização:** 25/05/2026  
+**Última atualização:** 26/05/2026  
 **Objetivo:** Corrigir problemas críticos de segurança, estabilidade e qualidade de código
 
 ---
@@ -72,23 +72,23 @@
 
 ## MÉDIAS (Qualidade de Código e Manutenção)
 
-### ❌ 11. Código massivamente duplicado no `mqttCallback`
+### ✅ 11. Código massivamente duplicado no `mqttCallback`
 **Arquivo:** `.ino:209-300`  
 **Problema:** 8 blocos `else if` quase idênticos para tratar cada relé. ~90 linhas que poderiam ser ~15 com arrays de lookup.  
 **Solução:** Criar array de structs com `{sub_topic, pin, state_ptr, relay_num}` e iterar.  
-**Status:** ❌ Pendente — Refatoração extensa com risco de regressão. Requer teste em hardware.
+**Status:** ✅ Concluído — 8 blocos `else if` substituídos por loop com arrays `relayTopics[]`, `relayPinNums[]`, `relayStatePtrs[]`.
 
-### ❌ 12. Código massivamente duplicado nos comandos Hermes
+### ✅ 12. Código massivamente duplicado nos comandos Hermes
 **Arquivo:** `.ino:334-384`  
 **Problema:** LIGAR/DESLIGAR individual repete 8 blocos idênticos em linhas longas e difíceis de ler.  
 **Solução:** Criar função `setRelayByIndex(int index, bool state, const char* source)` e usar lookup de nome->índice.  
-**Status:** ❌ Pendente — Refatoração extensa com risco de regressão. Requer teste em hardware.
+**Status:** ✅ Concluído — Funções `setRelayByIndex()`, `setAllRelays()`, `findRelayByName()` extraídas; 16 blocos eliminados.
 
-### ❌ 13. Código duplicado no `handleTelegramMessages`
+### ✅ 13. Código duplicado no `handleTelegramMessages`
 **Arquivo:** `TelegramBotESP32.h:134-141`  
 **Problema:** Mesma repetição de 8 blocos para toggle de relés.  
 **Solução:** Mesma abordagem de array de lookup.  
-**Status:** ❌ Pendente — Refatoração extensa com risco de regressão. Requer teste em hardware.
+**Status:** ✅ Concluído — 8 blocos substituídos por loop + `setRelayByIndex()` + `setAllRelays()`.
 
 ### ❌ 14. `.ino` monolítico com 818 linhas
 **Problema:** Toda a lógica principal (WiFi, MQTT, sensores, persistência, Hermes, tasks) está em um único arquivo.  
@@ -122,15 +122,15 @@
 **Solução:** Implementar watchdog que monitora heartbeat de cada task e reinicia o ESP32 em caso de travamento.  
 **Status:** ❌ Pendente — Requer implementação de watchdog com heartbeat.
 
-### ❌ 19. `preferences` não é protegida contra acesso concorrente
+### ✅ 19. `preferences` não é protegida contra acesso concorrente
 **Problema:** `saveRelayState()` é chamada de ambos os cores (via Telegram no Core 0 e via Hermes/MQTT callback também no Core 0, mas `loadRelayState` é chamada no `setup`). Operações NVS não são thread-safe.  
 **Solução:** Centralizar todas as operações NVS em um único core ou proteger com mutex.  
-**Status:** ❌ Pendente — Mutex `relayMutex` já criado, mas `saveRelayState()` ainda precisa ser protegida.
+**Status:** ✅ Concluído — `saveRelayState()` e `loadRelayState()` protegidas com `xSemaphoreTake/Give(relayMutex)`.
 
-### ❌ 20. `WiFiClientSecure` para Telnet sem autenticação
+### ✅ 20. `WiFiClientSecure` para Telnet sem autenticação
 **Problema:** O servidor Telnet na porta 2323 aceita qualquer conexão sem autenticação. Qualquer pessoa na rede pode enviar comandos ao Serial.  
 **Solução:** Adicionar autenticação básica ou restringir acesso por IP/MAC.  
-**Status:** ❌ Pendente — Requer implementação de autenticação.
+**Status:** ✅ Concluído — Telnet exige senha (`TELNET_PASSWORD = OTA_PASSWORD`) antes de liberar bridge Serial.
 
 ---
 
@@ -140,13 +140,10 @@
 |------------|-------|-------------|------------|
 | Críticas   | 5     | 5           | 0          |
 | Altas      | 5     | 5           | 0          |
-| Médias     | 5     | 1           | 4          |
-| Baixas     | 5     | 2           | 3          |
-| **Total**  | **20**| **12**      | **8**      |
+| Médias     | 5     | 4           | 1          |
+| Baixas     | 5     | 4           | 1          |
+| **Total**  | **20**| **18**      | **2**      |
 
 **Próximas etapas recomendadas:**
-1. Tarefa 19 — Proteger `saveRelayState()` com `relayMutex` (mutex já criado)
-2. Tarefa 18 — Implementar watchdog task com heartbeat
-3. Tarefa 20 — Adicionar autenticação no Telnet
-4. Tarefas 11-13 — Refatoração de código duplicado (requer teste em hardware)
-5. Tarefa 14 — Refatoração estrutural do `.ino` em múltiplos `.cpp`
+1. Tarefa 18 — Implementar watchdog task com heartbeat
+2. Tarefa 14 — Refatoração estrutural do `.ino` em múltiplos `.cpp`
