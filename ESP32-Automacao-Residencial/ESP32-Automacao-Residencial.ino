@@ -35,9 +35,6 @@
 // =============== BIBLIOTECAS ===============
 #include <Preferences.h>
 
-// Protótipo global para logging de acionamento de relés
-void logRelayAction(const char* source, int relayNum, bool state);
-
 #include "Bibliotecas.h"
 #include "ConfigMQTT.h"
 #include "ConstantesTempo.h"
@@ -54,7 +51,6 @@ void logRelayAction(const char* source, int relayNum, bool state);
 #include "WebServerESP32.h"
 #include "WiFiUtils.h"
 #include "HomeAssistantDiscovery.h"
-#include <WiFi.h>
 #include "WiFiManagerConfig.h"
 
 // Estados dos relés
@@ -85,37 +81,9 @@ const float pressaoNivelMar =
     1012.0; // Pressão ao nível do mar em sua localidad
 const float altitudeNivelMar = 92.0; // Altitude de referência do seu local
 
-// Configurações do MQTT - definidas em LoginsSenhas.h (via WiFiManager)
-// Telegram e SinricPro - buffers carregados do NVS com fallback em LoginsSenhas.h
-
-/**
- * @brief Configura o servidor e os callbacks do cliente MQTT.
- */
-void setupMQTT();
-
-/**
- * @brief Mantém a conexão com o Broker MQTT ativa.
- */
-void reconnectMQTT();
-
-/**
- * @brief Realiza a leitura física dos sensores (DHT22 e BMP180).
- */
 void readSensors();
-
-/**
- * @brief Publica todos os estados dos relés via MQTT (Sync).
- */
 void publishRelayStates();
-
-/**
- * @brief Notifica o Telegram sobre mudança de estado (origem externa).
- * @param source Origem (MQTT, Dashboard, Telegram)
- * @param relayNum Número do relé (-1 para todos)
- * @param relayState Estado do relé (true/false)
- */
-void notifyTelegramStateChange(const String &source, int relayNum,
-                                bool relayState);
+void logRelayAction(const char* source, int relayNum, bool state);
 
 /**
  * @brief Atualiza o LED de status (GPIO 2) com base no WiFi e MQTT.
@@ -133,33 +101,47 @@ void updateStatusLED() {
     }
 }
 
-// Função para configurar o WiFi
 void setupWiFi() {
   unsigned long currentMillis = millis();
 
-  // Controle de tentativas de conexão
   if (currentMillis - lastWifiRetryTime < WIFI_RETRY_INTERVAL) {
     return;
   }
   lastWifiRetryTime = currentMillis;
 
-  // Se não estiver conectado, inicia o WiFiManager imediatamente
   if (WiFi.status() != WL_CONNECTED) {
-    Serial.println("[Rede] Iniciando WiFiManager...");
-    if (WiFiManagerSetup()) {
+    Serial.println("[Rede] Conectando ao WiFi...");
+
+    IPAddress ip(STATIC_IP);
+    IPAddress gateway(STATIC_GATEWAY);
+    IPAddress subnet(STATIC_SUBNET);
+    IPAddress dns(STATIC_DNS);
+    WiFi.config(ip, gateway, subnet, dns);
+
+    WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+
+    int attempts = 0;
+    while (WiFi.status() != WL_CONNECTED && attempts < 60) {
+      delay(500);
+      Serial.print(".");
+      attempts++;
+    }
+
+    if (WiFi.status() == WL_CONNECTED) {
+      wifiConnected = true;
+      Serial.println("\n==============================");
+      Serial.println("WiFi CONECTADO!");
+      Serial.print("IP: "); Serial.println(WiFi.localIP());
+      Serial.println("==============================");
       setupMDNS();
+    } else {
+      wifiConnected = false;
+      Serial.println("\n[Rede] Falha na conexao WiFi.");
     }
   }
 
-  // Controle do LED unificado — tratado por updateStatusLED()
-
-  // Verifica status da conexão para logs
   if (WiFi.status() == WL_CONNECTED && !wifiConnected) {
     wifiConnected = true;
-    Serial.println("\n==============================");
-    Serial.println("WiFi CONECTADO!");
-    Serial.print("IP: "); Serial.println(WiFi.localIP());
-    Serial.println("==============================");
   } else if (WiFi.status() != WL_CONNECTED) {
     wifiConnected = false;
   }
@@ -631,11 +613,7 @@ void setup() {
   Serial.println("[SISTEMA] Autor: " PROJETO_AUTOR);
   Serial.println("[SISTEMA] Data: " PROJETO_DATA);
 
-  // Migração NVS: unifica namespaces legados → "app" (antes de qualquer leitura)
   migrateNVS();
-
-  // Carrega configurações do NVS (namespace unificado "app")
-  loadMQTTConfig();
   loadCredentials();
 
   pinMode(RelayPin1, OUTPUT);
@@ -720,21 +698,6 @@ void TaskConexoes(void *pvParameters) {
   Serial.println("[CORE 0] Serviços de rede inicializados.");
 
   for (;;) {
-    // ── Botão de Configuração (pressionar por 3s para abrir portal) ─────
-    if (digitalRead(configButton) == LOW) {
-      delay(3000);
-      if (digitalRead(configButton) == LOW) {
-        Serial.println("[BOTAO] Abrindo portal WiFiManager...");
-        clearStaticIPConfig();
-        WiFi.disconnect();
-        wm.startConfigPortal(globalHostname);
-        setupMDNS();
-        // Recarrega config do NVS e reconfigura MQTT após fechar portal
-        loadMQTTConfig();
-        setupMQTT();
-      }
-    }
-
     unsigned long currentMillis = millis();
 
     // ── WiFi ──────────────────────────────────────────────────────────────

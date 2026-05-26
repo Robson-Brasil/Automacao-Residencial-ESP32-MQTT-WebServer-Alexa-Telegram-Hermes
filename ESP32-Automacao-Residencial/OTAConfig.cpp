@@ -6,8 +6,6 @@
 uint32_t last_ota_time = 0;
 
 void setupOTA() {
-  WiFi.setHostname(globalHostname);
-  
   // Configurações de Identificação
   ArduinoOTA.setPort(3232);
   ArduinoOTA.setHostname(globalHostname);

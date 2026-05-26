@@ -26,12 +26,6 @@ String lastTelegramMessage = "";
 
 const String relayNames[8] = {"Varanda", "Bancada", "Sala", "Cozinha", "Quintal", "Varão", "Robson", "Kinha"};
 
-/**
- * @brief Adiciona uma notificação à fila para envio seguro no Core 0.
- */
-/**
- * @brief Adiciona uma notificação à fila para envio seguro no Core 0.
- */
 void notifyTelegramStateChange(const String& source, int relayNum = -1, bool relayState = false) {
   if (telegramQueue == NULL) return;
   TelegramNotification notif;
