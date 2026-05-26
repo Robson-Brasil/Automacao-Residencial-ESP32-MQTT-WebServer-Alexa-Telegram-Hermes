@@ -13,6 +13,9 @@ extern void saveRelayState(int relayNum, bool state);
 extern void publishRelayStates();
 extern void applyRelayStatesToPins();
 extern void logRelayAction(const char* source, int relayNum, bool state);
+extern bool* relayStatePtrs[8];
+extern void setRelayByIndex(int idx, bool state, const char* source);
+extern void setAllRelays(bool state, const char* source);
 extern String getControlKeyboard();
 
 WiFiClientSecure telegramClient;
@@ -164,30 +167,20 @@ void handleTelegramMessages(int numNewMessages) {
       feedback = "🏠 Selecione uma opção:";
       updated = true;
     }
-    if (text.startsWith("Varanda")) { RelayState1 = !RelayState1; digitalWrite(RelayPin1, !RelayState1); logRelayAction("Telegram",0,RelayState1); saveRelayState(1, RelayState1); updated = true; }
-    else if (text.startsWith("Bancada")) { RelayState2 = !RelayState2; digitalWrite(RelayPin2, !RelayState2); logRelayAction("Telegram",1,RelayState2); saveRelayState(2, RelayState2); updated = true; }
-    else if (text.startsWith("Sala")) { RelayState3 = !RelayState3; digitalWrite(RelayPin3, !RelayState3); logRelayAction("Telegram",2,RelayState3); saveRelayState(3, RelayState3); updated = true; }
-    else if (text.startsWith("Cozinha")) { RelayState4 = !RelayState4; digitalWrite(RelayPin4, !RelayState4); logRelayAction("Telegram",3,RelayState4); saveRelayState(4, RelayState4); updated = true; }
-    else if (text.startsWith("Quintal")) { RelayState5 = !RelayState5; digitalWrite(RelayPin5, !RelayState5); logRelayAction("Telegram",4,RelayState5); saveRelayState(5, RelayState5); updated = true; }
-    else if (text.startsWith("Val")) { RelayState6 = !RelayState6; digitalWrite(RelayPin6, !RelayState6); logRelayAction("Telegram",5,RelayState6); saveRelayState(6, RelayState6); updated = true; }
-    else if (text.startsWith("Robson")) { RelayState7 = !RelayState7; digitalWrite(RelayPin7, !RelayState7); logRelayAction("Telegram",6,RelayState7); saveRelayState(7, RelayState7); updated = true; }
-    else if (text.startsWith("Kinha")) { RelayState8 = !RelayState8; digitalWrite(RelayPin8, !RelayState8); logRelayAction("Telegram",7,RelayState8); saveRelayState(8, RelayState8); updated = true; }
-
+    for (int i = 0; i < 8; i++) {
+      if (text.startsWith(relayNames[i])) {
+        setRelayByIndex(i, !(*relayStatePtrs[i]), "Telegram");
+        updated = true;
+        break;
+      }
+    }
     else if (text == "💡 LIGAR TUDO" || text == "/on") {
-      RelayState1 = RelayState2 = RelayState3 = RelayState4 = RelayState5 = RelayState6 = RelayState7 = RelayState8 = true;
-      digitalWrite(RelayPin1, LOW); digitalWrite(RelayPin2, LOW); digitalWrite(RelayPin3, LOW); digitalWrite(RelayPin4, LOW);
-      digitalWrite(RelayPin5, LOW); digitalWrite(RelayPin6, LOW); digitalWrite(RelayPin7, LOW); digitalWrite(RelayPin8, LOW);
-      logRelayAction("Telegram", -1, true);
-      for(int r=1; r<=8; r++) saveRelayState(r, true);
-      feedback = "✅ Todos os relés ligada!";
+      setAllRelays(true, "Telegram");
+      feedback = "✅ Todos os relés ligados!";
       updated = true;
     }
     else if (text == "🔌 DESLIGAR TUDO" || text == "/off") {
-      RelayState1 = RelayState2 = RelayState3 = RelayState4 = RelayState5 = RelayState6 = RelayState7 = RelayState8 = false;
-      digitalWrite(RelayPin1, HIGH); digitalWrite(RelayPin2, HIGH); digitalWrite(RelayPin3, HIGH); digitalWrite(RelayPin4, HIGH);
-      digitalWrite(RelayPin5, HIGH); digitalWrite(RelayPin6, HIGH); digitalWrite(RelayPin7, HIGH); digitalWrite(RelayPin8, HIGH);
-      logRelayAction("Telegram", -1, false);
-      for(int r=1; r<=8; r++) saveRelayState(r, false);
+      setAllRelays(false, "Telegram");
       feedback = "⭕ Todos os relés desligados!";
       updated = true;
     }
