@@ -120,8 +120,6 @@ void setupWiFi() {
     WiFi.config(ip, gateway, subnet, dns);
 
     WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-
-    WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
     Serial.println("[Rede] WiFi.begin() assíncrono iniciado.");
   }
 
