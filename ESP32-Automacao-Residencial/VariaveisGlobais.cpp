@@ -49,3 +49,7 @@ bool otaInProgress = false;
 const char* globalHostname = DEVICE_HOSTNAME;
 
 SemaphoreHandle_t relayMutex = NULL;
+
+// Watchdog heartbeats
+volatile uint32_t heartbeatConexoes = 0;
+volatile uint32_t heartbeatSensores = 0;

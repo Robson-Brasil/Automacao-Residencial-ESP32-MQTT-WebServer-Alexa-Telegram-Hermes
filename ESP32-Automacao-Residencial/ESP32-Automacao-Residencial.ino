@@ -632,6 +632,7 @@ void TaskConexoes(void *pvParameters) {
 
   for (;;) {
     unsigned long currentMillis = millis();
+    heartbeatConexoes++;
 
     // ── WiFi ──────────────────────────────────────────────────────────────
     if (currentMillis - lastWifiCheckTime >= WIFI_RETRY_INTERVAL) {
@@ -755,6 +756,34 @@ void TaskConexoes(void *pvParameters) {
     // ── LED de Status ─────────────────────────────────────────────────
     updateStatusLED();
 
+    // ── Watchdog ─────────────────────────────────────────────────────
+    static uint32_t lastHbConexoes = 0;
+    static uint32_t lastHbSensores = 0;
+    static unsigned long lastConexoesChange = 0;
+    static unsigned long lastSensoresChange = 0;
+
+    uint32_t hbC = heartbeatConexoes;
+    if (hbC != lastHbConexoes) {
+      lastHbConexoes = hbC;
+      lastConexoesChange = currentMillis;
+    }
+    uint32_t hbS = heartbeatSensores;
+    if (hbS != lastHbSensores) {
+      lastHbSensores = hbS;
+      lastSensoresChange = currentMillis;
+    }
+
+    if (currentMillis - lastConexoesChange >= 30000) {
+      Serial.println("[WATCHDOG] TaskConexoes congelada! Reiniciando...");
+      delay(100);
+      ESP.restart();
+    }
+    if (currentMillis - lastSensoresChange >= 60000) {
+      Serial.println("[WATCHDOG] TaskSensores congelada! Reiniciando...");
+      delay(100);
+      ESP.restart();
+    }
+
     vTaskDelay(10 / portTICK_PERIOD_MS);
   }
 }
@@ -763,6 +792,7 @@ void TaskConexoes(void *pvParameters) {
 void TaskSensores(void *pvParameters) {
   (void)pvParameters;
   for (;;) {
+    heartbeatSensores++;
     // Lê os sensores (a função readSensors já tem controle de tempo interno)
     readSensors();
 

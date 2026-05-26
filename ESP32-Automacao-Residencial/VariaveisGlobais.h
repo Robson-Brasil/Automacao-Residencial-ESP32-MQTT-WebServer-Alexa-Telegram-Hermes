@@ -72,4 +72,8 @@ extern const char* globalHostname;
 
 extern SemaphoreHandle_t relayMutex;
 
+// Watchdog heartbeats
+extern volatile uint32_t heartbeatConexoes;
+extern volatile uint32_t heartbeatSensores;
+
 #endif // VARIAVEISGLOBAIS_H
