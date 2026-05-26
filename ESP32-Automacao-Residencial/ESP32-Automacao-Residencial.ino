@@ -712,8 +712,7 @@ void TaskConexoes(void *pvParameters) {
         if (telnetClient) telnetClient.stop();
         telnetClient = telnetServer.available();
         if (telnetClient && telnetClient.connected()) {
-          telnetClient.println("ESP32 Automação Residencial");
-          telnetClient.print("Password: ");
+          telnetClient.print("ESP32 Automação Residencial\r\nPassword: ");
           telnetAuthenticated = false;
         }
       } else {
@@ -726,20 +725,23 @@ void TaskConexoes(void *pvParameters) {
       if (!telnetAuthenticated) {
         static String telnetInput;
         while (telnetClient.available()) {
-          char c = telnetClient.read();
+          int b = telnetClient.read();
+          if (b < 0) break;
+          unsigned char c = (unsigned char)b;
+          if (c >= 0xF0) continue;
           if (c == '\r' || c == '\n') {
             if (telnetInput.length() > 0) {
               if (telnetInput == TELNET_PASSWORD) {
-                telnetClient.println("\nOK");
+                telnetClient.print("\r\nOK\r\n");
                 telnetAuthenticated = true;
               } else {
-                telnetClient.println("\nERROR");
-                if (telnetClient) telnetClient.stop();
+                telnetClient.print("\r\nERROR\r\n");
+                telnetClient.stop();
               }
               telnetInput = "";
             }
-          } else {
-            telnetInput += c;
+          } else if (c >= 32 && c < 127) {
+            if (telnetInput.length() < 64) telnetInput += (char)c;
           }
         }
       } else {

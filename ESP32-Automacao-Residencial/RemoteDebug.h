@@ -58,14 +58,8 @@ public:
 // Declara a instância global que será definida no arquivo .ino
 extern DualSerialClass DualSerial;
 
-#define LOG_PRINT(x) do { \
-  if (telnetClient && telnetClient.connected()) telnetClient.write((const uint8_t*)(x), strlen(x)); \
-  Serial.write((const uint8_t*)(x), strlen(x)); \
-} while(0)
-
-#define LOG_PRINTLN(x) do { \
-  if (telnetClient && telnetClient.connected()) { telnetClient.print(x); telnetClient.println(); } \
-  Serial.print(x); Serial.println(); \
-} while(0)
+// ## "Pulo do gato": substitui TODAS as chamadas "Serial" por "DualSerial"
+// ## fazendo com que Serial.print() vá tanto para USB quanto para Telnet
+#define Serial DualSerial
 
 #endif // REMOTEDEBUG_H
