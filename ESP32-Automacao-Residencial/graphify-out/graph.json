@@ -55,7 +55,7 @@
       "file_type": "code",
       "source_file": "/mnt/c/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/.graphify_incremental.json",
       "source_location": "L1",
-      "community": 7,
+      "community": 11,
       "norm_label": ".graphify_incremental.json",
       "id": "mnt_c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_graphify_incremental_json"
     },
@@ -64,7 +64,7 @@
       "file_type": "code",
       "source_file": "/mnt/c/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/.graphify_incremental.json",
       "source_location": "L2",
-      "community": 7,
+      "community": 11,
       "norm_label": "new_total",
       "id": "esp32_automacao_residencial_graphify_incremental_new_total"
     },
@@ -73,7 +73,7 @@
       "file_type": "code",
       "source_file": "/mnt/c/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/.graphify_incremental.json",
       "source_location": "L3",
-      "community": 7,
+      "community": 11,
       "norm_label": "deleted_files",
       "id": "esp32_automacao_residencial_graphify_incremental_deleted_files"
     },
@@ -82,7 +82,7 @@
       "file_type": "code",
       "source_file": "/mnt/c/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/.graphify_incremental.json",
       "source_location": "L4",
-      "community": 7,
+      "community": 11,
       "norm_label": "new_files",
       "id": "esp32_automacao_residencial_graphify_incremental_new_files"
     },
@@ -91,7 +91,7 @@
       "file_type": "code",
       "source_file": "/mnt/c/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/.graphify_incremental.json",
       "source_location": "L5",
-      "community": 7,
+      "community": 11,
       "norm_label": "code",
       "id": "esp32_automacao_residencial_graphify_incremental_new_files_code"
     },
@@ -100,7 +100,7 @@
       "file_type": "code",
       "source_file": "/mnt/c/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/.graphify_incremental.json",
       "source_location": "L6",
-      "community": 7,
+      "community": 11,
       "norm_label": "document",
       "id": "esp32_automacao_residencial_graphify_incremental_new_files_document"
     },
@@ -109,7 +109,7 @@
       "file_type": "code",
       "source_file": "/mnt/c/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/.graphify_incremental.json",
       "source_location": "L7",
-      "community": 7,
+      "community": 11,
       "norm_label": "paper",
       "id": "esp32_automacao_residencial_graphify_incremental_new_files_paper"
     },
@@ -118,7 +118,7 @@
       "file_type": "code",
       "source_file": "/mnt/c/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/.graphify_incremental.json",
       "source_location": "L8",
-      "community": 7,
+      "community": 11,
       "norm_label": "image",
       "id": "esp32_automacao_residencial_graphify_incremental_new_files_image"
     },
@@ -127,7 +127,7 @@
       "file_type": "code",
       "source_file": "/mnt/c/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/.graphify_incremental.json",
       "source_location": "L9",
-      "community": 7,
+      "community": 11,
       "norm_label": "video",
       "id": "esp32_automacao_residencial_graphify_incremental_new_files_video"
     },
@@ -136,7 +136,7 @@
       "file_type": "code",
       "source_file": "/mnt/c/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/.graphify_incremental_fixed.json",
       "source_location": "L1",
-      "community": 9,
+      "community": 12,
       "norm_label": ".graphify_incremental_fixed.json",
       "id": "mnt_c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_graphify_incremental_fixed_json"
     },
@@ -145,7 +145,7 @@
       "file_type": "code",
       "source_file": "/mnt/c/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/.graphify_incremental_fixed.json",
       "source_location": "L2",
-      "community": 9,
+      "community": 12,
       "norm_label": "new_files",
       "id": "esp32_automacao_residencial_graphify_incremental_fixed_new_files"
     },
@@ -154,7 +154,7 @@
       "file_type": "code",
       "source_file": "/mnt/c/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/.graphify_incremental_fixed.json",
       "source_location": "L3",
-      "community": 9,
+      "community": 12,
       "norm_label": "code",
       "id": "esp32_automacao_residencial_graphify_incremental_fixed_new_files_code"
     },
@@ -163,7 +163,7 @@
       "file_type": "code",
       "source_file": "/mnt/c/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/.graphify_incremental_fixed.json",
       "source_location": "L5",
-      "community": 9,
+      "community": 12,
       "norm_label": "document",
       "id": "esp32_automacao_residencial_graphify_incremental_fixed_new_files_document"
     },
@@ -172,7 +172,7 @@
       "file_type": "code",
       "source_file": "/mnt/c/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/.graphify_incremental_fixed.json",
       "source_location": "L8",
-      "community": 9,
+      "community": 12,
       "norm_label": "deleted_files",
       "id": "esp32_automacao_residencial_graphify_incremental_fixed_deleted_files"
     },
@@ -181,7 +181,7 @@
       "file_type": "code",
       "source_file": "D:/GitHub-Repositorios/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/Bibliotecas.h",
       "source_location": "L1",
-      "community": 8,
+      "community": 10,
       "norm_label": "bibliotecas.h",
       "id": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_bibliotecas_h"
     },
@@ -190,7 +190,7 @@
       "file_type": "code",
       "source_file": "ConfigMQTT.h",
       "source_location": "L1",
-      "community": 19,
+      "community": 23,
       "norm_label": "configmqtt.h",
       "id": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_configmqtt_h"
     },
@@ -199,7 +199,7 @@
       "file_type": "code",
       "source_file": "D:/GitHub-Repositorios/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/ConstantesTempo.h",
       "source_location": "L1",
-      "community": 24,
+      "community": 26,
       "norm_label": "constantestempo.h",
       "id": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_constantestempo_h"
     },
@@ -217,7 +217,7 @@
       "file_type": "code",
       "source_file": "finalize_fixed.py",
       "source_location": "L1",
-      "community": 11,
+      "community": 14,
       "norm_label": "finalize_fixed.py",
       "id": "finalize_fixed_py"
     },
@@ -226,7 +226,7 @@
       "file_type": "code",
       "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/finalize_fixed.py",
       "source_location": "L32",
-      "community": 11,
+      "community": 14,
       "norm_label": "to_html()",
       "id": "esp32_automacao_residencial_finalize_fixed_to_html"
     },
@@ -235,7 +235,7 @@
       "file_type": "code",
       "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/finalize_fixed.py",
       "source_location": "L43",
-      "community": 11,
+      "community": 14,
       "norm_label": "to_svg()",
       "id": "esp32_automacao_residencial_finalize_fixed_to_svg"
     },
@@ -244,7 +244,7 @@
       "file_type": "code",
       "source_file": "finalize_graphify.py",
       "source_location": "L1",
-      "community": 25,
+      "community": 27,
       "norm_label": "finalize_graphify.py",
       "id": "finalize_graphify_py"
     },
@@ -253,7 +253,7 @@
       "file_type": "code",
       "source_file": "generate_visualization.py",
       "source_location": "L1",
-      "community": 26,
+      "community": 28,
       "norm_label": "generate_visualization.py",
       "id": "generate_visualization_py"
     },
@@ -262,7 +262,7 @@
       "file_type": "code",
       "source_file": "D:/GitHub-Repositorios/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/GPIOs.h",
       "source_location": "L1",
-      "community": 27,
+      "community": 29,
       "norm_label": "gpios.h",
       "id": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_gpios_h"
     },
@@ -271,25 +271,25 @@
       "file_type": "code",
       "source_file": "D:/GitHub-Repositorios/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/HomeAssistantDiscovery.h",
       "source_location": "L1",
-      "community": 13,
+      "community": 4,
       "norm_label": "homeassistantdiscovery.h",
       "id": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_homeassistantdiscovery_h"
     },
     {
       "label": "_publishHA()",
       "file_type": "code",
-      "source_file": "D:/GitHub-Repositorios/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/HomeAssistantDiscovery.h",
-      "source_location": "L17",
-      "community": 13,
+      "source_file": "HomeAssistantDiscovery.cpp",
+      "source_location": "L9",
+      "community": 4,
       "norm_label": "_publishha()",
       "id": "esp32_automacao_residencial_homeassistantdiscovery_publishha"
     },
     {
       "label": "publishHADiscovery()",
       "file_type": "code",
-      "source_file": "D:/GitHub-Repositorios/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/HomeAssistantDiscovery.h",
-      "source_location": "L25",
-      "community": 13,
+      "source_file": "HomeAssistantDiscovery.cpp",
+      "source_location": "L17",
+      "community": 4,
       "norm_label": "publishhadiscovery()",
       "id": "esp32_automacao_residencial_homeassistantdiscovery_publishhadiscovery"
     },
@@ -298,7 +298,7 @@
       "file_type": "code",
       "source_file": "D:/GitHub-Repositorios/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/LoginsSenhas.h",
       "source_location": "L1",
-      "community": 19,
+      "community": 23,
       "norm_label": "loginssenhas.h",
       "id": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_loginssenhas_h"
     },
@@ -307,7 +307,7 @@
       "file_type": "code",
       "source_file": "D:/GitHub-Repositorios/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/MQTTParametros.h",
       "source_location": "L1",
-      "community": 28,
+      "community": 30,
       "norm_label": "mqttparametros.h",
       "id": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_mqttparametros_h"
     },
@@ -323,8 +323,8 @@
     {
       "label": "setupOTA()",
       "file_type": "code",
-      "source_file": "D:/GitHub-Repositorios/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/OTAConfig.cpp",
-      "source_location": "L10",
+      "source_file": "OTAConfig.cpp",
+      "source_location": "L8",
       "community": 10,
       "norm_label": "setupota()",
       "id": "esp32_automacao_residencial_otaconfig_setupota"
@@ -334,7 +334,7 @@
       "file_type": "code",
       "source_file": "OTAConfig.h",
       "source_location": "L1",
-      "community": 8,
+      "community": 10,
       "norm_label": "otaconfig.h",
       "id": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_otaconfig_h"
     },
@@ -343,16 +343,16 @@
       "file_type": "code",
       "source_file": "D:/GitHub-Repositorios/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/RemoteDebug.h",
       "source_location": "L1",
-      "community": 8,
+      "community": 10,
       "norm_label": "remotedebug.h",
       "id": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_remotedebug_h"
     },
     {
       "label": "DualSerialClass()",
       "file_type": "code",
-      "source_file": "D:/GitHub-Repositorios/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/RemoteDebug.h",
+      "source_file": "RemoteDebug.h",
       "source_location": "L15",
-      "community": 8,
+      "community": 10,
       "norm_label": "dualserialclass()",
       "id": "esp32_automacao_residencial_remotedebug_dualserialclass"
     },
@@ -361,7 +361,7 @@
       "file_type": "code",
       "source_file": "D:/GitHub-Repositorios/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/Sensores.h",
       "source_location": "L1",
-      "community": 29,
+      "community": 31,
       "norm_label": "sensores.h",
       "id": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_sensores_h"
     },
@@ -377,7 +377,7 @@
     {
       "label": "onPowerState()",
       "file_type": "code",
-      "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/SinricProESP32.h",
+      "source_file": "SinricProESP32.h",
       "source_location": "L53",
       "community": 3,
       "norm_label": "onpowerstate()",
@@ -386,8 +386,8 @@
     {
       "label": "setupSinricPro()",
       "file_type": "code",
-      "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/SinricProESP32.h",
-      "source_location": "L100",
+      "source_file": "SinricProESP32.h",
+      "source_location": "L104",
       "community": 3,
       "norm_label": "setupsinricpro()",
       "id": "esp32_automacao_residencial_sinricproesp32_setupsinricpro"
@@ -395,8 +395,8 @@
     {
       "label": "sinricProLoop()",
       "file_type": "code",
-      "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/SinricProESP32.h",
-      "source_location": "L140",
+      "source_file": "SinricProESP32.h",
+      "source_location": "L144",
       "community": 3,
       "norm_label": "sinricproloop()",
       "id": "esp32_automacao_residencial_sinricproesp32_sinricproloop"
@@ -404,8 +404,8 @@
     {
       "label": "sendSinricProTemperatureEvent()",
       "file_type": "code",
-      "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/SinricProESP32.h",
-      "source_location": "L152",
+      "source_file": "SinricProESP32.h",
+      "source_location": "L156",
       "community": 3,
       "norm_label": "sendsinricprotemperatureevent()",
       "id": "esp32_automacao_residencial_sinricproesp32_sendsinricprotemperatureevent"
@@ -413,8 +413,8 @@
     {
       "label": "sendSinricProSwitchEvents()",
       "file_type": "code",
-      "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/SinricProESP32.h",
-      "source_location": "L179",
+      "source_file": "SinricProESP32.h",
+      "source_location": "L183",
       "community": 3,
       "norm_label": "sendsinricproswitchevents()",
       "id": "esp32_automacao_residencial_sinricproesp32_sendsinricproswitchevents"
@@ -424,7 +424,7 @@
       "file_type": "code",
       "source_file": "TaskCores.h",
       "source_location": "L1",
-      "community": 30,
+      "community": 32,
       "norm_label": "taskcores.h",
       "id": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_taskcores_h"
     },
@@ -433,61 +433,61 @@
       "file_type": "code",
       "source_file": "TelegramBotESP32.h",
       "source_location": "L1",
-      "community": 5,
+      "community": 7,
       "norm_label": "telegrambotesp32.h",
       "id": "telegrambotesp32_h"
     },
     {
       "label": "processPendingTelegramNotification()",
       "file_type": "code",
-      "source_file": "TelegramBotESP32.h",
-      "source_location": "L48",
-      "community": 5,
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L34",
+      "community": 7,
       "norm_label": "processpendingtelegramnotification()",
       "id": "esp32_automacao_residencial_telegrambotesp32_processpendingtelegramnotification"
     },
     {
       "label": "getControlKeyboard()",
       "file_type": "code",
-      "source_file": "TelegramBotESP32.h",
-      "source_location": "L66",
-      "community": 5,
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L51",
+      "community": 7,
       "norm_label": "getcontrolkeyboard()",
       "id": "esp32_automacao_residencial_telegrambotesp32_getcontrolkeyboard"
     },
     {
       "label": "sendMainMenu()",
       "file_type": "code",
-      "source_file": "TelegramBotESP32.h",
-      "source_location": "L84",
-      "community": 5,
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L63",
+      "community": 7,
       "norm_label": "sendmainmenu()",
       "id": "esp32_automacao_residencial_telegrambotesp32_sendmainmenu"
     },
     {
       "label": "initTelegram()",
       "file_type": "code",
-      "source_file": "TelegramBotESP32.h",
-      "source_location": "L89",
-      "community": 5,
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L68",
+      "community": 7,
       "norm_label": "inittelegram()",
       "id": "esp32_automacao_residencial_telegrambotesp32_inittelegram"
     },
     {
       "label": "handleTelegramMessages()",
       "file_type": "code",
-      "source_file": "TelegramBotESP32.h",
-      "source_location": "L123",
-      "community": 5,
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L103",
+      "community": 7,
       "norm_label": "handletelegrammessages()",
       "id": "esp32_automacao_residencial_telegrambotesp32_handletelegrammessages"
     },
     {
       "label": "telegramLoop()",
       "file_type": "code",
-      "source_file": "TelegramBotESP32.h",
-      "source_location": "L188",
-      "community": 5,
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L147",
+      "community": 7,
       "norm_label": "telegramloop()",
       "id": "esp32_automacao_residencial_telegrambotesp32_telegramloop"
     },
@@ -496,7 +496,7 @@
       "file_type": "code",
       "source_file": "/mnt/c/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/tmp.json",
       "source_location": "L1",
-      "community": 31,
+      "community": 33,
       "norm_label": "tmp.json",
       "id": "mnt_c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_tmp_json"
     },
@@ -505,7 +505,7 @@
       "file_type": "code",
       "source_file": "TopicosMQTT.h",
       "source_location": "L1",
-      "community": 17,
+      "community": 19,
       "norm_label": "topicosmqtt.h",
       "id": "topicosmqtt_h"
     },
@@ -532,7 +532,7 @@
       "file_type": "code",
       "source_file": "WebServerESP32.h",
       "source_location": "L1",
-      "community": 2,
+      "community": 5,
       "norm_label": "webserveresp32.h",
       "id": "webserveresp32_h"
     },
@@ -540,8 +540,8 @@
       "label": "getRelayName()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
-      "source_location": "L30",
-      "community": 2,
+      "source_location": "L52",
+      "community": 5,
       "norm_label": "getrelayname()",
       "id": "esp32_automacao_residencial_webserveresp32_getrelayname"
     },
@@ -549,8 +549,8 @@
       "label": "handleRoot()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
-      "source_location": "L49",
-      "community": 2,
+      "source_location": "L63",
+      "community": 5,
       "norm_label": "handleroot()",
       "id": "esp32_automacao_residencial_webserveresp32_handleroot"
     },
@@ -558,8 +558,8 @@
       "label": "handleApiRelays()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
-      "source_location": "L53",
-      "community": 2,
+      "source_location": "L67",
+      "community": 5,
       "norm_label": "handleapirelays()",
       "id": "esp32_automacao_residencial_webserveresp32_handleapirelays"
     },
@@ -567,8 +567,8 @@
       "label": "handleApiSensors()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
-      "source_location": "L64",
-      "community": 2,
+      "source_location": "L78",
+      "community": 5,
       "norm_label": "handleapisensors()",
       "id": "esp32_automacao_residencial_webserveresp32_handleapisensors"
     },
@@ -576,8 +576,8 @@
       "label": "handleApiRelay()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
-      "source_location": "L71",
-      "community": 2,
+      "source_location": "L85",
+      "community": 8,
       "norm_label": "handleapirelay()",
       "id": "esp32_automacao_residencial_webserveresp32_handleapirelay"
     },
@@ -585,8 +585,8 @@
       "label": "handleApiAll()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
-      "source_location": "L96",
-      "community": 2,
+      "source_location": "L112",
+      "community": 8,
       "norm_label": "handleapiall()",
       "id": "esp32_automacao_residencial_webserveresp32_handleapiall"
     },
@@ -594,8 +594,8 @@
       "label": "handleApiSetName()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
-      "source_location": "L125",
-      "community": 2,
+      "source_location": "L141",
+      "community": 5,
       "norm_label": "handleapisetname()",
       "id": "esp32_automacao_residencial_webserveresp32_handleapisetname"
     },
@@ -603,8 +603,8 @@
       "label": "setupWebServer()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
-      "source_location": "L178",
-      "community": 2,
+      "source_location": "L197",
+      "community": 8,
       "norm_label": "setupwebserver()",
       "id": "esp32_automacao_residencial_webserveresp32_setupwebserver"
     },
@@ -612,8 +612,8 @@
       "label": "handleWebServerClient()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
-      "source_location": "L200",
-      "community": 2,
+      "source_location": "L219",
+      "community": 5,
       "norm_label": "handlewebserverclient()",
       "id": "esp32_automacao_residencial_webserveresp32_handlewebserverclient"
     },
@@ -622,7 +622,7 @@
       "file_type": "code",
       "source_file": "WiFiManagerConfig.h",
       "source_location": "L1",
-      "community": 6,
+      "community": 9,
       "norm_label": "wifimanagerconfig.h",
       "id": "wifimanagerconfig_h"
     },
@@ -631,7 +631,7 @@
       "file_type": "code",
       "source_file": "WiFiManagerConfig.h",
       "source_location": "L29",
-      "community": 6,
+      "community": 9,
       "norm_label": "loadmqttconfig()",
       "id": "esp32_automacao_residencial_wifimanagerconfig_loadmqttconfig"
     },
@@ -640,7 +640,7 @@
       "file_type": "code",
       "source_file": "WiFiManagerConfig.h",
       "source_location": "L50",
-      "community": 6,
+      "community": 9,
       "norm_label": "savemqttconfigtonvs()",
       "id": "esp32_automacao_residencial_wifimanagerconfig_savemqttconfigtonvs"
     },
@@ -649,7 +649,7 @@
       "file_type": "code",
       "source_file": "WiFiManagerConfig.h",
       "source_location": "L68",
-      "community": 6,
+      "community": 9,
       "norm_label": "savemqttconfigcallback()",
       "id": "esp32_automacao_residencial_wifimanagerconfig_savemqttconfigcallback"
     },
@@ -658,7 +658,7 @@
       "file_type": "code",
       "source_file": "WiFiManagerConfig.h",
       "source_location": "L109",
-      "community": 6,
+      "community": 9,
       "norm_label": "savestaticipconfig()",
       "id": "esp32_automacao_residencial_wifimanagerconfig_savestaticipconfig"
     },
@@ -667,7 +667,7 @@
       "file_type": "code",
       "source_file": "WiFiManagerConfig.h",
       "source_location": "L125",
-      "community": 6,
+      "community": 9,
       "norm_label": "loadstaticipconfig()",
       "id": "esp32_automacao_residencial_wifimanagerconfig_loadstaticipconfig"
     },
@@ -676,7 +676,7 @@
       "file_type": "code",
       "source_file": "WiFiManagerConfig.h",
       "source_location": "L139",
-      "community": 6,
+      "community": 9,
       "norm_label": "clearstaticipconfig()",
       "id": "esp32_automacao_residencial_wifimanagerconfig_clearstaticipconfig"
     },
@@ -685,7 +685,7 @@
       "file_type": "code",
       "source_file": "WiFiManagerConfig.h",
       "source_location": "L151",
-      "community": 6,
+      "community": 9,
       "norm_label": "wifimanagersetup()",
       "id": "esp32_automacao_residencial_wifimanagerconfig_wifimanagersetup"
     },
@@ -694,7 +694,7 @@
       "file_type": "code",
       "source_file": "WiFiManagerConfig.h",
       "source_location": "L190",
-      "community": 6,
+      "community": 9,
       "norm_label": "setupmdns()",
       "id": "esp32_automacao_residencial_wifimanagerconfig_setupmdns"
     },
@@ -703,7 +703,7 @@
       "file_type": "code",
       "source_file": "D:/GitHub-Repositorios/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/WiFiUtils.h",
       "source_location": "L1",
-      "community": 32,
+      "community": 34,
       "norm_label": "wifiutils.h",
       "id": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_wifiutils_h"
     },
@@ -729,7 +729,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 21,
+      "community": 20,
       "norm_label": "configmqtt.h (mqtt setup/reconnect)",
       "id": "ConfigMQTT_h"
     },
@@ -742,7 +742,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 33,
+      "community": 35,
       "norm_label": "setupmqtt (function)",
       "id": "setupMQTT"
     },
@@ -755,7 +755,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 34,
+      "community": 36,
       "norm_label": "reconnectmqtt (function)",
       "id": "reconnectMQTT"
     },
@@ -768,7 +768,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 35,
+      "community": 37,
       "norm_label": "mqttcallback (function)",
       "id": "mqttCallback"
     },
@@ -781,7 +781,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 36,
+      "community": 38,
       "norm_label": "constantestempo.h (time intervals)",
       "id": "ConstantesTempo_h"
     },
@@ -807,7 +807,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 17,
+      "community": 19,
       "norm_label": "homeassistantdiscovery.h (ha mqtt discovery)",
       "id": "HomeAssistantDiscovery_h"
     },
@@ -820,7 +820,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 17,
+      "community": 19,
       "norm_label": "publishhadiscovery (function)",
       "id": "publishHADiscovery"
     },
@@ -833,7 +833,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 9,
       "norm_label": "loginssenhas.h (credentials hub)",
       "id": "LoginsSenhas_h"
     },
@@ -846,7 +846,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 21,
+      "community": 20,
       "norm_label": "mqttcredentials (broker/port/user/pass/client)",
       "id": "mqttCredentials"
     },
@@ -859,7 +859,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 37,
+      "community": 39,
       "norm_label": "telegramcredentials (bot_token, chat_id)",
       "id": "telegramCredentials"
     },
@@ -872,7 +872,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 38,
+      "community": 40,
       "norm_label": "sinricprocredentials (app_key, app_secret, device_*)",
       "id": "sinricProCredentials"
     },
@@ -885,7 +885,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 39,
+      "community": 41,
       "norm_label": "mqttparametros.h (qos/retain config)",
       "id": "MQTTParametros_h"
     },
@@ -963,7 +963,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 40,
+      "community": 42,
       "norm_label": "sensores.h (sensor read prototypes)",
       "id": "Sensores_h"
     },
@@ -976,7 +976,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 41,
+      "community": 43,
       "norm_label": "readsensors (function)",
       "id": "readSensors"
     },
@@ -989,7 +989,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 42,
+      "community": 44,
       "norm_label": "publishsensordata (function)",
       "id": "publishSensorData"
     },
@@ -1002,7 +1002,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 43,
+      "community": 45,
       "norm_label": "publishrelaystates (function)",
       "id": "publishRelayStates"
     },
@@ -1015,7 +1015,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 44,
+      "community": 46,
       "norm_label": "readdhtsensor (function)",
       "id": "readDHTSensor"
     },
@@ -1028,7 +1028,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 45,
+      "community": 47,
       "norm_label": "readbmp180sensor (function)",
       "id": "readBMP180Sensor"
     },
@@ -1041,7 +1041,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 46,
+      "community": 48,
       "norm_label": "taskcores.h (freertos task prototypes)",
       "id": "TaskCores_h"
     },
@@ -1054,7 +1054,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 47,
+      "community": 49,
       "norm_label": "taskconexoes (freertos task)",
       "id": "TaskConexoes"
     },
@@ -1067,7 +1067,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 48,
+      "community": 50,
       "norm_label": "tasksensores (freertos task)",
       "id": "TaskSensores"
     },
@@ -1106,7 +1106,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 49,
+      "community": 51,
       "norm_label": "telegramnotification (struct + queuehandle)",
       "id": "TelegramNotificationQueue"
     },
@@ -1119,7 +1119,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 50,
+      "community": 52,
       "norm_label": "cross-core sync flags (pending*)",
       "id": "CrossCoreSyncFlags"
     },
@@ -1145,7 +1145,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 51,
+      "community": 53,
       "norm_label": "wifiutils.h (wifi utilities)",
       "id": "WiFiUtils_h"
     },
@@ -1158,7 +1158,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 52,
+      "community": 54,
       "norm_label": "setupwifi (function)",
       "id": "setupWiFi"
     },
@@ -1171,7 +1171,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 53,
+      "community": 55,
       "norm_label": "checkwificonnection (function)",
       "id": "checkWiFiConnection"
     },
@@ -1184,7 +1184,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 54,
+      "community": 56,
       "norm_label": "gitnexus code intelligence",
       "id": "claude_gitnexus"
     },
@@ -1197,7 +1197,7 @@
       "captured_at": null,
       "author": "Robson Brasil",
       "contributor": null,
-      "community": 55,
+      "community": 57,
       "norm_label": "iot dashboard interface",
       "id": "dashboard_html"
     },
@@ -1210,7 +1210,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 56,
+      "community": 58,
       "norm_label": "project analysis findings",
       "id": "findings_analysis"
     },
@@ -1223,7 +1223,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "progress log",
       "id": "progressmd_ProgressLog"
     },
@@ -1236,7 +1236,7 @@
       "captured_at": null,
       "author": "Robson Brasil",
       "contributor": null,
-      "community": 22,
+      "community": 25,
       "norm_label": "smart home hub esp32 readme",
       "id": "readme_main"
     },
@@ -1249,7 +1249,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "esp32 project analysis task plan",
       "id": "taskplanmd_TaskPlan"
     },
@@ -1262,7 +1262,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 57,
+      "community": 59,
       "norm_label": "quick reference cheatsheet",
       "id": "cheatsheet_docs"
     },
@@ -1275,7 +1275,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "documentation index",
       "id": "docsINDICEmd_DocIndex"
     },
@@ -1288,7 +1288,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "freertos multi-core architecture",
       "id": "FreeRTOSMultiCore"
     },
@@ -1301,7 +1301,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "hermes natural language commands",
       "id": "HermesNaturalLanguage"
     },
@@ -1314,7 +1314,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "home assistant mqtt discovery",
       "id": "HomeAssistantDiscovery"
     },
@@ -1327,7 +1327,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "sinricpro alexa/google home",
       "id": "SinricProAlexaGoogle"
     },
@@ -1340,7 +1340,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "telegram bot integration",
       "id": "TelegramBotIntegration"
     },
@@ -1353,7 +1353,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "projeto_detalhado.md guide",
       "id": "PROJETO_DETALHADO_Guide"
     },
@@ -1366,7 +1366,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "cheatsheet.md quick reference",
       "id": "CHEATSHEET_Reference"
     },
@@ -1379,7 +1379,7 @@
       "captured_at": null,
       "author": "Robson Brasil",
       "contributor": null,
-      "community": 22,
+      "community": 25,
       "norm_label": "detailed project documentation",
       "id": "projeto_detalhado_docs"
     },
@@ -1392,7 +1392,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "fix mdns and ota hostname plan",
       "id": "docsPlanFixMdnsOta"
     },
@@ -1405,7 +1405,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "device_hostname constant",
       "id": "DeviceHostnameConstant"
     },
@@ -1418,7 +1418,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "mdns (espmdns)",
       "id": "MDNSService"
     },
@@ -1431,7 +1431,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "ota update (arduinoota)",
       "id": "OTAUpdateService"
     },
@@ -1444,7 +1444,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "global hostname centralization design",
       "id": "GlobalHostnameCentralization"
     },
@@ -1457,7 +1457,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "taskconexoes (core 0)",
       "id": "TaskConexoesCore0"
     },
@@ -1470,7 +1470,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "remove hardcoded wifi/ip plan",
       "id": "docsPlanRemoveHardcodedWifi"
     },
@@ -1483,7 +1483,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "mqtt wifimanager integration design",
       "id": "docsSpecMqttWifiManager"
     },
@@ -1496,7 +1496,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "mqtt broker configuration",
       "id": "MqttBrokerConfiguration"
     },
@@ -1509,7 +1509,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "nvs flash persistence",
       "id": "NvsFlashPersistence"
     },
@@ -1522,7 +1522,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "wifimanager custom mqtt parameters",
       "id": "WiFiManagerMqttParams"
     },
@@ -1535,7 +1535,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "remove hardcoded wifi/ip design spec",
       "id": "docsSpecRemoveHardcodedWifi"
     },
@@ -1548,7 +1548,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "wifimanager library",
       "id": "WiFiManagerLibrary"
     },
@@ -1561,7 +1561,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "hardcoded configuration removal initiative",
       "id": "HardcodedConfigRemoval"
     },
@@ -1574,7 +1574,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 1,
       "norm_label": "dhcp-only networking",
       "id": "DHCPSimplification"
     },
@@ -1587,7 +1587,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "sinricpro alexa integration",
       "id": "SinricProESP32"
     },
@@ -1600,7 +1600,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "telegram bot controller",
       "id": "TelegramBotESP32"
     },
@@ -1613,7 +1613,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "web dashboard server",
       "id": "WebServerESP32"
     },
@@ -1626,7 +1626,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 12,
+      "community": 15,
       "norm_label": "wifi manager configuration",
       "id": "WiFiManagerConfig"
     },
@@ -1639,7 +1639,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 12,
+      "community": 15,
       "norm_label": "mqtt topic definitions",
       "id": "TopicosMQTT"
     },
@@ -1652,7 +1652,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 12,
+      "community": 15,
       "norm_label": "project definition constants",
       "id": "DefinicoesProjeto"
     },
@@ -1665,7 +1665,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 14,
+      "community": 17,
       "norm_label": "finalize visualization (networkx)",
       "id": "finalize_fixed"
     },
@@ -1678,7 +1678,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 14,
+      "community": 17,
       "norm_label": "finalize visualization (graphify)",
       "id": "finalize_graphify"
     },
@@ -1691,7 +1691,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 14,
+      "community": 17,
       "norm_label": "generate visualization standalone",
       "id": "generate_visualization"
     },
@@ -1704,7 +1704,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "alexa voice command callback",
       "id": "onPowerState"
     },
@@ -1717,7 +1717,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "initialize sinricpro sdk",
       "id": "setupSinricPro"
     },
@@ -1730,7 +1730,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "sync relay states to sinricpro",
       "id": "sendSinricProSwitchEvents"
     },
@@ -1743,7 +1743,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 58,
+      "community": 60,
       "norm_label": "send temperature to sinricpro",
       "id": "sendSinricProTemperatureEvent"
     },
@@ -1756,7 +1756,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 59,
+      "community": 61,
       "norm_label": "sinricpro websocket loop",
       "id": "sinricProLoop"
     },
@@ -1769,7 +1769,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "initialize telegram bot",
       "id": "initTelegram"
     },
@@ -1782,7 +1782,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "process telegram commands",
       "id": "handleTelegramMessages"
     },
@@ -1795,7 +1795,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "telegram polling loop",
       "id": "telegramLoop"
     },
@@ -1808,7 +1808,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "queue telegram notification",
       "id": "notifyTelegramStateChange"
     },
@@ -1821,7 +1821,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "send pending telegram message",
       "id": "processPendingTelegramNotification"
     },
@@ -1834,7 +1834,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "generate telegram keyboard json",
       "id": "getControlKeyboard"
     },
@@ -1847,7 +1847,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 60,
+      "community": 62,
       "norm_label": "serve dashboard html",
       "id": "handleRoot"
     },
@@ -1860,7 +1860,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "api single relay control",
       "id": "handleApiRelay"
     },
@@ -1873,7 +1873,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "api all relays control",
       "id": "handleApiAll"
     },
@@ -1886,7 +1886,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 61,
+      "community": 63,
       "norm_label": "configure web server routes",
       "id": "setupWebServer"
     },
@@ -1899,7 +1899,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 18,
+      "community": 16,
       "norm_label": "wifimanager portal setup",
       "id": "WiFiManagerSetup"
     },
@@ -1912,7 +1912,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 18,
+      "community": 16,
       "norm_label": "save mqtt config callback",
       "id": "saveMQTTConfigCallback"
     },
@@ -1925,7 +1925,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "relay state variables (r1-r8)",
       "id": "shared_RelayStates"
     },
@@ -1938,7 +1938,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "relay pin definitions (gpio)",
       "id": "shared_RelayPins"
     },
@@ -1951,7 +1951,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "mqtt sync pending flag",
       "id": "shared_pendingMqttUpdate"
     },
@@ -1964,7 +1964,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "sinricpro sync pending flag",
       "id": "shared_pendingSinricProUpdate"
     },
@@ -1977,7 +1977,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "sinricpro origin guard flag",
       "id": "shared_sinricProOriginatedChange"
     },
@@ -1990,7 +1990,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "telegram notification queue",
       "id": "shared_telegramQueue"
     },
@@ -2003,7 +2003,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 2,
       "norm_label": "relay custom names (nvs)",
       "id": "shared_relayNames"
     },
@@ -2016,7 +2016,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 18,
+      "community": 16,
       "norm_label": "mqtt topic string constants",
       "id": "shared_mqttTopics"
     },
@@ -2025,378 +2025,378 @@
       "file_type": "code",
       "source_file": "Bibliotecas.h",
       "source_location": "L1",
-      "id": "bibliotecas_h",
-      "community": 8,
-      "norm_label": "bibliotecas.h"
+      "community": 10,
+      "norm_label": "bibliotecas.h",
+      "id": "bibliotecas_h"
     },
     {
       "label": "ConstantesTempo.h",
       "file_type": "code",
       "source_file": "ConstantesTempo.h",
       "source_location": "L1",
-      "id": "constantestempo_h",
-      "community": 62,
-      "norm_label": "constantestempo.h"
+      "community": 64,
+      "norm_label": "constantestempo.h",
+      "id": "constantestempo_h"
     },
     {
       "label": "DefinicoesProjeto.h",
       "file_type": "code",
       "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/DefinicoesProjeto.h",
       "source_location": "L1",
-      "id": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_definicoesprojeto_h",
-      "community": 63,
-      "norm_label": "definicoesprojeto.h"
+      "community": 65,
+      "norm_label": "definicoesprojeto.h",
+      "id": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_definicoesprojeto_h"
     },
     {
       "label": "finalize_fixed.py",
       "file_type": "code",
       "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/finalize_fixed.py",
       "source_location": "L1",
-      "id": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_finalize_fixed_py",
-      "community": 11,
-      "norm_label": "finalize_fixed.py"
+      "community": 14,
+      "norm_label": "finalize_fixed.py",
+      "id": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_finalize_fixed_py"
     },
     {
       "label": "finalize_graphify.py",
       "file_type": "code",
       "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/finalize_graphify.py",
       "source_location": "L1",
-      "id": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_finalize_graphify_py",
-      "community": 64,
-      "norm_label": "finalize_graphify.py"
+      "community": 66,
+      "norm_label": "finalize_graphify.py",
+      "id": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_finalize_graphify_py"
     },
     {
       "label": "generate_visualization.py",
       "file_type": "code",
       "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/generate_visualization.py",
       "source_location": "L1",
-      "id": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_generate_visualization_py",
-      "community": 65,
-      "norm_label": "generate_visualization.py"
+      "community": 67,
+      "norm_label": "generate_visualization.py",
+      "id": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_generate_visualization_py"
     },
     {
       "label": "GPIOs.h",
       "file_type": "code",
       "source_file": "GPIOs.h",
       "source_location": "L1",
-      "id": "gpios_h",
-      "community": 66,
-      "norm_label": "gpios.h"
+      "community": 68,
+      "norm_label": "gpios.h",
+      "id": "gpios_h"
     },
     {
       "label": "HomeAssistantDiscovery.h",
       "file_type": "code",
       "source_file": "HomeAssistantDiscovery.h",
       "source_location": "L1",
-      "id": "homeassistantdiscovery_h",
-      "community": 16,
-      "norm_label": "homeassistantdiscovery.h"
+      "community": 4,
+      "norm_label": "homeassistantdiscovery.h",
+      "id": "homeassistantdiscovery_h"
     },
     {
       "label": "_publishHA()",
       "file_type": "code",
       "source_file": "HomeAssistantDiscovery.h",
       "source_location": "L17",
-      "id": "homeassistantdiscovery_publishha",
-      "community": 16,
-      "norm_label": "_publishha()"
+      "community": 4,
+      "norm_label": "_publishha()",
+      "id": "homeassistantdiscovery_publishha"
     },
     {
       "label": "publishHADiscovery()",
       "file_type": "code",
       "source_file": "HomeAssistantDiscovery.h",
       "source_location": "L25",
-      "id": "homeassistantdiscovery_publishhadiscovery",
-      "community": 16,
-      "norm_label": "publishhadiscovery()"
+      "community": 4,
+      "norm_label": "publishhadiscovery()",
+      "id": "homeassistantdiscovery_publishhadiscovery"
     },
     {
       "label": "LoginsSenhas.h",
       "file_type": "code",
       "source_file": "LoginsSenhas.h",
       "source_location": "L1",
-      "id": "loginssenhas_h",
-      "community": 67,
-      "norm_label": "loginssenhas.h"
+      "community": 69,
+      "norm_label": "loginssenhas.h",
+      "id": "loginssenhas_h"
     },
     {
       "label": "LoginsSenhas_example.h",
       "file_type": "code",
       "source_file": "LoginsSenhas_example.h",
       "source_location": "L1",
-      "id": "loginssenhas_example_h",
-      "community": 68,
-      "norm_label": "loginssenhas_example.h"
+      "community": 70,
+      "norm_label": "loginssenhas_example.h",
+      "id": "loginssenhas_example_h"
     },
     {
       "label": "MQTTParametros.h",
       "file_type": "code",
       "source_file": "MQTTParametros.h",
       "source_location": "L1",
-      "id": "mqttparametros_h",
-      "community": 69,
-      "norm_label": "mqttparametros.h"
+      "community": 71,
+      "norm_label": "mqttparametros.h",
+      "id": "mqttparametros_h"
     },
     {
       "label": "OTAConfig.cpp",
       "file_type": "code",
       "source_file": "OTAConfig.cpp",
       "source_location": "L1",
-      "id": "otaconfig_cpp",
-      "community": 8,
-      "norm_label": "otaconfig.cpp"
+      "community": 10,
+      "norm_label": "otaconfig.cpp",
+      "id": "otaconfig_cpp"
     },
     {
       "label": "setupOTA()",
       "file_type": "code",
       "source_file": "OTAConfig.cpp",
       "source_location": "L9",
-      "id": "otaconfig_setupota",
-      "community": 8,
-      "norm_label": "setupota()"
+      "community": 10,
+      "norm_label": "setupota()",
+      "id": "otaconfig_setupota"
     },
     {
       "label": "RemoteDebug.h",
       "file_type": "code",
       "source_file": "RemoteDebug.h",
       "source_location": "L1",
-      "id": "remotedebug_h",
-      "community": 23,
-      "norm_label": "remotedebug.h"
+      "community": 4,
+      "norm_label": "remotedebug.h",
+      "id": "remotedebug_h"
     },
     {
       "label": "DualSerialClass()",
       "file_type": "code",
       "source_file": "RemoteDebug.h",
       "source_location": "L15",
-      "id": "remotedebug_dualserialclass",
-      "community": 23,
-      "norm_label": "dualserialclass()"
+      "community": 4,
+      "norm_label": "dualserialclass()",
+      "id": "remotedebug_dualserialclass"
     },
     {
       "label": "Sensores.h",
       "file_type": "code",
       "source_file": "Sensores.h",
       "source_location": "L1",
-      "id": "sensores_h",
-      "community": 70,
-      "norm_label": "sensores.h"
+      "community": 72,
+      "norm_label": "sensores.h",
+      "id": "sensores_h"
     },
     {
       "label": "SinricProESP32.h",
       "file_type": "code",
       "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/SinricProESP32.h",
       "source_location": "L1",
-      "id": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_sinricproesp32_h",
       "community": 3,
-      "norm_label": "sinricproesp32.h"
+      "norm_label": "sinricproesp32.h",
+      "id": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_sinricproesp32_h"
     },
     {
       "label": "processPendingTelegramNotification()",
       "file_type": "code",
       "source_file": "TelegramBotESP32.h",
       "source_location": "L42",
-      "id": "telegrambotesp32_processpendingtelegramnotification",
-      "community": 5,
-      "norm_label": "processpendingtelegramnotification()"
+      "community": 7,
+      "norm_label": "processpendingtelegramnotification()",
+      "id": "telegrambotesp32_processpendingtelegramnotification"
     },
     {
       "label": "getControlKeyboard()",
       "file_type": "code",
       "source_file": "TelegramBotESP32.h",
       "source_location": "L60",
-      "id": "telegrambotesp32_getcontrolkeyboard",
-      "community": 5,
-      "norm_label": "getcontrolkeyboard()"
+      "community": 7,
+      "norm_label": "getcontrolkeyboard()",
+      "id": "telegrambotesp32_getcontrolkeyboard"
     },
     {
       "label": "sendMainMenu()",
       "file_type": "code",
       "source_file": "TelegramBotESP32.h",
       "source_location": "L78",
-      "id": "telegrambotesp32_sendmainmenu",
-      "community": 5,
-      "norm_label": "sendmainmenu()"
+      "community": 7,
+      "norm_label": "sendmainmenu()",
+      "id": "telegrambotesp32_sendmainmenu"
     },
     {
       "label": "initTelegram()",
       "file_type": "code",
       "source_file": "TelegramBotESP32.h",
       "source_location": "L83",
-      "id": "telegrambotesp32_inittelegram",
-      "community": 5,
-      "norm_label": "inittelegram()"
+      "community": 7,
+      "norm_label": "inittelegram()",
+      "id": "telegrambotesp32_inittelegram"
     },
     {
       "label": "handleTelegramMessages()",
       "file_type": "code",
       "source_file": "TelegramBotESP32.h",
       "source_location": "L156",
-      "id": "telegrambotesp32_handletelegrammessages",
-      "community": 5,
-      "norm_label": "handletelegrammessages()"
+      "community": 7,
+      "norm_label": "handletelegrammessages()",
+      "id": "telegrambotesp32_handletelegrammessages"
     },
     {
       "label": "telegramLoop()",
       "file_type": "code",
       "source_file": "TelegramBotESP32.h",
       "source_location": "L221",
-      "id": "telegrambotesp32_telegramloop",
-      "community": 5,
-      "norm_label": "telegramloop()"
+      "community": 7,
+      "norm_label": "telegramloop()",
+      "id": "telegrambotesp32_telegramloop"
     },
     {
       "label": "TopicosMQTT.h",
       "file_type": "code",
       "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/TopicosMQTT.h",
       "source_location": "L1",
-      "id": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_topicosmqtt_h",
-      "community": 71,
-      "norm_label": "topicosmqtt.h"
+      "community": 73,
+      "norm_label": "topicosmqtt.h",
+      "id": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_topicosmqtt_h"
     },
     {
       "label": "VariaveisGlobais.cpp",
       "file_type": "code",
       "source_file": "VariaveisGlobais.cpp",
       "source_location": "L1",
-      "id": "variaveisglobais_cpp",
-      "community": 72,
-      "norm_label": "variaveisglobais.cpp"
+      "community": 3,
+      "norm_label": "variaveisglobais.cpp",
+      "id": "variaveisglobais_cpp"
     },
     {
       "label": "VariaveisGlobais.h",
       "file_type": "code",
       "source_file": "VariaveisGlobais.h",
       "source_location": "L1",
-      "id": "variaveisglobais_h",
-      "community": 73,
-      "norm_label": "variaveisglobais.h"
+      "community": 7,
+      "norm_label": "variaveisglobais.h",
+      "id": "variaveisglobais_h"
     },
     {
       "label": "_ensureRelayNames()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
       "source_location": "L34",
-      "id": "webserveresp32_ensurerelaynames",
-      "community": 2,
-      "norm_label": "_ensurerelaynames()"
+      "community": 5,
+      "norm_label": "_ensurerelaynames()",
+      "id": "webserveresp32_ensurerelaynames"
     },
     {
       "label": "getRelayName()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
       "source_location": "L52",
-      "id": "webserveresp32_getrelayname",
-      "community": 2,
-      "norm_label": "getrelayname()"
+      "community": 5,
+      "norm_label": "getrelayname()",
+      "id": "webserveresp32_getrelayname"
     },
     {
       "label": "handleRoot()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
       "source_location": "L63",
-      "id": "webserveresp32_handleroot",
-      "community": 2,
-      "norm_label": "handleroot()"
+      "community": 5,
+      "norm_label": "handleroot()",
+      "id": "webserveresp32_handleroot"
     },
     {
       "label": "handleApiRelays()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
       "source_location": "L67",
-      "id": "webserveresp32_handleapirelays",
-      "community": 2,
-      "norm_label": "handleapirelays()"
+      "community": 5,
+      "norm_label": "handleapirelays()",
+      "id": "webserveresp32_handleapirelays"
     },
     {
       "label": "handleApiSensors()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
       "source_location": "L78",
-      "id": "webserveresp32_handleapisensors",
-      "community": 2,
-      "norm_label": "handleapisensors()"
+      "community": 5,
+      "norm_label": "handleapisensors()",
+      "id": "webserveresp32_handleapisensors"
     },
     {
       "label": "handleApiRelay()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
       "source_location": "L85",
-      "id": "webserveresp32_handleapirelay",
-      "community": 2,
-      "norm_label": "handleapirelay()"
+      "community": 5,
+      "norm_label": "handleapirelay()",
+      "id": "webserveresp32_handleapirelay"
     },
     {
       "label": "handleApiAll()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
       "source_location": "L110",
-      "id": "webserveresp32_handleapiall",
-      "community": 2,
-      "norm_label": "handleapiall()"
+      "community": 5,
+      "norm_label": "handleapiall()",
+      "id": "webserveresp32_handleapiall"
     },
     {
       "label": "handleApiSetName()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
       "source_location": "L139",
-      "id": "webserveresp32_handleapisetname",
-      "community": 2,
-      "norm_label": "handleapisetname()"
+      "community": 5,
+      "norm_label": "handleapisetname()",
+      "id": "webserveresp32_handleapisetname"
     },
     {
       "label": "setupWebServer()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
       "source_location": "L195",
-      "id": "webserveresp32_setupwebserver",
-      "community": 2,
-      "norm_label": "setupwebserver()"
+      "community": 5,
+      "norm_label": "setupwebserver()",
+      "id": "webserveresp32_setupwebserver"
     },
     {
       "label": "handleWebServerClient()",
       "file_type": "code",
       "source_file": "WebServerESP32.h",
       "source_location": "L217",
-      "id": "webserveresp32_handlewebserverclient",
-      "community": 2,
-      "norm_label": "handlewebserverclient()"
+      "community": 5,
+      "norm_label": "handlewebserverclient()",
+      "id": "webserveresp32_handlewebserverclient"
     },
     {
       "label": "migrateNVS()",
       "file_type": "code",
       "source_file": "WiFiManagerConfig.h",
       "source_location": "L12",
-      "id": "wifimanagerconfig_migratenvs",
-      "community": 6,
-      "norm_label": "migratenvs()"
+      "community": 9,
+      "norm_label": "migratenvs()",
+      "id": "wifimanagerconfig_migratenvs"
     },
     {
       "label": "loadCredentials()",
       "file_type": "code",
       "source_file": "WiFiManagerConfig.h",
       "source_location": "L61",
-      "id": "wifimanagerconfig_loadcredentials",
-      "community": 6,
-      "norm_label": "loadcredentials()"
+      "community": 9,
+      "norm_label": "loadcredentials()",
+      "id": "wifimanagerconfig_loadcredentials"
     },
     {
       "label": "setupMDNS()",
       "file_type": "code",
       "source_file": "WiFiManagerConfig.h",
       "source_location": "L95",
-      "id": "wifimanagerconfig_setupmdns",
-      "community": 6,
-      "norm_label": "setupmdns()"
+      "community": 9,
+      "norm_label": "setupmdns()",
+      "id": "wifimanagerconfig_setupmdns"
     },
     {
       "label": "WiFiUtils.h",
       "file_type": "code",
       "source_file": "WiFiUtils.h",
       "source_location": "L1",
-      "id": "wifiutils_h",
       "community": 74,
-      "norm_label": "wifiutils.h"
+      "norm_label": "wifiutils.h",
+      "id": "wifiutils_h"
     },
     {
       "label": "tarefas.md",
@@ -2407,9 +2407,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tarefas_md",
-      "community": 4,
-      "norm_label": "tarefas.md"
+      "community": 6,
+      "norm_label": "tarefas.md",
+      "id": "tarefas_md"
     },
     {
       "label": ".graphify_incremental.json",
@@ -2420,9 +2420,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "graphify_incremental_json",
-      "community": 15,
-      "norm_label": ".graphify_incremental.json"
+      "community": 18,
+      "norm_label": ".graphify_incremental.json",
+      "id": "graphify_incremental_json"
     },
     {
       "label": ".graphify_incremental_fixed.json",
@@ -2433,9 +2433,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "graphify_incremental_fixed_json",
-      "community": 15,
-      "norm_label": ".graphify_incremental_fixed.json"
+      "community": 18,
+      "norm_label": ".graphify_incremental_fixed.json",
+      "id": "graphify_incremental_fixed_json"
     },
     {
       "label": ".kilo/kilo.json",
@@ -2446,9 +2446,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "kilo_config",
-      "community": 20,
-      "norm_label": ".kilo/kilo.json"
+      "community": 24,
+      "norm_label": ".kilo/kilo.json",
+      "id": "kilo_config"
     },
     {
       "label": ".kilo/package.json",
@@ -2459,9 +2459,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "kilo_package_json",
-      "community": 20,
-      "norm_label": ".kilo/package.json"
+      "community": 24,
+      "norm_label": ".kilo/package.json",
+      "id": "kilo_package_json"
     },
     {
       "label": ".graphify_files_new.txt",
@@ -2472,9 +2472,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "graphify_files_new_txt",
-      "community": 15,
-      "norm_label": ".graphify_files_new.txt"
+      "community": 18,
+      "norm_label": ".graphify_files_new.txt",
+      "id": "graphify_files_new_txt"
     },
     {
       "label": "ESP32 Automa\u00e7\u00e3o Residencial",
@@ -2485,9 +2485,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "esp32_automacao_residencial",
-      "community": 4,
-      "norm_label": "esp32 automacao residencial"
+      "community": 6,
+      "norm_label": "esp32 automacao residencial",
+      "id": "esp32_automacao_residencial"
     },
     {
       "label": "VariaveisGlobais",
@@ -2498,9 +2498,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "variaveis_globais",
-      "community": 4,
-      "norm_label": "variaveisglobais"
+      "community": 6,
+      "norm_label": "variaveisglobais",
+      "id": "variaveis_globais"
     },
     {
       "label": "RemoteDebug.h",
@@ -2511,9 +2511,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "remote_debug",
-      "community": 4,
-      "norm_label": "remotedebug.h"
+      "community": 6,
+      "norm_label": "remotedebug.h",
+      "id": "remote_debug"
     },
     {
       "label": "OTAConfig.cpp",
@@ -2524,9 +2524,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "ota_config",
-      "community": 4,
-      "norm_label": "otaconfig.cpp"
+      "community": 6,
+      "norm_label": "otaconfig.cpp",
+      "id": "ota_config"
     },
     {
       "label": "LoginsSenhas.h",
@@ -2537,9 +2537,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "logins_senhas",
-      "community": 4,
-      "norm_label": "loginssenhas.h"
+      "community": 6,
+      "norm_label": "loginssenhas.h",
+      "id": "logins_senhas"
     },
     {
       "label": "TelegramBotESP32.h",
@@ -2550,9 +2550,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "telegram_bot_esp32",
-      "community": 4,
-      "norm_label": "telegrambotesp32.h"
+      "community": 6,
+      "norm_label": "telegrambotesp32.h",
+      "id": "telegram_bot_esp32"
     },
     {
       "label": "TopicosMQTT.h",
@@ -2563,9 +2563,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "topicos_mqtt",
-      "community": 4,
-      "norm_label": "topicosmqtt.h"
+      "community": 6,
+      "norm_label": "topicosmqtt.h",
+      "id": "topicos_mqtt"
     },
     {
       "label": "HomeAssistantDiscovery.h",
@@ -2576,9 +2576,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "home_assistant_discovery",
-      "community": 4,
-      "norm_label": "homeassistantdiscovery.h"
+      "community": 6,
+      "norm_label": "homeassistantdiscovery.h",
+      "id": "home_assistant_discovery"
     },
     {
       "label": "Race Condition",
@@ -2589,9 +2589,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "race_condition",
-      "community": 4,
-      "norm_label": "race condition"
+      "community": 6,
+      "norm_label": "race condition",
+      "id": "race_condition"
     },
     {
       "label": "Mutex/Semaphore",
@@ -2602,9 +2602,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "mutex_semaphore",
-      "community": 4,
-      "norm_label": "mutex/semaphore"
+      "community": 6,
+      "norm_label": "mutex/semaphore",
+      "id": "mutex_semaphore"
     },
     {
       "label": "TLS Certificate Validation",
@@ -2615,9 +2615,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "tls_certificate_validation",
-      "community": 4,
-      "norm_label": "tls certificate validation"
+      "community": 6,
+      "norm_label": "tls certificate validation",
+      "id": "tls_certificate_validation"
     },
     {
       "label": "Code Duplication",
@@ -2628,9 +2628,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "code_duplication",
-      "community": 4,
-      "norm_label": "code duplication"
+      "community": 6,
+      "norm_label": "code duplication",
+      "id": "code_duplication"
     },
     {
       "label": "Watchdog Timer",
@@ -2641,9 +2641,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "watchdog_timer",
-      "community": 4,
-      "norm_label": "watchdog timer"
+      "community": 6,
+      "norm_label": "watchdog timer",
+      "id": "watchdog_timer"
     },
     {
       "label": "NVS (Non-Volatile Storage)",
@@ -2654,9 +2654,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "nvs_storage",
-      "community": 4,
-      "norm_label": "nvs (non-volatile storage)"
+      "community": 6,
+      "norm_label": "nvs (non-volatile storage)",
+      "id": "nvs_storage"
     },
     {
       "label": "Telnet Remote Serial",
@@ -2667,9 +2667,858 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "telnet_server",
+      "community": 6,
+      "norm_label": "telnet remote serial",
+      "id": "telnet_server"
+    },
+    {
+      "label": "HomeAssistantDiscovery.cpp",
+      "file_type": "code",
+      "source_file": "HomeAssistantDiscovery.cpp",
+      "source_location": "L1",
+      "id": "homeassistantdiscovery_cpp",
       "community": 4,
-      "norm_label": "telnet remote serial"
+      "norm_label": "homeassistantdiscovery.cpp"
+    },
+    {
+      "label": "MQTTHandler.cpp",
+      "file_type": "code",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L1",
+      "id": "mqtthandler_cpp",
+      "community": 4,
+      "norm_label": "mqtthandler.cpp"
+    },
+    {
+      "label": "setupMQTT()",
+      "file_type": "code",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L17",
+      "id": "esp32_automacao_residencial_mqtthandler_setupmqtt",
+      "community": 4,
+      "norm_label": "setupmqtt()"
+    },
+    {
+      "label": "reconnectMQTT()",
+      "file_type": "code",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L24",
+      "id": "esp32_automacao_residencial_mqtthandler_reconnectmqtt",
+      "community": 4,
+      "norm_label": "reconnectmqtt()"
+    },
+    {
+      "label": "mqttCallback()",
+      "file_type": "code",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L55",
+      "id": "esp32_automacao_residencial_mqtthandler_mqttcallback",
+      "community": 8,
+      "norm_label": "mqttcallback()"
+    },
+    {
+      "label": "publishRelayStates()",
+      "file_type": "code",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L155",
+      "id": "esp32_automacao_residencial_mqtthandler_publishrelaystates",
+      "community": 4,
+      "norm_label": "publishrelaystates()"
+    },
+    {
+      "label": "publishSensorData()",
+      "file_type": "code",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L167",
+      "id": "esp32_automacao_residencial_mqtthandler_publishsensordata",
+      "community": 4,
+      "norm_label": "publishsensordata()"
+    },
+    {
+      "label": "MQTTHandler.h",
+      "file_type": "code",
+      "source_file": "MQTTHandler.h",
+      "source_location": "L1",
+      "id": "mqtthandler_h",
+      "community": 4,
+      "norm_label": "mqtthandler.h"
+    },
+    {
+      "label": "OTAConfig.h",
+      "file_type": "code",
+      "source_file": "OTAConfig.h",
+      "source_location": "L1",
+      "id": "otaconfig_h",
+      "community": 10,
+      "norm_label": "otaconfig.h"
+    },
+    {
+      "label": "RelayManager.cpp",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L1",
+      "id": "relaymanager_cpp",
+      "community": 8,
+      "norm_label": "relaymanager.cpp"
+    },
+    {
+      "label": "setRelayByIndex()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L14",
+      "id": "esp32_automacao_residencial_relaymanager_setrelaybyindex",
+      "community": 8,
+      "norm_label": "setrelaybyindex()"
+    },
+    {
+      "label": "setAllRelays()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L24",
+      "id": "esp32_automacao_residencial_relaymanager_setallrelays",
+      "community": 8,
+      "norm_label": "setallrelays()"
+    },
+    {
+      "label": "findRelayByName()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L35",
+      "id": "esp32_automacao_residencial_relaymanager_findrelaybyname",
+      "community": 8,
+      "norm_label": "findrelaybyname()"
+    },
+    {
+      "label": "saveRelayState()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L45",
+      "id": "esp32_automacao_residencial_relaymanager_saverelaystate",
+      "community": 8,
+      "norm_label": "saverelaystate()"
+    },
+    {
+      "label": "loadRelayState()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L54",
+      "id": "esp32_automacao_residencial_relaymanager_loadrelaystate",
+      "community": 8,
+      "norm_label": "loadrelaystate()"
+    },
+    {
+      "label": "loadAllRelayStates()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L65",
+      "id": "esp32_automacao_residencial_relaymanager_loadallrelaystates",
+      "community": 8,
+      "norm_label": "loadallrelaystates()"
+    },
+    {
+      "label": "applyRelayStatesToPins()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L78",
+      "id": "esp32_automacao_residencial_relaymanager_applyrelaystatestopins",
+      "community": 8,
+      "norm_label": "applyrelaystatestopins()"
+    },
+    {
+      "label": "logRelayAction()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L97",
+      "id": "esp32_automacao_residencial_relaymanager_logrelayaction",
+      "community": 8,
+      "norm_label": "logrelayaction()"
+    },
+    {
+      "label": "RelayManager.h",
+      "file_type": "code",
+      "source_file": "RelayManager.h",
+      "source_location": "L1",
+      "id": "relaymanager_h",
+      "community": 4,
+      "norm_label": "relaymanager.h"
+    },
+    {
+      "label": "SensorManager.cpp",
+      "file_type": "code",
+      "source_file": "SensorManager.cpp",
+      "source_location": "L1",
+      "id": "sensormanager_cpp",
+      "community": 4,
+      "norm_label": "sensormanager.cpp"
+    },
+    {
+      "label": "readSensors()",
+      "file_type": "code",
+      "source_file": "SensorManager.cpp",
+      "source_location": "L13",
+      "id": "esp32_automacao_residencial_sensormanager_readsensors",
+      "community": 4,
+      "norm_label": "readsensors()"
+    },
+    {
+      "label": "SensorManager.h",
+      "file_type": "code",
+      "source_file": "SensorManager.h",
+      "source_location": "L1",
+      "id": "sensormanager_h",
+      "community": 4,
+      "norm_label": "sensormanager.h"
+    },
+    {
+      "label": "TelegramBotESP32.cpp",
+      "file_type": "code",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L1",
+      "id": "telegrambotesp32_cpp",
+      "community": 7,
+      "norm_label": "telegrambotesp32.cpp"
+    },
+    {
+      "label": "notifyTelegramStateChange()",
+      "file_type": "code",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L24",
+      "id": "esp32_automacao_residencial_telegrambotesp32_notifytelegramstatechange",
+      "community": 8,
+      "norm_label": "notifytelegramstatechange()"
+    },
+    {
+      "label": "_ensureRelayNames()",
+      "file_type": "code",
+      "source_file": "WebServerESP32.h",
+      "source_location": "L34",
+      "id": "esp32_automacao_residencial_webserveresp32_ensurerelaynames",
+      "community": 5,
+      "norm_label": "_ensurerelaynames()"
+    },
+    {
+      "label": "ESP32 - Sistema IoT",
+      "file_type": "code",
+      "source_file": "DefinicoesProjeto.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Robson Brasil",
+      "contributor": null,
+      "id": "DefinicoesProjeto_Projeto",
+      "community": 75,
+      "norm_label": "esp32 - sistema iot"
+    },
+    {
+      "label": "publishHADiscovery()",
+      "file_type": "code",
+      "source_file": "HomeAssistantDiscovery.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "HomeAssistantDiscovery_publishHADiscovery",
+      "community": 0,
+      "norm_label": "publishhadiscovery()"
+    },
+    {
+      "label": "HA Device (esp32_quarto_robson_v2)",
+      "file_type": "code",
+      "source_file": "HomeAssistantDiscovery.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "HomeAssistantDiscovery_HA_Device",
+      "community": 0,
+      "norm_label": "ha device (esp32_quarto_robson_v2)"
+    },
+    {
+      "label": "setupMQTT()",
+      "file_type": "code",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "MQTTHandler_setupMQTT",
+      "community": 13,
+      "norm_label": "setupmqtt()"
+    },
+    {
+      "label": "reconnectMQTT()",
+      "file_type": "code",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "MQTTHandler_reconnectMQTT",
+      "community": 0,
+      "norm_label": "reconnectmqtt()"
+    },
+    {
+      "label": "mqttCallback()",
+      "file_type": "code",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "MQTTHandler_mqttCallback",
+      "community": 0,
+      "norm_label": "mqttcallback()"
+    },
+    {
+      "label": "publishRelayStates()",
+      "file_type": "code",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "MQTTHandler_publishRelayStates",
+      "community": 0,
+      "norm_label": "publishrelaystates()"
+    },
+    {
+      "label": "publishSensorData()",
+      "file_type": "code",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "MQTTHandler_publishSensorData",
+      "community": 0,
+      "norm_label": "publishsensordata()"
+    },
+    {
+      "label": "setupOTA()",
+      "file_type": "code",
+      "source_file": "OTAConfig.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "OTAConfig_setupOTA",
+      "community": 21,
+      "norm_label": "setupota()"
+    },
+    {
+      "label": "setRelayByIndex()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "RelayManager_setRelayByIndex",
+      "community": 0,
+      "norm_label": "setrelaybyindex()"
+    },
+    {
+      "label": "setAllRelays()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "RelayManager_setAllRelays",
+      "community": 0,
+      "norm_label": "setallrelays()"
+    },
+    {
+      "label": "findRelayByName()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "RelayManager_findRelayByName",
+      "community": 0,
+      "norm_label": "findrelaybyname()"
+    },
+    {
+      "label": "saveRelayState()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "RelayManager_saveRelayState",
+      "community": 0,
+      "norm_label": "saverelaystate()"
+    },
+    {
+      "label": "loadRelayState()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "RelayManager_loadRelayState",
+      "community": 0,
+      "norm_label": "loadrelaystate()"
+    },
+    {
+      "label": "loadAllRelayStates()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "RelayManager_loadAllRelayStates",
+      "community": 0,
+      "norm_label": "loadallrelaystates()"
+    },
+    {
+      "label": "applyRelayStatesToPins()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "RelayManager_applyRelayStatesToPins",
+      "community": 0,
+      "norm_label": "applyrelaystatestopins()"
+    },
+    {
+      "label": "logRelayAction()",
+      "file_type": "code",
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "RelayManager_logRelayAction",
+      "community": 0,
+      "norm_label": "logrelayaction()"
+    },
+    {
+      "label": "DualSerialClass",
+      "file_type": "code",
+      "source_file": "RemoteDebug.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "RemoteDebug_DualSerialClass",
+      "community": 0,
+      "norm_label": "dualserialclass"
+    },
+    {
+      "label": "readSensors()",
+      "file_type": "code",
+      "source_file": "SensorManager.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "SensorManager_readSensors",
+      "community": 0,
+      "norm_label": "readsensors()"
+    },
+    {
+      "label": "onPowerState()",
+      "file_type": "code",
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "SinricProESP32_onPowerState",
+      "community": 0,
+      "norm_label": "onpowerstate()"
+    },
+    {
+      "label": "setupSinricPro()",
+      "file_type": "code",
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "SinricProESP32_setupSinricPro",
+      "community": 13,
+      "norm_label": "setupsinricpro()"
+    },
+    {
+      "label": "sinricProLoop()",
+      "file_type": "code",
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "SinricProESP32_sinricProLoop",
+      "community": 76,
+      "norm_label": "sinricproloop()"
+    },
+    {
+      "label": "sendSinricProTemperatureEvent()",
+      "file_type": "code",
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "SinricProESP32_sendSinricProTemperatureEvent",
+      "community": 0,
+      "norm_label": "sendsinricprotemperatureevent()"
+    },
+    {
+      "label": "sendSinricProSwitchEvents()",
+      "file_type": "code",
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "SinricProESP32_sendSinricProSwitchEvents",
+      "community": 0,
+      "norm_label": "sendsinricproswitchevents()"
+    },
+    {
+      "label": "notifyTelegramStateChange()",
+      "file_type": "code",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "TelegramBotESP32_notifyTelegramStateChange",
+      "community": 0,
+      "norm_label": "notifytelegramstatechange()"
+    },
+    {
+      "label": "processPendingTelegramNotification()",
+      "file_type": "code",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "TelegramBotESP32_processPendingTelegramNotification",
+      "community": 77,
+      "norm_label": "processpendingtelegramnotification()"
+    },
+    {
+      "label": "getControlKeyboard()",
+      "file_type": "code",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "TelegramBotESP32_getControlKeyboard",
+      "community": 78,
+      "norm_label": "getcontrolkeyboard()"
+    },
+    {
+      "label": "sendMainMenu()",
+      "file_type": "code",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "TelegramBotESP32_sendMainMenu",
+      "community": 79,
+      "norm_label": "sendmainmenu()"
+    },
+    {
+      "label": "initTelegram()",
+      "file_type": "code",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "TelegramBotESP32_initTelegram",
+      "community": 13,
+      "norm_label": "inittelegram()"
+    },
+    {
+      "label": "handleTelegramMessages()",
+      "file_type": "code",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "TelegramBotESP32_handleTelegramMessages",
+      "community": 0,
+      "norm_label": "handletelegrammessages()"
+    },
+    {
+      "label": "telegramLoop()",
+      "file_type": "code",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "TelegramBotESP32_telegramLoop",
+      "community": 80,
+      "norm_label": "telegramloop()"
+    },
+    {
+      "label": "TelegramNotification",
+      "file_type": "code",
+      "source_file": "VariaveisGlobais.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "VariaveisGlobais_TelegramNotification",
+      "community": 0,
+      "norm_label": "telegramnotification"
+    },
+    {
+      "label": "Relay State Variables (RelayState1-8, Todos)",
+      "file_type": "code",
+      "source_file": "VariaveisGlobais.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "VariaveisGlobais_RelayStates",
+      "community": 0,
+      "norm_label": "relay state variables (relaystate1-8, todos)"
+    },
+    {
+      "label": "Sensor Data Variables",
+      "file_type": "code",
+      "source_file": "VariaveisGlobais.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "VariaveisGlobais_SensorData",
+      "community": 0,
+      "norm_label": "sensor data variables"
+    },
+    {
+      "label": "Cross-Core Sync Flags",
+      "file_type": "code",
+      "source_file": "VariaveisGlobais.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "VariaveisGlobais_SyncFlags",
+      "community": 0,
+      "norm_label": "cross-core sync flags"
+    },
+    {
+      "label": "FreeRTOS Task Handles (hTaskConexoes, hTaskSensores)",
+      "file_type": "code",
+      "source_file": "VariaveisGlobais.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "VariaveisGlobais_TaskHandles",
+      "community": 21,
+      "norm_label": "freertos task handles (htaskconexoes, htasksensores)"
+    },
+    {
+      "label": "setupWebServer()",
+      "file_type": "code",
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "WebServerESP32_setupWebServer",
+      "community": 81,
+      "norm_label": "setupwebserver()"
+    },
+    {
+      "label": "handleRoot()",
+      "file_type": "code",
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "WebServerESP32_handleRoot",
+      "community": 22,
+      "norm_label": "handleroot()"
+    },
+    {
+      "label": "handleApiRelays()",
+      "file_type": "code",
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "WebServerESP32_handleApiRelays",
+      "community": 0,
+      "norm_label": "handleapirelays()"
+    },
+    {
+      "label": "handleApiSensors()",
+      "file_type": "code",
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "WebServerESP32_handleApiSensors",
+      "community": 0,
+      "norm_label": "handleapisensors()"
+    },
+    {
+      "label": "handleApiRelay()",
+      "file_type": "code",
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "WebServerESP32_handleApiRelay",
+      "community": 0,
+      "norm_label": "handleapirelay()"
+    },
+    {
+      "label": "handleApiAll()",
+      "file_type": "code",
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "WebServerESP32_handleApiAll",
+      "community": 0,
+      "norm_label": "handleapiall()"
+    },
+    {
+      "label": "handleApiSetName()",
+      "file_type": "code",
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "WebServerESP32_handleApiSetName",
+      "community": 0,
+      "norm_label": "handleapisetname()"
+    },
+    {
+      "label": "DASHBOARD_HTML",
+      "file_type": "code",
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "WebServerESP32_DASHBOARD_HTML",
+      "community": 22,
+      "norm_label": "dashboard_html"
+    },
+    {
+      "label": "Credentials Template (MQTT, Telegram, SinricPro)",
+      "file_type": "code",
+      "source_file": "LoginsSenhas_example.cpp.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "LoginsSenhas_example_Credentials",
+      "community": 13,
+      "norm_label": "credentials template (mqtt, telegram, sinricpro)"
+    },
+    {
+      "label": "Cross-Core Synchronization via Flags + Queue",
+      "file_type": "rationale",
+      "source_file": "VariaveisGlobais.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "VariaveisGlobais_SincronizacaoMultiCore",
+      "community": 0,
+      "norm_label": "cross-core synchronization via flags + queue"
+    },
+    {
+      "label": "SinricPro Anti-Loop Flag Pattern",
+      "file_type": "rationale",
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "SinricProESP32_AntiLoop",
+      "community": 0,
+      "norm_label": "sinricpro anti-loop flag pattern"
+    },
+    {
+      "label": "Telnet Serial Output Interception",
+      "file_type": "rationale",
+      "source_file": "RemoteDebug.h",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "RemoteDebug_TelnetInterceptor",
+      "community": 0,
+      "norm_label": "telnet serial output interception"
     }
   ],
   "links": [
@@ -2847,6 +3696,17 @@
       "target": "VariaveisGlobais_cpp"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "VariaveisGlobais.cpp",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "variaveisglobais_cpp",
+      "target": "definicoesprojeto_h",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "finalize_fixed.py",
@@ -2872,9 +3732,9 @@
       "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/finalize_fixed.py",
       "source_location": "L32",
       "weight": 1.0,
-      "source": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_finalize_fixed_py",
-      "target": "esp32_automacao_residencial_finalize_fixed_to_html",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "esp32_automacao_residencial_finalize_fixed_to_html",
+      "target": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_finalize_fixed_py"
     },
     {
       "relation": "contains",
@@ -2882,9 +3742,9 @@
       "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/finalize_fixed.py",
       "source_location": "L43",
       "weight": 1.0,
-      "source": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_finalize_fixed_py",
-      "target": "esp32_automacao_residencial_finalize_fixed_to_svg",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "esp32_automacao_residencial_finalize_fixed_to_svg",
+      "target": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_finalize_fixed_py"
     },
     {
       "relation": "contains",
@@ -2910,12 +3770,32 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "D:/GitHub-Repositorios/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/HomeAssistantDiscovery.h",
-      "source_location": "L43",
+      "source_file": "HomeAssistantDiscovery.cpp",
+      "source_location": "L49",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "esp32_automacao_residencial_homeassistantdiscovery_publishha",
-      "target": "esp32_automacao_residencial_homeassistantdiscovery_publishhadiscovery"
+      "source": "esp32_automacao_residencial_homeassistantdiscovery_publishhadiscovery",
+      "target": "esp32_automacao_residencial_homeassistantdiscovery_publishha"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "HomeAssistantDiscovery.cpp",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "homeassistantdiscovery_cpp",
+      "target": "esp32_automacao_residencial_homeassistantdiscovery_publishha",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "HomeAssistantDiscovery.cpp",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "homeassistantdiscovery_cpp",
+      "target": "esp32_automacao_residencial_homeassistantdiscovery_publishhadiscovery",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -2939,15 +3819,25 @@
       "target": "esp32_automacao_residencial_otaconfig_setupota"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "OTAConfig.cpp",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "otaconfig_cpp",
+      "target": "esp32_automacao_residencial_otaconfig_setupota",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "Bibliotecas.h",
       "source_location": "L30",
       "weight": 1.0,
-      "source": "bibliotecas_h",
-      "target": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_otaconfig_h",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_otaconfig_h",
+      "target": "bibliotecas_h"
     },
     {
       "relation": "imports",
@@ -2956,9 +3846,9 @@
       "source_file": "OTAConfig.cpp",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "otaconfig_cpp",
-      "target": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_otaconfig_h",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_otaconfig_h",
+      "target": "otaconfig_cpp"
     },
     {
       "relation": "contains",
@@ -2969,6 +3859,16 @@
       "confidence_score": 1.0,
       "source": "d_github_repositorios_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_remotedebug_h",
       "target": "esp32_automacao_residencial_remotedebug_dualserialclass"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RemoteDebug.h",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "remotedebug_h",
+      "target": "esp32_automacao_residencial_remotedebug_dualserialclass",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -3017,7 +3917,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "SinricProESP32.h",
-      "source_location": "L100",
+      "source_location": "L104",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "sinricproesp32_h",
@@ -3027,7 +3927,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "SinricProESP32.h",
-      "source_location": "L140",
+      "source_location": "L144",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "sinricproesp32_h",
@@ -3037,7 +3937,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "SinricProESP32.h",
-      "source_location": "L152",
+      "source_location": "L156",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "sinricproesp32_h",
@@ -3047,18 +3947,29 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "SinricProESP32.h",
-      "source_location": "L179",
+      "source_location": "L183",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "sinricproesp32_h",
       "target": "esp32_automacao_residencial_sinricproesp32_sendsinricproswitchevents"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "SinricProESP32.h",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "sinricproesp32_h",
+      "target": "variaveisglobais_h",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/SinricProESP32.h",
-      "source_location": "L103",
+      "source_file": "SinricProESP32.h",
+      "source_location": "L107",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "esp32_automacao_residencial_sinricproesp32_setupsinricpro",
@@ -3070,9 +3981,42 @@
       "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/SinricProESP32.h",
       "source_location": "L53",
       "weight": 1.0,
-      "source": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_sinricproesp32_h",
-      "target": "esp32_automacao_residencial_sinricproesp32_onpowerstate",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "esp32_automacao_residencial_sinricproesp32_onpowerstate",
+      "target": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_sinricproesp32_h"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "SinricProESP32.h",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_sinricproesp32_onpowerstate",
+      "target": "esp32_automacao_residencial_relaymanager_saverelaystate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "SinricProESP32.h",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_sinricproesp32_onpowerstate",
+      "target": "esp32_automacao_residencial_relaymanager_logrelayaction"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "SinricProESP32.h",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_sinricproesp32_onpowerstate",
+      "target": "esp32_automacao_residencial_telegrambotesp32_notifytelegramstatechange"
     },
     {
       "relation": "contains",
@@ -3080,9 +4024,9 @@
       "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/SinricProESP32.h",
       "source_location": "L100",
       "weight": 1.0,
-      "source": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_sinricproesp32_h",
-      "target": "esp32_automacao_residencial_sinricproesp32_setupsinricpro",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "esp32_automacao_residencial_sinricproesp32_setupsinricpro",
+      "target": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_sinricproesp32_h"
     },
     {
       "relation": "contains",
@@ -3090,9 +4034,9 @@
       "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/SinricProESP32.h",
       "source_location": "L140",
       "weight": 1.0,
-      "source": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_sinricproesp32_h",
-      "target": "esp32_automacao_residencial_sinricproesp32_sinricproloop",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "esp32_automacao_residencial_sinricproesp32_sinricproloop",
+      "target": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_sinricproesp32_h"
     },
     {
       "relation": "contains",
@@ -3100,9 +4044,9 @@
       "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/SinricProESP32.h",
       "source_location": "L152",
       "weight": 1.0,
-      "source": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_sinricproesp32_h",
-      "target": "esp32_automacao_residencial_sinricproesp32_sendsinricprotemperatureevent",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "esp32_automacao_residencial_sinricproesp32_sendsinricprotemperatureevent",
+      "target": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_sinricproesp32_h"
     },
     {
       "relation": "contains",
@@ -3110,9 +4054,9 @@
       "source_file": "C:/Users/RobsonBrasil/Desktop/Automacao-Residencial-ESP32-MQTT-WebServer-Alexa-Telegram-Hermes/ESP32-Automacao-Residencial/SinricProESP32.h",
       "source_location": "L179",
       "weight": 1.0,
-      "source": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_sinricproesp32_h",
-      "target": "esp32_automacao_residencial_sinricproesp32_sendsinricproswitchevents",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "esp32_automacao_residencial_sinricproesp32_sendsinricproswitchevents",
+      "target": "c_users_robsonbrasil_desktop_automacao_residencial_esp32_mqtt_webserver_alexa_telegram_hermes_esp32_automacao_residencial_sinricproesp32_h"
     },
     {
       "relation": "imports",
@@ -3202,9 +4146,9 @@
       "source_file": "TelegramBotESP32.h",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "telegrambotesp32_h",
-      "target": "telegrambotesp32_processpendingtelegramnotification",
-      "confidence_score": 1.0
+      "target": "telegrambotesp32_processpendingtelegramnotification"
     },
     {
       "relation": "contains",
@@ -3212,9 +4156,9 @@
       "source_file": "TelegramBotESP32.h",
       "source_location": "L60",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "telegrambotesp32_h",
-      "target": "telegrambotesp32_getcontrolkeyboard",
-      "confidence_score": 1.0
+      "target": "telegrambotesp32_getcontrolkeyboard"
     },
     {
       "relation": "contains",
@@ -3222,9 +4166,9 @@
       "source_file": "TelegramBotESP32.h",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "telegrambotesp32_h",
-      "target": "telegrambotesp32_sendmainmenu",
-      "confidence_score": 1.0
+      "target": "telegrambotesp32_sendmainmenu"
     },
     {
       "relation": "contains",
@@ -3232,9 +4176,9 @@
       "source_file": "TelegramBotESP32.h",
       "source_location": "L83",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "telegrambotesp32_h",
-      "target": "telegrambotesp32_inittelegram",
-      "confidence_score": 1.0
+      "target": "telegrambotesp32_inittelegram"
     },
     {
       "relation": "contains",
@@ -3242,9 +4186,9 @@
       "source_file": "TelegramBotESP32.h",
       "source_location": "L156",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "telegrambotesp32_h",
-      "target": "telegrambotesp32_handletelegrammessages",
-      "confidence_score": 1.0
+      "target": "telegrambotesp32_handletelegrammessages"
     },
     {
       "relation": "contains",
@@ -3252,86 +4196,212 @@
       "source_file": "TelegramBotESP32.h",
       "source_location": "L221",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "telegrambotesp32_h",
-      "target": "telegrambotesp32_telegramloop",
+      "target": "telegrambotesp32_telegramloop"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "mqtthandler_cpp",
+      "target": "telegrambotesp32_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "relaymanager_cpp",
+      "target": "telegrambotesp32_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "telegrambotesp32_cpp",
+      "target": "telegrambotesp32_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "TelegramBotESP32.h",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "telegrambotesp32_h",
+      "target": "variaveisglobais_h",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "TelegramBotESP32.h",
-      "source_location": "L60",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L46",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "esp32_automacao_residencial_telegrambotesp32_processpendingtelegramnotification",
       "target": "esp32_automacao_residencial_telegrambotesp32_getcontrolkeyboard"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "telegrambotesp32_cpp",
+      "target": "esp32_automacao_residencial_telegrambotesp32_processpendingtelegramnotification",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "TelegramBotESP32.h",
-      "source_location": "L85",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L64",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "esp32_automacao_residencial_telegrambotesp32_getcontrolkeyboard",
+      "source": "esp32_automacao_residencial_telegrambotesp32_sendmainmenu",
+      "target": "esp32_automacao_residencial_telegrambotesp32_getcontrolkeyboard"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L114",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "esp32_automacao_residencial_telegrambotesp32_handletelegrammessages",
+      "target": "esp32_automacao_residencial_telegrambotesp32_getcontrolkeyboard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "telegrambotesp32_cpp",
+      "target": "esp32_automacao_residencial_telegrambotesp32_getcontrolkeyboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L100",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "esp32_automacao_residencial_telegrambotesp32_inittelegram",
       "target": "esp32_automacao_residencial_telegrambotesp32_sendmainmenu"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "TelegramBotESP32.h",
-      "source_location": "L183",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "esp32_automacao_residencial_telegrambotesp32_getcontrolkeyboard",
-      "target": "esp32_automacao_residencial_telegrambotesp32_handletelegrammessages"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "TelegramBotESP32.h",
-      "source_location": "L121",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "esp32_automacao_residencial_telegrambotesp32_sendmainmenu",
-      "target": "esp32_automacao_residencial_telegrambotesp32_inittelegram"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "TelegramBotESP32.h",
-      "source_location": "L175",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "esp32_automacao_residencial_telegrambotesp32_sendmainmenu",
-      "target": "esp32_automacao_residencial_telegrambotesp32_handletelegrammessages"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "TelegramBotESP32.h",
-      "source_location": "L195",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "esp32_automacao_residencial_telegrambotesp32_inittelegram",
-      "target": "esp32_automacao_residencial_telegrambotesp32_telegramloop"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "TelegramBotESP32.h",
-      "source_location": "L202",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L142",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "esp32_automacao_residencial_telegrambotesp32_handletelegrammessages",
-      "target": "esp32_automacao_residencial_telegrambotesp32_telegramloop"
+      "target": "esp32_automacao_residencial_telegrambotesp32_sendmainmenu"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "telegrambotesp32_cpp",
+      "target": "esp32_automacao_residencial_telegrambotesp32_sendmainmenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L154",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "esp32_automacao_residencial_telegrambotesp32_telegramloop",
+      "target": "esp32_automacao_residencial_telegrambotesp32_inittelegram"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "telegrambotesp32_cpp",
+      "target": "esp32_automacao_residencial_telegrambotesp32_inittelegram",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L161",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "esp32_automacao_residencial_telegrambotesp32_telegramloop",
+      "target": "esp32_automacao_residencial_telegrambotesp32_handletelegrammessages"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_telegrambotesp32_handletelegrammessages",
+      "target": "esp32_automacao_residencial_relaymanager_setrelaybyindex"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_telegrambotesp32_handletelegrammessages",
+      "target": "esp32_automacao_residencial_relaymanager_setallrelays"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "telegrambotesp32_cpp",
+      "target": "esp32_automacao_residencial_telegrambotesp32_handletelegrammessages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "telegrambotesp32_cpp",
+      "target": "esp32_automacao_residencial_telegrambotesp32_telegramloop",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -3380,7 +4450,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "WebServerESP32.h",
-      "source_location": "L30",
+      "source_location": "L52",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "webserveresp32_h",
@@ -3390,7 +4460,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "WebServerESP32.h",
-      "source_location": "L49",
+      "source_location": "L63",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "webserveresp32_h",
@@ -3400,7 +4470,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "WebServerESP32.h",
-      "source_location": "L53",
+      "source_location": "L67",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "webserveresp32_h",
@@ -3410,7 +4480,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "WebServerESP32.h",
-      "source_location": "L64",
+      "source_location": "L78",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "webserveresp32_h",
@@ -3420,7 +4490,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "WebServerESP32.h",
-      "source_location": "L71",
+      "source_location": "L85",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "webserveresp32_h",
@@ -3430,7 +4500,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "WebServerESP32.h",
-      "source_location": "L96",
+      "source_location": "L112",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "webserveresp32_h",
@@ -3440,7 +4510,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "WebServerESP32.h",
-      "source_location": "L125",
+      "source_location": "L141",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "webserveresp32_h",
@@ -3450,7 +4520,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "WebServerESP32.h",
-      "source_location": "L178",
+      "source_location": "L197",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "webserveresp32_h",
@@ -3460,7 +4530,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "WebServerESP32.h",
-      "source_location": "L200",
+      "source_location": "L219",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "webserveresp32_h",
@@ -3472,9 +4542,9 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "webserveresp32_h",
-      "target": "webserveresp32_ensurerelaynames",
-      "confidence_score": 1.0
+      "target": "webserveresp32_ensurerelaynames"
     },
     {
       "relation": "contains",
@@ -3482,9 +4552,9 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "webserveresp32_h",
-      "target": "webserveresp32_getrelayname",
-      "confidence_score": 1.0
+      "target": "webserveresp32_getrelayname"
     },
     {
       "relation": "contains",
@@ -3492,9 +4562,9 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "webserveresp32_h",
-      "target": "webserveresp32_handleroot",
-      "confidence_score": 1.0
+      "target": "webserveresp32_handleroot"
     },
     {
       "relation": "contains",
@@ -3502,9 +4572,9 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "webserveresp32_h",
-      "target": "webserveresp32_handleapirelays",
-      "confidence_score": 1.0
+      "target": "webserveresp32_handleapirelays"
     },
     {
       "relation": "contains",
@@ -3512,9 +4582,9 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "webserveresp32_h",
-      "target": "webserveresp32_handleapisensors",
-      "confidence_score": 1.0
+      "target": "webserveresp32_handleapisensors"
     },
     {
       "relation": "contains",
@@ -3522,9 +4592,9 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L85",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "webserveresp32_h",
-      "target": "webserveresp32_handleapirelay",
-      "confidence_score": 1.0
+      "target": "webserveresp32_handleapirelay"
     },
     {
       "relation": "contains",
@@ -3532,9 +4602,9 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L110",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "webserveresp32_h",
-      "target": "webserveresp32_handleapiall",
-      "confidence_score": 1.0
+      "target": "webserveresp32_handleapiall"
     },
     {
       "relation": "contains",
@@ -3542,9 +4612,9 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L139",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "webserveresp32_h",
-      "target": "webserveresp32_handleapisetname",
-      "confidence_score": 1.0
+      "target": "webserveresp32_handleapisetname"
     },
     {
       "relation": "contains",
@@ -3552,9 +4622,9 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L195",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "webserveresp32_h",
-      "target": "webserveresp32_setupwebserver",
-      "confidence_score": 1.0
+      "target": "webserveresp32_setupwebserver"
     },
     {
       "relation": "contains",
@@ -3562,8 +4632,29 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L217",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "webserveresp32_h",
-      "target": "webserveresp32_handlewebserverclient",
+      "target": "webserveresp32_handlewebserverclient"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "WebServerESP32.h",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "webserveresp32_h",
+      "target": "variaveisglobais_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "WebServerESP32.h",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "webserveresp32_h",
+      "target": "esp32_automacao_residencial_webserveresp32_ensurerelaynames",
       "confidence_score": 1.0
     },
     {
@@ -3571,44 +4662,132 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "WebServerESP32.h",
-      "source_location": "L58",
+      "source_location": "L72",
       "weight": 1.0,
       "confidence_score": 1.0,
+      "source": "esp32_automacao_residencial_webserveresp32_handleapirelays",
+      "target": "esp32_automacao_residencial_webserveresp32_getrelayname"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "WebServerESP32.h",
+      "source_location": "L54",
+      "weight": 1.0,
       "source": "esp32_automacao_residencial_webserveresp32_getrelayname",
-      "target": "esp32_automacao_residencial_webserveresp32_handleapirelays"
+      "target": "esp32_automacao_residencial_webserveresp32_ensurerelaynames",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "WebServerESP32.h",
-      "source_location": "L186",
+      "source_location": "L205",
       "weight": 1.0,
       "confidence_score": 1.0,
+      "source": "esp32_automacao_residencial_webserveresp32_setupwebserver",
+      "target": "esp32_automacao_residencial_webserveresp32_handleapirelay"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "WebServerESP32.h",
+      "source_location": "L101",
+      "weight": 1.0,
       "source": "esp32_automacao_residencial_webserveresp32_handleapirelay",
-      "target": "esp32_automacao_residencial_webserveresp32_setupwebserver"
+      "target": "esp32_automacao_residencial_relaymanager_saverelaystate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "WebServerESP32.h",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_webserveresp32_handleapirelay",
+      "target": "esp32_automacao_residencial_relaymanager_logrelayaction"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "WebServerESP32.h",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_webserveresp32_handleapirelay",
+      "target": "esp32_automacao_residencial_telegrambotesp32_notifytelegramstatechange"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "WebServerESP32.h",
-      "source_location": "L188",
+      "source_location": "L207",
       "weight": 1.0,
       "confidence_score": 1.0,
+      "source": "esp32_automacao_residencial_webserveresp32_setupwebserver",
+      "target": "esp32_automacao_residencial_webserveresp32_handleapiall"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "WebServerESP32.h",
+      "source_location": "L129",
+      "weight": 1.0,
       "source": "esp32_automacao_residencial_webserveresp32_handleapiall",
-      "target": "esp32_automacao_residencial_webserveresp32_setupwebserver"
+      "target": "esp32_automacao_residencial_relaymanager_saverelaystate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "WebServerESP32.h",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_webserveresp32_handleapiall",
+      "target": "esp32_automacao_residencial_relaymanager_logrelayaction"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "WebServerESP32.h",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_webserveresp32_handleapiall",
+      "target": "esp32_automacao_residencial_telegrambotesp32_notifytelegramstatechange"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "WebServerESP32.h",
-      "source_location": "L190",
+      "source_location": "L209",
       "weight": 1.0,
       "confidence_score": 1.0,
+      "source": "esp32_automacao_residencial_webserveresp32_setupwebserver",
+      "target": "esp32_automacao_residencial_webserveresp32_handleapisetname"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "WebServerESP32.h",
+      "source_location": "L178",
+      "weight": 1.0,
       "source": "esp32_automacao_residencial_webserveresp32_handleapisetname",
-      "target": "esp32_automacao_residencial_webserveresp32_setupwebserver"
+      "target": "esp32_automacao_residencial_webserveresp32_ensurerelaynames",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -3718,9 +4897,9 @@
       "source_file": "WiFiManagerConfig.h",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wifimanagerconfig_h",
-      "target": "wifimanagerconfig_migratenvs",
-      "confidence_score": 1.0
+      "target": "wifimanagerconfig_migratenvs"
     },
     {
       "relation": "contains",
@@ -3728,9 +4907,9 @@
       "source_file": "WiFiManagerConfig.h",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wifimanagerconfig_h",
-      "target": "wifimanagerconfig_loadcredentials",
-      "confidence_score": 1.0
+      "target": "wifimanagerconfig_loadcredentials"
     },
     {
       "relation": "contains",
@@ -3738,9 +4917,9 @@
       "source_file": "WiFiManagerConfig.h",
       "source_location": "L95",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wifimanagerconfig_h",
-      "target": "wifimanagerconfig_setupmdns",
-      "confidence_score": 1.0
+      "target": "wifimanagerconfig_setupmdns"
     },
     {
       "relation": "calls",
@@ -4062,8 +5241,8 @@
       "source_file": "docs/superpowers/plans/2026-05-13-fix-mdns-ota-hostname.md",
       "source_location": null,
       "weight": 1.0,
-      "source": "docsPlanFixMdnsOta",
-      "target": "FreeRTOSMultiCore"
+      "source": "FreeRTOSMultiCore",
+      "target": "docsPlanFixMdnsOta"
     },
     {
       "relation": "references",
@@ -4152,8 +5331,8 @@
       "source_file": "docs/superpowers/plans/2026-05-13-fix-mdns-ota-hostname.md",
       "source_location": null,
       "weight": 1.0,
-      "source": "MDNSService",
-      "target": "DeviceHostnameConstant"
+      "source": "DeviceHostnameConstant",
+      "target": "MDNSService"
     },
     {
       "relation": "conceptually_related_to",
@@ -4162,8 +5341,8 @@
       "source_file": "docs/superpowers/plans/2026-05-13-fix-mdns-ota-hostname.md",
       "source_location": null,
       "weight": 1.0,
-      "source": "OTAUpdateService",
-      "target": "DeviceHostnameConstant"
+      "source": "DeviceHostnameConstant",
+      "target": "OTAUpdateService"
     },
     {
       "relation": "references",
@@ -4272,8 +5451,8 @@
       "source_file": "docs/superpowers/specs/2026-05-14-mqtt-wifi-manager-design.md",
       "source_location": null,
       "weight": 1.0,
-      "source": "WiFiManagerMqttParams",
-      "target": "MqttBrokerConfiguration"
+      "source": "MqttBrokerConfiguration",
+      "target": "WiFiManagerMqttParams"
     },
     {
       "relation": "conceptually_related_to",
@@ -4282,8 +5461,8 @@
       "source_file": "docs/superpowers/specs/2026-05-14-mqtt-wifi-manager-design.md",
       "source_location": null,
       "weight": 1.0,
-      "source": "WiFiManagerMqttParams",
-      "target": "NvsFlashPersistence"
+      "source": "NvsFlashPersistence",
+      "target": "WiFiManagerMqttParams"
     },
     {
       "relation": "references",
@@ -4751,9 +5930,9 @@
       "source_file": "HomeAssistantDiscovery.h",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "homeassistantdiscovery_h",
-      "target": "homeassistantdiscovery_publishha",
-      "confidence_score": 1.0
+      "target": "homeassistantdiscovery_publishha"
     },
     {
       "relation": "contains",
@@ -4761,8 +5940,30 @@
       "source_file": "HomeAssistantDiscovery.h",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "homeassistantdiscovery_h",
-      "target": "homeassistantdiscovery_publishhadiscovery",
+      "target": "homeassistantdiscovery_publishhadiscovery"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "HomeAssistantDiscovery.cpp",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "homeassistantdiscovery_cpp",
+      "target": "homeassistantdiscovery_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "mqtthandler_cpp",
+      "target": "homeassistantdiscovery_h",
       "confidence_score": 1.0
     },
     {
@@ -4772,9 +5973,9 @@
       "source_file": "HomeAssistantDiscovery.h",
       "source_location": "L59",
       "weight": 1.0,
-      "source": "homeassistantdiscovery_publishhadiscovery",
-      "target": "homeassistantdiscovery_publishha",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "homeassistantdiscovery_publishha",
+      "target": "homeassistantdiscovery_publishhadiscovery"
     },
     {
       "relation": "contains",
@@ -4782,8 +5983,30 @@
       "source_file": "OTAConfig.cpp",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "otaconfig_cpp",
-      "target": "otaconfig_setupota",
+      "target": "otaconfig_setupota"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "OTAConfig.cpp",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "otaconfig_cpp",
+      "target": "otaconfig_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "OTAConfig.cpp",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "otaconfig_cpp",
+      "target": "variaveisglobais_h",
       "confidence_score": 1.0
     },
     {
@@ -4792,8 +6015,63 @@
       "source_file": "RemoteDebug.h",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remotedebug_h",
-      "target": "remotedebug_dualserialclass",
+      "target": "remotedebug_dualserialclass"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "HomeAssistantDiscovery.cpp",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "homeassistantdiscovery_cpp",
+      "target": "remotedebug_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "mqtthandler_cpp",
+      "target": "remotedebug_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "relaymanager_cpp",
+      "target": "remotedebug_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "SensorManager.cpp",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "sensormanager_cpp",
+      "target": "remotedebug_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "telegrambotesp32_cpp",
+      "target": "remotedebug_h",
       "confidence_score": 1.0
     },
     {
@@ -4803,9 +6081,9 @@
       "source_file": "TelegramBotESP32.h",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "telegrambotesp32_processpendingtelegramnotification",
-      "target": "telegrambotesp32_getcontrolkeyboard",
-      "confidence_score": 1.0
+      "target": "telegrambotesp32_getcontrolkeyboard"
     },
     {
       "relation": "calls",
@@ -4814,9 +6092,9 @@
       "source_file": "TelegramBotESP32.h",
       "source_location": "L79",
       "weight": 1.0,
-      "source": "telegrambotesp32_sendmainmenu",
-      "target": "telegrambotesp32_getcontrolkeyboard",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "telegrambotesp32_getcontrolkeyboard",
+      "target": "telegrambotesp32_sendmainmenu"
     },
     {
       "relation": "calls",
@@ -4825,9 +6103,9 @@
       "source_file": "TelegramBotESP32.h",
       "source_location": "L216",
       "weight": 1.0,
-      "source": "telegrambotesp32_handletelegrammessages",
-      "target": "telegrambotesp32_getcontrolkeyboard",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "telegrambotesp32_getcontrolkeyboard",
+      "target": "telegrambotesp32_handletelegrammessages"
     },
     {
       "relation": "calls",
@@ -4836,9 +6114,9 @@
       "source_file": "TelegramBotESP32.h",
       "source_location": "L154",
       "weight": 1.0,
-      "source": "telegrambotesp32_inittelegram",
-      "target": "telegrambotesp32_sendmainmenu",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "telegrambotesp32_sendmainmenu",
+      "target": "telegrambotesp32_inittelegram"
     },
     {
       "relation": "calls",
@@ -4847,9 +6125,9 @@
       "source_file": "TelegramBotESP32.h",
       "source_location": "L208",
       "weight": 1.0,
-      "source": "telegrambotesp32_handletelegrammessages",
-      "target": "telegrambotesp32_sendmainmenu",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "telegrambotesp32_sendmainmenu",
+      "target": "telegrambotesp32_handletelegrammessages"
     },
     {
       "relation": "calls",
@@ -4858,9 +6136,9 @@
       "source_file": "TelegramBotESP32.h",
       "source_location": "L228",
       "weight": 1.0,
-      "source": "telegrambotesp32_telegramloop",
-      "target": "telegrambotesp32_inittelegram",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "telegrambotesp32_inittelegram",
+      "target": "telegrambotesp32_telegramloop"
     },
     {
       "relation": "calls",
@@ -4869,8 +6147,63 @@
       "source_file": "TelegramBotESP32.h",
       "source_location": "L235",
       "weight": 1.0,
-      "source": "telegrambotesp32_telegramloop",
-      "target": "telegrambotesp32_handletelegrammessages",
+      "confidence_score": 1.0,
+      "source": "telegrambotesp32_handletelegrammessages",
+      "target": "telegrambotesp32_telegramloop"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "VariaveisGlobais.cpp",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "variaveisglobais_cpp",
+      "target": "variaveisglobais_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "mqtthandler_cpp",
+      "target": "variaveisglobais_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "relaymanager_cpp",
+      "target": "variaveisglobais_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "SensorManager.cpp",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "sensormanager_cpp",
+      "target": "variaveisglobais_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "telegrambotesp32_cpp",
+      "target": "variaveisglobais_h",
       "confidence_score": 1.0
     },
     {
@@ -4880,9 +6213,9 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L54",
       "weight": 1.0,
-      "source": "webserveresp32_getrelayname",
-      "target": "webserveresp32_ensurerelaynames",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "webserveresp32_ensurerelaynames",
+      "target": "webserveresp32_getrelayname"
     },
     {
       "relation": "calls",
@@ -4891,9 +6224,9 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L176",
       "weight": 1.0,
-      "source": "webserveresp32_handleapisetname",
-      "target": "webserveresp32_ensurerelaynames",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "webserveresp32_ensurerelaynames",
+      "target": "webserveresp32_handleapisetname"
     },
     {
       "relation": "calls",
@@ -4902,9 +6235,9 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L72",
       "weight": 1.0,
-      "source": "webserveresp32_handleapirelays",
-      "target": "webserveresp32_getrelayname",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "webserveresp32_getrelayname",
+      "target": "webserveresp32_handleapirelays"
     },
     {
       "relation": "calls",
@@ -4913,9 +6246,9 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L203",
       "weight": 1.0,
-      "source": "webserveresp32_setupwebserver",
-      "target": "webserveresp32_handleapirelay",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "webserveresp32_handleapirelay",
+      "target": "webserveresp32_setupwebserver"
     },
     {
       "relation": "calls",
@@ -4924,9 +6257,9 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L205",
       "weight": 1.0,
-      "source": "webserveresp32_setupwebserver",
-      "target": "webserveresp32_handleapiall",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "webserveresp32_handleapiall",
+      "target": "webserveresp32_setupwebserver"
     },
     {
       "relation": "calls",
@@ -4935,9 +6268,9 @@
       "source_file": "WebServerESP32.h",
       "source_location": "L207",
       "weight": 1.0,
-      "source": "webserveresp32_setupwebserver",
-      "target": "webserveresp32_handleapisetname",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "webserveresp32_handleapisetname",
+      "target": "webserveresp32_setupwebserver"
     },
     {
       "relation": "references",
@@ -5126,8 +6459,8 @@
       "source_file": "tarefas.md",
       "source_location": "tarefas.md:12",
       "weight": 1.0,
-      "source": "race_condition",
-      "target": "variaveis_globais"
+      "source": "variaveis_globais",
+      "target": "race_condition"
     },
     {
       "relation": "conceptually_related_to",
@@ -5136,8 +6469,8 @@
       "source_file": "tarefas.md",
       "source_location": "tarefas.md:125",
       "weight": 1.0,
-      "source": "nvs_storage",
-      "target": "variaveis_globais"
+      "source": "variaveis_globais",
+      "target": "nvs_storage"
     },
     {
       "relation": "conceptually_related_to",
@@ -5146,8 +6479,8 @@
       "source_file": "tarefas.md",
       "source_location": "tarefas.md:87",
       "weight": 1.0,
-      "source": "code_duplication",
-      "target": "telegram_bot_esp32"
+      "source": "telegram_bot_esp32",
+      "target": "code_duplication"
     },
     {
       "relation": "conceptually_related_to",
@@ -5156,8 +6489,8 @@
       "source_file": "tarefas.md",
       "source_location": "tarefas.md:27",
       "weight": 1.0,
-      "source": "tls_certificate_validation",
-      "target": "telegram_bot_esp32"
+      "source": "telegram_bot_esp32",
+      "target": "tls_certificate_validation"
     },
     {
       "relation": "conceptually_related_to",
@@ -5168,6 +6501,1005 @@
       "weight": 1.0,
       "source": "race_condition",
       "target": "mutex_semaphore"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "mqtthandler_cpp",
+      "target": "mqtthandler_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "mqtthandler_cpp",
+      "target": "relaymanager_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "mqtthandler_cpp",
+      "target": "esp32_automacao_residencial_mqtthandler_setupmqtt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "mqtthandler_cpp",
+      "target": "esp32_automacao_residencial_mqtthandler_reconnectmqtt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "mqtthandler_cpp",
+      "target": "esp32_automacao_residencial_mqtthandler_mqttcallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "mqtthandler_cpp",
+      "target": "esp32_automacao_residencial_mqtthandler_publishrelaystates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "mqtthandler_cpp",
+      "target": "esp32_automacao_residencial_mqtthandler_publishsensordata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_mqtthandler_reconnectmqtt",
+      "target": "esp32_automacao_residencial_mqtthandler_publishrelaystates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_mqtthandler_mqttcallback",
+      "target": "esp32_automacao_residencial_relaymanager_logrelayaction"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_mqtthandler_mqttcallback",
+      "target": "esp32_automacao_residencial_relaymanager_saverelaystate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_mqtthandler_mqttcallback",
+      "target": "esp32_automacao_residencial_telegrambotesp32_notifytelegramstatechange"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_mqtthandler_mqttcallback",
+      "target": "esp32_automacao_residencial_relaymanager_setallrelays"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_mqtthandler_mqttcallback",
+      "target": "esp32_automacao_residencial_relaymanager_findrelaybyname"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_mqtthandler_mqttcallback",
+      "target": "esp32_automacao_residencial_relaymanager_setrelaybyindex"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "relaymanager_cpp",
+      "target": "relaymanager_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "relaymanager_cpp",
+      "target": "esp32_automacao_residencial_relaymanager_setrelaybyindex",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "relaymanager_cpp",
+      "target": "esp32_automacao_residencial_relaymanager_setallrelays",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "relaymanager_cpp",
+      "target": "esp32_automacao_residencial_relaymanager_findrelaybyname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "relaymanager_cpp",
+      "target": "esp32_automacao_residencial_relaymanager_saverelaystate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "relaymanager_cpp",
+      "target": "esp32_automacao_residencial_relaymanager_loadrelaystate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "relaymanager_cpp",
+      "target": "esp32_automacao_residencial_relaymanager_loadallrelaystates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "relaymanager_cpp",
+      "target": "esp32_automacao_residencial_relaymanager_applyrelaystatestopins",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "relaymanager_cpp",
+      "target": "esp32_automacao_residencial_relaymanager_logrelayaction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_relaymanager_setrelaybyindex",
+      "target": "esp32_automacao_residencial_relaymanager_logrelayaction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_relaymanager_setrelaybyindex",
+      "target": "esp32_automacao_residencial_relaymanager_saverelaystate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "RelayManager.cpp",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_relaymanager_setrelaybyindex",
+      "target": "esp32_automacao_residencial_telegrambotesp32_notifytelegramstatechange"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_relaymanager_setallrelays",
+      "target": "esp32_automacao_residencial_relaymanager_saverelaystate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_relaymanager_setallrelays",
+      "target": "esp32_automacao_residencial_relaymanager_logrelayaction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "RelayManager.cpp",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_relaymanager_setallrelays",
+      "target": "esp32_automacao_residencial_telegrambotesp32_notifytelegramstatechange"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_relaymanager_loadallrelaystates",
+      "target": "esp32_automacao_residencial_relaymanager_loadrelaystate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "RelayManager.cpp",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "esp32_automacao_residencial_relaymanager_applyrelaystatestopins",
+      "target": "esp32_automacao_residencial_relaymanager_logrelayaction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "SensorManager.cpp",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "sensormanager_cpp",
+      "target": "sensormanager_h",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "SensorManager.cpp",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "sensormanager_cpp",
+      "target": "esp32_automacao_residencial_sensormanager_readsensors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "telegrambotesp32_cpp",
+      "target": "esp32_automacao_residencial_telegrambotesp32_notifytelegramstatechange",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "MQTTHandler_reconnectMQTT",
+      "target": "HomeAssistantDiscovery_publishHADiscovery"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "HomeAssistantDiscovery.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "HomeAssistantDiscovery_publishHADiscovery",
+      "target": "HomeAssistantDiscovery_HA_Device"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "MQTTHandler_setupMQTT",
+      "target": "LoginsSenhas_example_Credentials"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "MQTTHandler_reconnectMQTT",
+      "target": "VariaveisGlobais_SyncFlags"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "MQTTHandler_mqttCallback",
+      "target": "RelayManager_logRelayAction"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "MQTTHandler_mqttCallback",
+      "target": "RelayManager_saveRelayState"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "MQTTHandler_mqttCallback",
+      "target": "TelegramBotESP32_notifyTelegramStateChange"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "MQTTHandler_mqttCallback",
+      "target": "RelayManager_setAllRelays"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "MQTTHandler_mqttCallback",
+      "target": "RelayManager_findRelayByName"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "MQTTHandler_mqttCallback",
+      "target": "VariaveisGlobais_RelayStates"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "MQTTHandler_mqttCallback",
+      "target": "VariaveisGlobais_SyncFlags"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "MQTTHandler_mqttCallback",
+      "target": "VariaveisGlobais_SincronizacaoMultiCore"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "MQTTHandler_publishRelayStates",
+      "target": "VariaveisGlobais_RelayStates"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "MQTTHandler.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "MQTTHandler_publishSensorData",
+      "target": "VariaveisGlobais_SensorData"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "OTAConfig.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "OTAConfig_setupOTA",
+      "target": "VariaveisGlobais_TaskHandles"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "RelayManager_setRelayByIndex",
+      "target": "VariaveisGlobais_RelayStates"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "RelayManager_setRelayByIndex",
+      "target": "TelegramBotESP32_notifyTelegramStateChange"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "RelayManager_setRelayByIndex",
+      "target": "RelayManager_logRelayAction"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "RelayManager_setRelayByIndex",
+      "target": "RelayManager_saveRelayState"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "TelegramBotESP32_handleTelegramMessages",
+      "target": "RelayManager_setRelayByIndex"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "RelayManager_setRelayByIndex",
+      "target": "VariaveisGlobais_SincronizacaoMultiCore"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "RelayManager_setAllRelays",
+      "target": "RelayManager_saveRelayState"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "RelayManager_setAllRelays",
+      "target": "RelayManager_logRelayAction"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "RelayManager_setAllRelays",
+      "target": "TelegramBotESP32_notifyTelegramStateChange"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "RelayManager_setAllRelays",
+      "target": "VariaveisGlobais_RelayStates"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "TelegramBotESP32_handleTelegramMessages",
+      "target": "RelayManager_setAllRelays"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "RelayManager_saveRelayState",
+      "target": "VariaveisGlobais_RelayStates"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "SinricProESP32_onPowerState",
+      "target": "RelayManager_saveRelayState"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "WebServerESP32_handleApiRelay",
+      "target": "RelayManager_saveRelayState"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "WebServerESP32_handleApiAll",
+      "target": "RelayManager_saveRelayState"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "RelayManager_loadAllRelayStates",
+      "target": "RelayManager_loadRelayState"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "RelayManager_loadAllRelayStates",
+      "target": "VariaveisGlobais_RelayStates"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "RelayManager.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "RelayManager_applyRelayStatesToPins",
+      "target": "VariaveisGlobais_RelayStates"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "SinricProESP32_onPowerState",
+      "target": "RelayManager_logRelayAction"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "WebServerESP32_handleApiRelay",
+      "target": "RelayManager_logRelayAction"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "WebServerESP32_handleApiAll",
+      "target": "RelayManager_logRelayAction"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "RemoteDebug.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "RemoteDebug_DualSerialClass",
+      "target": "RemoteDebug_TelnetInterceptor"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "SensorManager.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "SensorManager_readSensors",
+      "target": "VariaveisGlobais_SensorData"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "SensorManager.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "SensorManager_readSensors",
+      "target": "VariaveisGlobais_SyncFlags"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "SinricProESP32_onPowerState",
+      "target": "TelegramBotESP32_notifyTelegramStateChange"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "SinricProESP32_onPowerState",
+      "target": "VariaveisGlobais_RelayStates"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "SinricProESP32_onPowerState",
+      "target": "VariaveisGlobais_SyncFlags"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "SinricProESP32_onPowerState",
+      "target": "SinricProESP32_AntiLoop"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "SinricProESP32_setupSinricPro",
+      "target": "LoginsSenhas_example_Credentials"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "SinricProESP32_sendSinricProTemperatureEvent",
+      "target": "VariaveisGlobais_SensorData"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "SinricProESP32_sendSinricProSwitchEvents",
+      "target": "SinricProESP32_AntiLoop"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "SinricProESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "SinricProESP32_sendSinricProSwitchEvents",
+      "target": "VariaveisGlobais_RelayStates"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "TelegramBotESP32_notifyTelegramStateChange",
+      "target": "VariaveisGlobais_TelegramNotification"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "WebServerESP32_handleApiRelay",
+      "target": "TelegramBotESP32_notifyTelegramStateChange"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "WebServerESP32_handleApiAll",
+      "target": "TelegramBotESP32_notifyTelegramStateChange"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "TelegramBotESP32_initTelegram",
+      "target": "VariaveisGlobais_RelayStates"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "TelegramBotESP32_initTelegram",
+      "target": "LoginsSenhas_example_Credentials"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "TelegramBotESP32_handleTelegramMessages",
+      "target": "VariaveisGlobais_SensorData"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "TelegramBotESP32.cpp",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "TelegramBotESP32_handleTelegramMessages",
+      "target": "VariaveisGlobais_RelayStates"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "WebServerESP32_handleApiRelay",
+      "target": "VariaveisGlobais_RelayStates"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "WebServerESP32_handleApiAll",
+      "target": "VariaveisGlobais_RelayStates"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "WebServerESP32_handleApiRelays",
+      "target": "VariaveisGlobais_RelayStates"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "WebServerESP32_handleApiSetName",
+      "target": "VariaveisGlobais_RelayStates"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "WebServerESP32_handleApiSensors",
+      "target": "VariaveisGlobais_SensorData"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "WebServerESP32_handleApiRelay",
+      "target": "VariaveisGlobais_SyncFlags"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "WebServerESP32_handleApiAll",
+      "target": "VariaveisGlobais_SyncFlags"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "VariaveisGlobais.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "VariaveisGlobais_SincronizacaoMultiCore",
+      "target": "VariaveisGlobais_SyncFlags"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "WebServerESP32.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "WebServerESP32_handleRoot",
+      "target": "WebServerESP32_DASHBOARD_HTML"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.55,
+      "source_file": "RemoteDebug.h",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "RemoteDebug_TelnetInterceptor",
+      "target": "VariaveisGlobais_SincronizacaoMultiCore"
     }
   ],
   "hyperedges": [
@@ -5216,5 +7548,5 @@
       "source_file": "docs/superpowers/specs/2026-05-14-remove-hardcoded-wifi-ip-design.md"
     }
   ],
-  "built_at_commit": "3d70f3005ed40abd2c660628224f2b99027908df"
+  "built_at_commit": "f1bcab51b9a65159a28e51b0e52e5fadebc3b8da"
 }
