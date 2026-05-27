@@ -95,6 +95,8 @@ void handleApiRelay() {
             bool* relayStates[] = {&RelayState1, &RelayState2, &RelayState3, &RelayState4,
                                  &RelayState5, &RelayState6, &RelayState7, &RelayState8};
             *relayStates[idx] = bState;
+            Todos = RelayState1 && RelayState2 && RelayState3 && RelayState4 &&
+                    RelayState5 && RelayState6 && RelayState7 && RelayState8;
 
             saveRelayState(idx + 1, bState);
             pendingMqttUpdate = true; // Sinaliza para Core 0 enviar ao MQTT

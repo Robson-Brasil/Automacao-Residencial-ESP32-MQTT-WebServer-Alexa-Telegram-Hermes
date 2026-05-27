@@ -17,6 +17,8 @@ void setRelayByIndex(int idx, bool state, const char* source) {
   logRelayAction(source, idx, state);
   saveRelayState(idx + 1, state);
   notifyTelegramStateChange(source, idx, state);
+  Todos = RelayState1 && RelayState2 && RelayState3 && RelayState4 &&
+          RelayState5 && RelayState6 && RelayState7 && RelayState8;
 }
 
 void setAllRelays(bool state, const char* source) {

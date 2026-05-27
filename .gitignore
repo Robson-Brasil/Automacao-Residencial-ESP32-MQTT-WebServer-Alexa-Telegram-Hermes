@@ -4,7 +4,7 @@ __pycache__/
 *.pyc
 
 # Credentials
-LoginSenhas.h
+LoginsSenhas.h
 LoginsSenhas.cpp
 
 # IDE / Tool directories

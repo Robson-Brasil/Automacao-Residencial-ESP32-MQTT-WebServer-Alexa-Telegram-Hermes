@@ -94,6 +94,8 @@ void mqttCallback(char *topic, byte *payload, unsigned int length) {
         saveRelayState(i + 1, newState);
         notifyTelegramStateChange("MQTT", i, newState);
         pendingSinricProUpdate = true;
+        Todos = RelayState1 && RelayState2 && RelayState3 && RelayState4 &&
+                RelayState5 && RelayState6 && RelayState7 && RelayState8;
       }
       return;
     }

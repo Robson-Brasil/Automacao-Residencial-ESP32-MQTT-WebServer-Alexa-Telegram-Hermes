@@ -62,6 +62,8 @@ bool onPowerState(const String &deviceId, bool &state) {
       saveRelayState(2, RelayState2);
       pendingMqttUpdate = true;
       notifyTelegramStateChange("Alexa/Google", 1, state); // index 1 = Bancada
+      Todos = RelayState1 && RelayState2 && RelayState3 && RelayState4 &&
+              RelayState5 && RelayState6 && RelayState7 && RelayState8;
     }
     
     Serial.print("[SinricPro] Bancada: ");
@@ -76,6 +78,8 @@ bool onPowerState(const String &deviceId, bool &state) {
       saveRelayState(8, RelayState8);
       pendingMqttUpdate = true;
       notifyTelegramStateChange("Alexa/Google", 7, state); // index 7 = Refletor/Kinha
+      Todos = RelayState1 && RelayState2 && RelayState3 && RelayState4 &&
+              RelayState5 && RelayState6 && RelayState7 && RelayState8;
     }
     
     Serial.print("[SinricPro] Refletor: ");
